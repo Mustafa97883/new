@@ -1,4 +1,7 @@
 {
-    "discord_token": "NjgxOTM4NjE2NjExODk3MzY1.XnSD7A.fUsSFde-Fl-700KU69GEpC_sh4M",
-    "randomize_delay": 3
+  "token" : "",
+  "ms" : 2000,
+  "roleToDisco" : [""],
+  "prefix" : "",
+  "allowedUsers" : [""]
 }
