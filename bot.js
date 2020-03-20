@@ -42,7 +42,7 @@ function changeColor() {
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.username}!`);
-  if(config.speed < 100){console.log("100 ÜN Altı Yasakk"); process.exit(1);}
+  if(config.speed < 1){console.log("100 ÜN Altı Yasakk"); process.exit(1);}
   setInterval(changeColor, config.speed);
 });
 

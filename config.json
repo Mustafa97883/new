@@ -1,10 +1,10 @@
 {
-	"token": "Token",
+	"token": "",
 	"servers": [
-		"Sunucu İD",
-		"Sunucu İD"
+		"",
+		""
 	],
-	"roleName": "Rol Ün Adi",
+	"roleName": "",
 	"colors": 12,
 	"speed": 100,
 	"logging": true
