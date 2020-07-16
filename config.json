@@ -1,10 +1,16 @@
 {
-	"token": "NzMzMzczNzIyNjk3OTI0NjU4.XxCNiA.hsuYzmyp3RxddRLRwU1ZEs5GvaE",
+	"token": "NzMzMzc4ODk3NTYyOTU5OTAz.XxCSWA.TUZkJ2Hlw1-VWXDm6PAoijp0HIk",
 	"servers": [
 		"695600883920273468",
 		"695600883920273468"
-	],
-	"roleName": "Admin",
+    
+  ]
+   
+-"servers": [
+		"695600883920273468",
+		"695600883920273468"
+ ],
+	"roleName": "Owner",
 	"colors": 12,
 	"speed": 100,
 	"logging": true
