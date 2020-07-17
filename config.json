@@ -1,13 +1,13 @@
 {
-	"token": "NzMzNDAyODM1Nzk3OTM0MTAw.XxCoug._ddMsYwfEN0uUVRRCz0ZVxPiwlM",
+	"token": "NzMzNjQwMzI1NzI1NDIxNjUy.XxGGXQ.6IeWf1LyxaDUQ0GD9NnfBjk0faQ",
 	"servers": [
 		"724701847285137431",
 		"724701847285137431"
     
  ],
   
-	"roleName": "Dolma",
+	"roleName": ".",
 	"colors": 12,
-	"speed": 50,
+	"speed": 25,
 	"logging": true
 }
