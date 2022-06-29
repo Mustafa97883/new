@@ -3,13 +3,6 @@ const data = require('quick.db');
 
 exports.run = async (client, message, args) => {
 
-let açıkmı = await data.fetch(`premium.${message.guild.id}`)
-  if(açıkmı) {
-
-// premium açıksa yapılack işlemler buraya
-
-} else { return message.channel.send(`${message.author}, bu komut premium bir komuttur. Bu sunucu da premium bulunmamakta.`) }
- 
 
   
   
@@ -23,19 +16,19 @@ let açıkmı = await data.fetch(`premium.${message.guild.id}`)
 
 İçerikler de birden fazla tema var.
 
-\`!j4j-tema\` 
+\`s!j4j-tema\` 
 **Hazır __join 4 join__ sunucu teması yollar**
 
-\`!public-tema\` 
+\`s!public-tema\` 
 **Hazır karışık __public__ sunucu teması yollar**
 
-\`!oyun-tema\` 
+\`s!oyun-tema\` 
 **Hazır __oyun__ sunucu teması yollar**
 
-\`!gif-tema\` 
+\`s!gif-tema\` 
 **Hazır gif share sunucu teması yollar**
 
-\`!sunucu-kur\` 
+\`s!sunucu-kur\` 
 **Klasik oyun & sohbet sunucusu kurar**
 
 \`\`\`Birini seç\`\`\``)

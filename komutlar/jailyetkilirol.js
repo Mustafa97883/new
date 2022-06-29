@@ -13,8 +13,8 @@ exports.run = async(client, message, args) => {
    var başarısız = ['**TÜH!** <a:alarm3:823900153831620658>', '**OLMADI BU!** <a:alarm3:823900153831620658>', '**HAY AKSİ!** <a:alarm3:823900153831620658>', '**HADİ ORADAN!** <a:alarm3:823900153831620658>', '**OLMADI YA!** <a:alarm3:823900153831620658>', '**BÖYLE OLMAZ?!** <a:alarm3:823900153831620658>', '**HADİ YA!** <a:alarm3:823900153831620658>'];
    var x2 = başarısız[Math.floor(Math.random() * başarısız.length)];
   
-if (!message.member.hasPermission('MANAGE_GUILD')) return message.reply(`**!jail-yetkilisi ayarla/sıfırla** isimli komutu kullanabilmek için \`SUNUCUYU YÖNET\` yetkisine sahip olman gerekiyor.`)
-if (!args[0]) return message.reply(`Sistemi kullanabilmek için, !jail-yetkilisi ayarla/sıfırla @rol yazmalısın.`)
+if (!message.member.hasPermission('MANAGE_GUILD')) return message.reply(`**s!jail-yetkilisi ayarla/sıfırla** isimli komutu kullanabilmek için \`SUNUCUYU YÖNET\` yetkisine sahip olman gerekiyor.`)
+if (!args[0]) return message.reply(`Sistemi kullanabilmek için, !sjail-yetkilisi ayarla/sıfırla @rol yazmalısın.`)
    
   
   if (args[0] == 'ayarla') {

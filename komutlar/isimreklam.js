@@ -17,7 +17,7 @@ exports.run = async (client, message, args) => {
     if (!codare.member.hasPermission('MANAGE_GUILD')) return newerror('Bu komudu kullanabilmen için **SUNUCUYU YÖNET** yetkisine sahip olmalısın.');
     
     const option = args[0];
-    if (!option) return newerror('Bir seçenek belirtmen gerekiyor:\n\`!isimreklamkoruma <aç | kapat>\`');
+    if (!option) return newerror('Bir seçenek belirtmen gerekiyor:\n\`s!isimreklamkoruma <aç | kapat>\`');
     switch (option) {
         case 'aç':
             if (youthanasia.has(`isimreklamkoruma.${codare.guild.id}`)) return newerror('İsim reklam koruma sistemi zaten açık.');
@@ -30,7 +30,7 @@ exports.run = async (client, message, args) => {
             codare.channel.send(Rifleman.setColor('GREEN').setDescription('İsim reklam koruma sistemini kapattım.'));
             break; 
         default:
-            newerror('Bir seçenek belirtmen gerekiyor:\n\`!isimreklamkoruma <aç | kapat>\`');
+            newerror('Bir seçenek belirtmen gerekiyor:\n\`s!isimreklamkoruma <aç | kapat>\`');
             break;
     };
 };

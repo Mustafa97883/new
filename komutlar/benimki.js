@@ -23,4 +23,4 @@ module.exports.help = {
   name: 'benimki',
   description: 'Korana olmak için en iyi yöntem',
   usage: 'korona-ol'
-};
+};  

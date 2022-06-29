@@ -1,47 +1,67 @@
-const Discord = require('discord.js')
-const db = require("croxydb");
-const database = require('croxydb');
+//komutlara atın
+const Discord = require("discord.js");
+const db = require("quick.db");
+let prefix = process.env.prefix;
+const ayarlar = require("../ayarlar.json");
 
-exports.run = async(client, message, args) => {
-  
-if(!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send('Bu komutu kullanabilmek için `Yönetici` yetkisine sahip olmalısın')
-  
-let logk = message.mentions.channels.first();
-let logkanal = await db.fetch(`narcosmodlog_${message.guild.id}`)
-if (args[0] === "sıfırla" || args[0] === "kapat") {
-if(logkanal) return message.channel.send(new Discord.MessageEmbed()                                          
-  .setTitle("Hata!!")
-  .setDescription("Log Kanalı Ayarlı Değil.")
-  .setColor("BLUE")
-  .setFooter( "Strom / Discord'da Yeni Devrim!", client.user.avatarURL()));
-db.delete(`narcosmodlog_${message.guild.id}`)
-message.channel.send(new Discord.MessageEmbed()
-  .setTitle("Başarılı!!")
-  .setDescription("Modlog Kanalı Sıfırlandı.")
-  .setColor("BLUE"));
-return
-}
-if (!logk) return message.channel.send(new Discord.MessageEmbed()
-  .setTitle("Hata!!")
-  .setFooter( "Strom / Discord'da Yeni Devrim!", client.user.avatarURL())
-  .setDescription("Bir Kanal Belirt.")
-  .setColor("BLUE"));
-db.set(`narcosmodlog_${message.guild.id}`, logk.id)
-message.channel.send(new Discord.MessageEmbed()
-    .setTitle("Başarılı!!")
-    .setFooter( "Strom / Discord'da Yeni Devrim!", client.user.avatarURL())
-  .setDescription(`Modlog Kanalı ${logk} Olarak Ayarlandı.`)
-  .setColor("BLUE"));
+exports.run = async (client, message, args) => {
+ 
+  let prefix = ayarlar.prefix;
+  if (!message.member.hasPermission("MANAGE_GUILD"))
+    return message.channel.send(
+      ` Bu komutu kullanabilmek için "\`Yönetici\`" yetkisine sahip olmalısın.`
+    );
+
+  let logk = message.mentions.channels.first();
+  let logkanal = await db.fetch(`log_${message.guild.id}`);
+
+  if (args[0] === "sıfırla" || args[0] === "kapat") {
+    if (!logkanal)
+      return message.channel.send(
+        new Discord.MessageEmbed()
+          .setColor("#ff0000")
+          .setDescription(`ModLog Kanalı Zaten Ayarlı Degil.`)
+      );
+    db.delete(`log_${message.guild.id}`);
+    message.channel.send(
+      new Discord.MessageEmbed()
+        .setColor("#ff0000")
+        .setDescription(
+          `✅ | Mod-log kanalı başarıyla sıfırlandı.`
+        )
+    );
+    return;
+  }
+
+  if (!logk)
+    return message.channel.send(
+      new Discord.MessageEmbed()
+        .setColor("#ff0000")
+        .setDescription(
+          ` Yanlış Kullanım \n Doğru Kullanım: ${prefix}mod-log #kanal`
+        )
+    );
+
+  db.set(`log_${message.guild.id}`, logk.id);
+
+  message.channel.send(
+    new Discord.MessageEmbed()
+      .setColor("#ff0000")
+      .setDescription(` Mod-log kanalı başarıyla ${logk} olarak ayarlandı.`)
+  );
+  message.react("✳️");
 };
+
 exports.conf = {
-    enabled: true,
-    guildOnly: true,
-    aliases: ['log','modlog'],
-    permLevel: 0
+  enabled: true,
+  guildOnly: false,
+  aliases: ["mod-log", "modlog", "log-ayarlama"],
+  permLevel: 3,
+  kategori: "moderasyon"
 };
 
 exports.help = {
-    name: 'mod-log',
-    description: 'Moderasyon Loglarınızı Kayıt Eder',
-    usage: 'mod-log'
+  name: "mod-log",
+  description: "Mod-Log kanalını belirler.",
+  usage: "mod-log <#kanal>"
 };

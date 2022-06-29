@@ -3,12 +3,6 @@ const data = require('quick.db');
 const ms = require('ms');
 
 exports.run = async (client, message, args) => {
-let açıkmı = await data.fetch(`premium.${message.guild.id}`)
-  if(açıkmı) {
-
-// premium açıksa yapılack işlemler buraya
-
-} else { return message.channel.send(`${message.author}, bu komut premium bir komuttur. Bu sunucu da premium bulunmamakta.`) }
  
 
   
@@ -17,7 +11,9 @@ if(Date.now() < datas) return message.channel.send(new Discord.MessageEmbed().se
 data.set(`${message.author.id}.zaman.gif`, Date.now()+ms('6h'));
 message.channel.send(new Discord.MessageEmbed()
 .setDescription(`${message.author} **Özelden gönderdim __gif sunucunu__ gönderdim bakar mısın.**`));
-message.author.send(`> **1 adet __Gif__ sunucusu kurmak için tema geldi.
+m
+Logs
+essage.author.send(`> **1 adet __Gif__ sunucusu kurmak için tema geldi.
 
 > Güle güle kullan 😇
 

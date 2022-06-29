@@ -17,7 +17,6 @@ exports.run = async (client, message, args) => {
     .setDescription(
       `
   **<:sessiz:855393464606130207>  mute** Kişiyi Yazılı Kanalda Susturur\n
-  **<:sessiz:855393464606130207>  seslimute** Kişiyi Sesli Kanalda Susturur\n
 
 
 `

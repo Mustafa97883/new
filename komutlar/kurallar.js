@@ -4,10 +4,6 @@ exports.run = async(client, message) => {
 
     const rules = new Discord.MessageEmbed()
     
-     
-
-    
-    
     .setColor('RED')
       .addField(`Kurallar`, [`
       

@@ -3,12 +3,6 @@ const data = require('quick.db');
 const ms = require('ms');
 
 exports.run = async (client, message, args) => {
-let açıkmı = await data.fetch(`premium.${message.guild.id}`)
-  if(açıkmı) {
-
-// premium açıksa yapılack işlemler buraya
-
-} else { return message.channel.send(`${message.author}, bu komut premium bir komuttur. Bu sunucu da premium bulunmamakta.`) }
  
 
   

@@ -22,7 +22,7 @@ deny: ['SEND_MESSAGES', 'ADD_REACTIONS'],
 }], 'Muterole güncellendi by '+message.author.tag);
 okay++;
 };
-database.set(`carl-mute-role.${message.guild.id}`, role.id);
+database.set(`Strom-mute-role.${message.guild.id}`, role.id);
 return message.channel.send("Başarılı! rol **"+role.name+"** ile oluşturuldu  "+okay+" başarılı kanal geçersiz kılmalar ve 0 atlandı .");
 
 });

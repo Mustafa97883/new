@@ -6,14 +6,14 @@ exports.run = (client, message, args) => {
     if (db.has(`antiraidK_${message.guild.id}`) === true) {
       return message.channel.send("Anti-raid zaten açılmış.");
     }
-    db.set(`antiraidK_${message.guild.id}`, "!anti-raid-aç");
+    db.set(`antiraidK_${message.guild.id}`, "s!anti-raid-aç");
     message.reply("Anti-raid sistemi başarıyla açıldı");
   }
  
   if (args[0] == "kapat") {
     if (db.has(`antiraidK_${message.guild.id}`) === false) {
       return message.channel.send(
-        "Anti-raid açılmamış. Açmak için **!anti-raid aç**"
+        "Anti-raid açılmamış. Açmak için **s!anti-raid aç**"
       );
     }
     db.delete(`antiraidK_${message.guild.id}`, "anti-raid-aç");
@@ -21,7 +21,7 @@ exports.run = (client, message, args) => {
   }
   if (!args[0])
     return message.reply(
-      "Lütfen geçerli işlem girin. Örnek: **!anti-raid aç/kapat**"
+      "Lütfen geçerli işlem girin. Örnek: **s!anti-raid aç/kapat**"
     );
 };
 exports.conf = {

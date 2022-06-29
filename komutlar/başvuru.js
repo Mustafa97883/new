@@ -1,56 +1,71 @@
-const Discord = require('discord.js');
-const db = require('quick.db');
+const Discord = require('discord.js')
+const {Client, MessageEmbed } = require('discord.js');
 
 
-exports.run = function(client, message, args) {
+exports.run = (client,message,args) => {
 
-	let adınız = args[0]
-	let yaşınız = args[1]
-  let katagori = args[2]
 
-  let basvuru = db.fetch(`basvuruk_${message.guild.id}`)
-	let kanal = db.fetch(`başvuru-ekle_${message.guild.id}`)
-  let log =   db.fetch(`başvuru-log_${message.guild.id}`)
- 
-	if(!log) return message.channel.send("Bu komudu kullanmak için başvurulist kanallarının sunucuda ayarlı olması gerekiyor.")
-  if(!basvuru) return message.channel.send("Bu komudu kullanmak için başvurulist kanallarının sunucuda ayarlı olması gerekiyor.")
-  if(!kanal) return message.channel.send("Bu komudu kullanmak için başvurulist kanallarının sunucuda ayarlı olması gerekiyor.")
-  
-  if (message.channel.id !== kanal) return message.channel.send(`Bu komutu sadece <#${kanal}> kanalında kullanabilirsin.`)
-	if (message.channel.id == kanal) {
-    message.delete()
-  if (!adınız)return message.channel.send(`<a:alarm3:823900153831620658> Adınızı yazmalısınız`).then(m => m.delete({timeout: 10000}))
-  if(isNaN(yaşınız)) return message.channel.send(`<a:alarm3:823900153831620658> Yaşlar rakamdan oluşmalıdır.`).then(m => m.delete({timeout: 10000}))
-  if (!yaşınız) return message.channel.send(`<a:alarm3:823900153831620658> Yaşınızı yazmalısınız`).then(m => m.delete({timeout: 10000}))
-  
-  if (!katagori) return message.channel.send(`<a:alarm3:823900153831620658> Hangi bölümü seçiceksiniz (<@&818220083595313162>, <@&844981379200843826>, <@&822869084667904030>, <@&819602002497110017>)`).then(m => m.delete({timeout: 10000}))
- 
-  
-  const basvuruuu = new Discord.MessageEmbed()
-  .setColor("PURPLE")
-  .setDescription(`${message.author} adlı kullanıcı ${katagori} Yetkisine başvuru yaptı`)
-  const embed = new Discord.MessageEmbed()
-  .setColor("BLUE")
-  .setTitle("Başvuru Geldi!")
-  .addField("<a:sarta:855249764500373564> **•** Başvuran kişinin adı", `\`\`\`${adınız}\`\`\`(<@${message.author.id}>)` )
-  .addField("<a:sarta:855249764500373564> **•** Başvuran kişinin yaşı", `\`\`\`${yaşınız}\`\`\``)
-  .addField("<a:sarta:855249764500373564> **•** Başvurduğu kategori", `\`\`\`${katagori}\`\`\``)
-
-  client.channels.cache.get(basvuru).send(embed)
-  client.channels.cache.get(log).send(basvuruuu)
-  message.channel.send(`Yetkili başvuru istek alındı.`)
-  }
-};
-
-exports.conf = {
-  enabled: true,
-  guildOnly: false,
-  aliases: ['yetkili-başvuru'],
-  permLevel: 0
-};
-
-exports.help = {
-  name: 'başvuru', 
-  description: "Sunucuya başvuru eklemenizi sağlar.",
-  usage: 'başvur <adınız> <yaşınız> <katagori>'
-};
+    const isim = args[0]
+    if(!isim) return message.channel.send(
+        new MessageEmbed()
+        .setColor('RED')
+        .setTitle('Hata :x:')
+        .setDescription('**Kullanım:** İsim,Yaş,Günlük Aktiflik Süresi,İstediğin Yetki'))
+    
+    const yaş = args[1]
+    if(!yaş) return message.channel.send(
+        new MessageEmbed()
+        .setColor('RED')
+        .setTitle('Hata :x:')
+        .setDescription('Yaşını belirtmedin?'))
+        
+    const aktiflik = args[2]
+    if(!aktiflik) return message.channel.send(
+        new MessageEmbed()
+        .setColor('RED')
+        .setTitle('Hata :x:')
+        .setDescription('Günlük Aktiflik süreni belirtmedin?'))
+    
+    const yetki = args.slice(3).join(' ')
+    if(!yetki) return message.channel.send(
+        new MessageEmbed()
+        .setColor('RED')
+        .setTitle('Hata :x:')
+        .setDescription('Hangi yetkiyi istediğini belirtmedin?'))
+    
+    
+    message.channel.send(
+        new MessageEmbed()
+        .setColor('RED')
+        .setTitle('Başarılı :white_check_mark:')
+        .setDescription('Başvurun başarıyla gönderildi!'))
+    
+    
+    client.channels.cache.get('860167717691850782').send(
+        new MessageEmbed()
+        .setColor('GREEN')
+        .setTitle('Yeni Başvuru!')
+        .setAuthor(message.guild.name, message.guild.userURL)
+        .setThumbnail(message.author.avatarURL)
+          .addField('Başvuruyu Yapan', `**${message.author.tag}**`)
+          .addField('İsmi', isim)
+          .addField('Yaşı', yaş)
+          .addField('Günlük Aktiflik Süresi', aktiflik)
+          .addField('Başvurduğu Yetki', yetki)
+        .setFooter(`${message.author.username} Tarafından Başvuruldu`, message.author.avatarURL, `${message.author.Date} Kanalında kullanıldı.`)
+        )
+        }
+    
+    
+    exports.conf = {
+        enabled : true,
+        guildOnly : false,
+        aliases : ['başvur'],
+        permLevel : 0
+    }
+    
+    exports.help = {
+        name : 'başvur',
+        description : 'Yetkili Başvuru Sistemi',
+        usage : 'başvur'
+    }

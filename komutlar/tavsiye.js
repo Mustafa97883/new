@@ -5,7 +5,7 @@ exports.run = function(client, message, args) {
     let type = args.slice(0).join(' ');
     if (type.length < 1) return message.channel.send(
 new Discord.MessageEmbed()
-.setDescription('Kullanım: !tavsiye <Tavsiyeniz>'));
+.setDescription('Kullanım: s!tavsiye <Tavsiyeniz>'));
 const embed = new Discord.MessageEmbed()
 .setColor('RANDOM')
 .setDescription('Tavsiyeniz Bildirildi!')
@@ -16,7 +16,7 @@ const embed2 = new Discord.MessageEmbed()
 .addField(`Kulanıcı Bilgileri`, `Kullanıcı ID: ${message.author.id}\nKullanıcı Adı: ${message.author.username}\nKullanıcı Tagı: ${message.author.discriminator}`)
 .addField("Tavsiye", type)
 .setThumbnail(message.author.avatarURL())
-client.channels.cache.get('826124655613575268').send(embed2); // Kanal ID
+client.channels.cache.get('989518783519555674').send(embed2); // Kanal ID
 
 };
 

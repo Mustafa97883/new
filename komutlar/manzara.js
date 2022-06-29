@@ -4,11 +4,20 @@ const client = new Discord.Client();
 var Manzara = require('cool-images')
 
 exports.run = (client, message) => {
- message.channel.send({embed: {
-          "image": {
+ 
+  
+message.channel.send({embed: {
+
+  "image": {
           url: Manzara.one(600, 800)},
           color: 0xD97634,
             }});};
+
+
+
+
+
+
 
 exports.conf = {
   enabled: true,

@@ -5,9 +5,9 @@ module.exports.run = async (client, message) => {
   const embed = new Discord.MessageEmbed()
     .setColor("BLUE")
     .addField(`Yapımcım`, `
-ℬ 《 Shadow Oracle zed》#6427
+✧ 《 Shadow Oracle zed》#6427
 
-ℬ ShAdOw#0001
+✧ ShAdOw#5968
 
 
 `)

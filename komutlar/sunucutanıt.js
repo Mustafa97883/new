@@ -19,10 +19,10 @@ exports.run = async (client, message, args) => {
     .setAuthor('Strom', client.user.avatarURL())
   .setTitle('Strom', client.user.avatarURL())
   .setURL("https://discord.gg/FV2rwt6GRF")
-  .setDescription("!sunucutanıt Kullandınız.")
+  .setDescription("s!sunucutanıt Kullandınız.")
   .addField('Sizin Sunucunuz Burada Tanıtıldı', `[Tıkla](https://discord.gg/FV2rwt6GRF)`)
         .setTimestamp()
-  .addField("Sizde sunucunuzu tanıtmak istiyorsanız.", "!davet yazarak beni sunucunuza ekleyebilirsiniz.")
+  .addField("Sizde sunucunuzu tanıtmak istiyorsanız.", "s!davet yazarak beni sunucunuza ekleyebilirsiniz.")
   .setColor('BLUE')
  message.channel.send(embed);
     message.channel.createInvite({maxAge: 0}).then((invite) => {
@@ -57,10 +57,14 @@ exports.run = async (client, message, args) => {
   {
   message.reply("Bu özelliği `(24)` Saat içinde yalnızca 1 kez kullanabilirsiniz")
   }
+
+
+
+
+
+
+
 };
-
-
-
 exports.conf = {
     enabled: true,
     guildOnly: false,

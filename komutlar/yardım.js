@@ -5,11 +5,14 @@ const talkedRecently = new Set();
 let botid = "756883309270663229";
 
 exports.run = async (client, message, args) => {
-  
+  const DBL = require('dblapi.js')
+const dbl = new DBL('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc1Njg4MzMwOTI3MDY2MzIyOSIsImJvdCI6dHJ1ZSwiaWF0IjoxNjU2MTEwOTkxfQ.7Oqg1lelprL5ACm4Yh0RKREKaOTPIyQRrSjDaT7uKko', client)
   
   let prefix = (await db.fetch(`prefix_${message.guild.id}`)) || "!";
 
 
+  
+  
   const embed = new Strom.MessageEmbed()
     .setAuthor(
       `${client.user.username} `,
@@ -21,20 +24,16 @@ exports.run = async (client, message, args) => {
   **Bota yorum atıp 5 yıldız vermeyi unutma :)** [TIKLA](https://top.gg/bot/756883309270663229)
   
   **<a:rainbow:855248569136578570> tag** \`Destek sunucusunun tagını gösterir.\`\n
-  **<a:rainbow:855248569136578570> ${prefix}kayıt-sistemi**  \`Kayıt Komutlarını Gösterir.\`  \n
   **<a:rainbow:855248569136578570> ${prefix}moderasyon-sistemi**  \`Moderasyon komutlarını gösterir.\` \n
   **<a:rainbow:855248569136578570> ${prefix}guard-sistemi**  \`Koruma Komutlarını Gösterir.\` \n
   **<a:rainbow:855248569136578570> ${prefix}mutesistem**  \`İlk Olarak Kurulum Yapınız.\`\n
   **<a:rainbow:855248569136578570> ${prefix}kasa-yardım**  \`kasa Komutlarını Gösterir.\` \n
   **<a:rainbow:855248569136578570> ${prefix}say**  \`Sunucu Bilgilerini Gösterir.\` \n
-  **<a:rainbow:855248569136578570> ${prefix}yardım-sunucu-kur**\`Sunucu-kur komutlarını gösterir.\` \n
-  **<a:rainbow:855248569136578570> ${prefix}rütbe-yardım**\`rütbe sistemini gösterir. \` **premium-komut**\n
-  **<a:rainbow:855248569136578570> ${prefix}premium-satın-al**\`Nasıl premium sahibi olursunuz onu gösterir.\` \n
-  **<a:rainbow:855248569136578570> ${prefix}ekonomi-yardım**  \`Ekonomi Komutlarını Gösterir.\`**#BETA**\n
+  **<a:rainbow:855248569136578570> ${prefix}yardım-sunucu-kur**\`Sunucu-kur komutlarını gösterir.\`\n
+  **<a:rainbow:855248569136578570> ${prefix}rütbe-yardım**\`rütbe sistemini gösterir. \`\n
   **<a:rainbow:855248569136578570> ${prefix}eğlence-yardım**\`Eğlence komutlarını gösterir.\` \n
-  **<a:rainbow:855248569136578570> ${prefix}botlist-yardım**\`Botlist sunucuları için.\` \n
   **<a:rainbow:855248569136578570> ${prefix}jail-yardım**\`jail.\` \n
-  **<a:rainbow:855248569136578570> ${prefix}up-yardım**\`botunuzu 7/24 yapar.\` \n
+  **<a:rainbow:855248569136578570> ${prefix}kullanıcı-yardım**\`kullanıcı komutlarını gösterir.\` \n
 `
     
     
@@ -43,7 +42,12 @@ exports.run = async (client, message, args) => {
   return message.channel.send(embed);
 },
 
-exports.conf = {
+
+  
+  
+  
+  
+  exports.conf = {
   enabled: true,
   guildOnly: false,
   aliases: ["yardım","yardim"],

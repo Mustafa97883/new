@@ -3,7 +3,7 @@ exports.run = function(client, message, args) {
     let type = args.slice(0).join(' ');
     if (type.length < 1) return message.channel.send(
 new Discord.MessageEmbed()
-.setDescription('Kullanım: !sikayet <Şikayet>'));
+.setDescription('Kullanım: s!sikayet <Şikayet>'));
 const embed = new Discord.MessageEmbed()
 .setColor('RANDOM')
 .setDescription('Şikayetiniz Bildirildi!')
@@ -27,3 +27,4 @@ exports.help = {
   description: 'Şikayet de bulunursunuz.',
   usage: 'sikayet <Şikayet>'
 };
+

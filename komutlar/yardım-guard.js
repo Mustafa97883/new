@@ -11,19 +11,20 @@ const yardım = new Strom.MessageEmbed()
 .setDescription(`**Bota Oy Vermek için** [TIKLA](https://top.gg/bot/756883309270663229/vote)
 **Bota yorum atıp 5 yıldız vermeyi unutma :)** [TIKLA](https://top.gg/bot/756883309270663229)
 
-🔰 \`!kanal-koruma\` : **Kanal Koruma Aç/Kapat**
-🔰 \`!küfür-engel\`:  **Küfür Engel Aç/Kapat**
-🔰 \`!reklam-engel\` :  **Reklam Engel Aç/Kapat**
-🔰 \`!Antiraid\` :  **Antiraid sistemini Açıp Kapatırsınız**
-🔰 \`!caps-engel\` :  **Büyük harf engeli**
-🔰 \`!spam-engel\` :  **Spam yapanları durdurur**
-🔰 \`!isim-reklam-koruma\`:  **Kullanıcının isminde reklam varsa onu sunucudan banlar**
-🔰 \`!sohbet aç-kapat\` :  **Sohbeti Açıp Kapatırsınız**
-🔰 \`!ban\`: **Belirttiğiniz Kişiyi Sunucudan Banlarsınız**
-🔰 \`!unban\`:  **Belirttiğiniz Kişinin Banını Kaldırırsınız**
-🔰\`!istatistik\`:  **Botun İstatistiklerini Atar**
-🔰 \`!temizle\`:  **Belirttiğiniz Sayıda Mesajı Siler**
-🔰 \`!ping\`:  **Pinginizi Ölçüp Atar**
+🔰 \`${prefix}kanal-koruma\` : **Kanal Koruma Aç/Kapat**
+🔰 \`${prefix}küfür-engel\`:  **Küfür Engel Aç/Kapat**
+🔰 \`${prefix}reklam-engel\` :  **Reklam Engel Aç/Kapat**
+🔰 \`${prefix}Antiraid\` :  **Antiraid sistemini Açıp Kapatırsınız**
+🔰 \`${prefix}caps-engel\` :  **Büyük harf engeli**
+🔰 \`${prefix}spam-engel\` :  **Spam yapanları durdurur**
+🔰 \`${prefix}everhereengel\` :  **@everyone @here engeli atar**
+🔰 \`${prefix}isim-reklam-koruma\`:  **Kullanıcının isminde reklam varsa onu sunucudan banlar**
+🔰 \`${prefix}sohbet aç-kapat\` :  **Sohbeti Açıp Kapatırsınız**
+🔰 \`${prefix}ban\`: **Belirttiğiniz Kişiyi Sunucudan Banlarsınız**
+🔰 \`${prefix}unban\`:  **Belirttiğiniz Kişinin Banını Kaldırırsınız**
+🔰 \`${prefix}istatistik\`:  **Botun İstatistiklerini Atar**
+🔰 \`${prefix}temizle\`:  **Belirttiğiniz Sayıda Mesajı Siler**
+🔰 \`${prefix}ping\`:  **Pinginizi Ölçüp Atar**
 
 `)
 .setThumbnail(message.author.avatarURL())

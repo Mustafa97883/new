@@ -12,20 +12,20 @@ let images = [''];
 message.channel.send(new Discord.MessageEmbed().setColor('#000001').setDescription(`**Sunucu-kur Ana Menüsüne Hoş Geldin Dostum :innocent:.
 ${client.user} Kullanırken Botun Özel Rolünü rolünü en yukarıda tutunuz.**
 **
-🐝 \`!sunucu-tema\` Menüsün de neler var?\`**premium komut** \n
+🐝 \`!sunucu-tema\` Menüsün de neler var?\`\n
 
 > Public, Nitro, Oyun Gibi Sunucların Şablonları
 
 
-🦋 \`!sunucu-kur\` Menüsün de neler var?
+🦋 \`s!sunucu-kur\` Menüsün de neler var?
 
 
-🦋 \`!diğer-temalar\` Menüsün de neler var?\`**premium komut** \n
+🦋 \`s!diğer-temalar\` Menüsün de neler var?\`\n
 
 > Mute, Karantina, Ban, Toplu rol, Sayaç \`&\` Oto 
 > rol, Kısıtlamalar
 
-🔥 \`!davet\` Menüsün de neler var?
+🔥 \`s!davet\` Menüsün de neler var?
 
 
 **`).setThumbnail(message.author.avatarURL() ? message.author.avatarURL({dynamic: true}) : 'https://cdn.glitch.com/8e70d198-9ddc-40aa-b0c6-ccb4573f14a4%2F6499d2f1c46b106eed1e25892568aa55.png').setImage(images.random()))
