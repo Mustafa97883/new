@@ -26,7 +26,7 @@ const fetch = require('node-fetch')
 
 
 setInterval(async () => {
-  await fetch('https://glitch.com/edit/#!/scrawny-broken-lunge').then(console.log('Uptimed!'))
+  await fetch('https://glitch.com/edit/#!/sayisal-bot-v234123123e142123432').then(console.log('Uptimed!'))
 }, 20000)
 
 let prefix = ayarlar.prefix;
@@ -35,7 +35,7 @@ client.ekoayarlar = {
   parabirimi: "TL", //Para Birimi TL İsterseniz Dolar Euro Vb. Para Birimleri Girebilirsiniz.
   botunuzunprefixi: "s!",
   botunuzunidsi: "756883309270663229",
-  botismi: "Strom Public",
+  botismi: "Strom ",
   renk: "RANDOM", //İNGİLİZCE TERCİH ETTİĞİNİZ RENGİ YAZINIZ! EĞER BÖYLE BIRAKIRSANIZ RASTGELE ATAR!
   isimsiz: "Bilinmiyor", //İSİMSİZ KİŞİLERİN HANGİ İSİM İLE GÖZÜKECEĞİNİ BELİRLEYEBİLİRSİNİZ!
   rastgelepara: true, //EĞER BUNU TRUE YAPARSANIZ RASTGELE PARA VERME ÖZELLİĞİ AKTİF OLUR VE GÜNLÜK PARALARI RASTGELE VERİR!
