@@ -36,10 +36,39 @@ let client = message.client;
     message.channel.send(`bunu mu demek istediniz? **s!${rifleman.bestMatch.target}**`)
   };
 
+  
+    if (db.has(`karalist_${message.author.id}`) === true) {
+    let embed = new Strom.MessageEmbed()
+    .setColor("RANDOM")
+    .setDescription(`Karalistedesin!`)
+    message.channel.send({embed: embed})
+    return
+  };
+
+
+  
   if (cmd) {
-    if (!message.guild) return
+const member = message.guild.member(client.user)
+if(!member.hasPermission("SEND_MESSAGE")){
+message.member.send(new Strom.MessageEmbed().setDescription(`${message.channel ? "<#"+message.channel.id+">" : "`"+message.channel.name+"`"} adlı kanalda mesaj göndermeye iznim yok! Ya iznimi aç yada Kurucum olan \`zelvos#2649\` iletişime geç!`))
+}
+  let bakım = await db.fetch('bakım');
+  if(message.author.id !== ayarlar.ownerID)
+  if(message.author.id !== ayarlar.ownerİD){
+
+    if(bakım){
+ let bakımTIME = new Date("2021-11-30:20:30")
+ let time = Strom(bakımTIME - Date.now())
+  return message.channel.send(new Strom.MessageEmbed().setDescription(`
+${message.author}
+Bot şuan bakımdadır!!
+[LINK](https://zivocodes.tk/)
+
+  `).setColor("RANDOM"))
+     /*
+**:gear: Sizlere En İyi Hizmeti Verebilmek İçin Bakımdayız.\n**❓**Bakım Sebebi:** `{bakım}`\n⏱️**Tahmini Süre:** **{time.days}** gün, **{time.hours}** saat, **{time.minutes}** dakika, **%{time.seconds}** saniye\n\n:arrows_counterclockwise: **Lütfen Daha Sonra Tekrar Deneyin.**
+     */                         }}
     if (perms < cmd.conf.permLevel) return;
-    if (db.fetch(`cokaradalistere_${message.author.id}`)) return message.channel.send("Olamaz sen botun karalistesinde bulunuyorsun botu kullanamazsın.")
-    cmd.run(client, message, params, perms);
+    cmd.run(client, message, params, perms,);
   }
 };

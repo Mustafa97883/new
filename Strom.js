@@ -1650,3 +1650,4 @@ client.on("guildBanRemove", async (guild, user) => {
   client.channels.cache.get(modlog).send(embed);
 });
 // ModLog Son
+
