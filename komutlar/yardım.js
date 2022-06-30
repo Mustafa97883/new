@@ -24,16 +24,16 @@ const dbl = new DBL('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc1Njg4MzMwOT
   **Bota yorum atıp 5 yıldız vermeyi unutma :)** [TIKLA](https://top.gg/bot/756883309270663229)
   
   **<a:rainbow:855248569136578570> tag** \`Destek sunucusunun tagını gösterir.\`\n
-  **<a:rainbow:855248569136578570> ${prefix}moderasyon-sistemi**  \`Moderasyon komutlarını gösterir.\` \n
-  **<a:rainbow:855248569136578570> ${prefix}guard-sistemi**  \`Koruma Komutlarını Gösterir.\` \n
-  **<a:rainbow:855248569136578570> ${prefix}mutesistem**  \`İlk Olarak Kurulum Yapınız.\`\n
-  **<a:rainbow:855248569136578570> ${prefix}kasa-yardım**  \`kasa Komutlarını Gösterir.\` \n
-  **<a:rainbow:855248569136578570> ${prefix}say**  \`Sunucu Bilgilerini Gösterir.\` \n
-  **<a:rainbow:855248569136578570> ${prefix}yardım-sunucu-kur**\`Sunucu-kur komutlarını gösterir.\`\n
-  **<a:rainbow:855248569136578570> ${prefix}rütbe-yardım**\`rütbe sistemini gösterir. \`\n
-  **<a:rainbow:855248569136578570> ${prefix}eğlence-yardım**\`Eğlence komutlarını gösterir.\` \n
-  **<a:rainbow:855248569136578570> ${prefix}jail-yardım**\`jail.\` \n
-  **<a:rainbow:855248569136578570> ${prefix}kullanıcı-yardım**\`kullanıcı komutlarını gösterir.\` \n
+  **<a:rainbow:855248569136578570> s!moderasyon-sistemi**  \`Moderasyon komutlarını gösterir.\` \n
+  **<a:rainbow:855248569136578570> s!guard-sistemi**  \`Koruma Komutlarını Gösterir.\` \n
+  **<a:rainbow:855248569136578570> s!mutesistem**  \`İlk Olarak Kurulum Yapınız.\`\n
+  **<a:rainbow:855248569136578570> s!kasa-yardım**  \`kasa Komutlarını Gösterir.\` \n
+  **<a:rainbow:855248569136578570> s!say**  \`Sunucu Bilgilerini Gösterir.\` \n
+  **<a:rainbow:855248569136578570> s!yardım-sunucu-kur**\`Sunucu-kur komutlarını gösterir.\`\n
+  **<a:rainbow:855248569136578570> s!rütbe-yardım**\`rütbe sistemini gösterir. \`\n
+  **<a:rainbow:855248569136578570> s!eğlence-yardım**\`Eğlence komutlarını gösterir.\` \n
+  **<a:rainbow:855248569136578570> s!jail-yardım**\`jail.\` \n
+  **<a:rainbow:855248569136578570> s!kullanıcı-yardım**\`kullanıcı komutlarını gösterir.\` \n
 `
     
     
