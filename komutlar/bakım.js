@@ -1,62 +1,44 @@
-const Discord = require("discord.js");
-const db = require("croxydb");
-module.exports.run = async (client, message, args) => {
-  
-let csi = "KENDI ID YAZ";
-if (!csi === message.author.id){
-  return message.reply("**Bu Komut Bot Sahibine Özeldir!**")
-}
-  
-  let csb = db.get("csb");
+const Discord = require('discord.js');
+const database = require('quick.db');
 
-  if (csb === "KAPALI") {
-    await db.set("csb", "AKTİF");
-    let cse = new Discord.MessageEmbed()
-      .setTitle(client.user.username + " Bot Bakım Modu")
-      .setColor("GREEN")
-      .setThumbnail(client.user.avatarURL())
-      .setTimestamp()
-      .setDescription(
-        "**Bakım Modu Aktif Edildi!\nBakım Modunu Kapatmak İçin Tekrar `!bakım` Yazın!**"
-      )
-      .setFooter("Strom");
-    message.channel.send(cse);
-    message.react("🔨");
-  } else {
+exports.run = async (client, message, args) => {// can#0002
+if(message.author.id !== '846736343593779230') return;
 
-  if (csb === "AKTİF") {
-    await db.set("csb", "KAPALI");
-    let cse = new Discord.MessageEmbed()
-      .setTitle(client.user.username + " Bot Bakım Modu")
-      .setColor("RED")
-      .setThumbnail(client.user.avatarURL())
-      .setTimestamp()
-      .setDescription(
-        "**Bakım Modu Kapatıldı!\nBakım Modunu Açmam İçin Tekrar `!bakım` Yazın!**"
-      )
-      .setFooter("Strom");
-    message.channel.send(cse);
-    message.react("🔌");
-  } else {
-      await db.set("csb", "AKTİF");
-    let cse = new Discord.MessageEmbed()
-      .setTitle(client.user.username + " Bot Bakım Modu")
-      .setColor("GREEN")
-      .setThumbnail(client.user.avatarURL())
-      .setTimestamp()
-      .setDescription(
-        "**Bakım Modu Aktif Edildi!\nBakım Modunu Kapatmak İçin Tekrar `s!bakım` Yazın!**"
-      )
-      .setFooter("Strom");
-    message.channel.send(cse);
-    message.react("🔨");
-  }
-  }
-};
-module.exports.conf = {
-  aliases: ["b"]
+function gönderkardesim(content) {
+const infoEmbed = new Discord.MessageEmbed()
+.setColor('BLUE')
+.setDescription(content)
+.setTimestamp()
+.setAuthor(message.author.username, message.author.displayAvatarURL({ dynamic: true }));
+return message.channel.send(infoEmbed)
 };
 
-module.exports.help = {
-  name: "bakım"
+const durum = await database.fetch(client.user.id);
+if(durum == true) {
+
+await database.delete(client.user.id);
+return gönderkardesim('Bakım artık sona erdi.');
+
+} else {
+
+await database.set(client.user.id, true);
+database.set(client.user.id+':)', { 
+author: message.author,
+time: Date.now() 
+});
+
+return gönderkardesim('Bakım modu açıldı.\nArtık hiç bir kimse komutları kullanamayacak.');
 };
+
+
+}; 
+exports.conf = {
+  enabled: true,
+  guildOnly: false,
+  aliases: ['bakım'],
+  permLevel: 0
+};
+ 
+exports.help = {
+  name: 'bakım-modu'
+};// codare ♥

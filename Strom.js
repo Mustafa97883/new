@@ -1160,44 +1160,46 @@ function exp(message) {
 //SPAM ENGEL
 
 
-var authors = [];
-var warned = [];
-
-var messageLog = [];
-
+const database = require("quick.db")
+const userMap = new Map();
 client.on("message", async message => {
-  const spam = await db.fetch(`spam.${message.guild.id}`);
-  if (!spam) return;
-  const maxTime = await db.fetch(
-    `max.${message.guild.id}.${message.author.id}`
-  );
-  const timeout = await db.fetch(
-    `time.${message.guild.id}.${message.author.id}`
-  );
-  db.add(`mesaj.${message.guild.id}.${message.author.id}`, 1);
-  if (timeout) {
-    const sayı = await db.fetch(
-      `mesaj.${message.guild.id}.${message.author.id}`
-    );
-    if (Date.now() < maxTime) {
-      if (message.member.hasPermission("BAN_MEMBERS")) return;
-      message.channel
-        .send(
-          `<@${message.author.id}> **HOPP BİLADER? spam yapmak yasak bidaha olmasın :))**`
-        )
-        .then(msg => msg.delete({ timeout: 25000 }));
-      return message.delete();
-    }
-  } else {
-    db.set(`time.${message.guild.id}.${message.author.id}`, "ok");
-    db.set(`max.${message.guild.id}.${message.author.id}`, Date.now() + 3000);
-    setTimeout(() => {
-      db.delete(`mesaj.${message.guild.id}.${message.author.id}`);
-      db.delete(`time.${message.guild.id}.${message.author.id}`);
-    }, 500); // default : 500
-  }
-});
+   if(!message.guild) return;
+const TheSid = db.get(`antispam_${message.guild.id}`)
+    if(message.author.bot) return;
+if(TheSid === "acik") { 
 
+    if(message.member.permissions.has("MANAGE_MESSAGES") || message.member.permissions.has("ADMINISTRATOR")) return;
+    if(userMap.has(message.author.id)) {
+    const userdata = userMap.get(message.author.id);
+    let msgcount = userdata.msgcount;
+    ++msgcount;
+    if(parseInt(msgcount) === 5) {
+      message.channel.bulkDelete('5')
+    message.channel.send(`<@${message.author.id}> **HOPP BİLADER? spam yap yasak bidaha olmasın. :))**`)
+    
+    } else {
+    
+    userdata.msgcount = msgcount;
+    userMap.set(message.author.id, userdata)
+    
+         }
+         
+        }else {
+    userMap.set(message.author.id, {
+    msgcount: 1,
+    lastMessage: message,
+    timer: null
+    
+     });
+    setTimeout(() => {
+      userMap.delete(message.author.id);
+    }, 5000);
+    }
+  
+
+} else return;
+
+});
 
 //spamengel son
 

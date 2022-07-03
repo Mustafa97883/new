@@ -37,13 +37,18 @@ let client = message.client;
   };
 
   if (cmd) {
-  let csdb = require('croxydb')
-    let csd = await csdb.get('csb')
-    let csi = "846736343593779230"
-    if(!message.author.id == csi){
-    if(csd === "AKTİF"){
-     return message.reply("**BAKIMDA!!**")
-    }}
+ /* if(cmd) kısmının üzerine bunu yazıyorsunuz */
+  if(cmd && cmd.help.name !== 'bakım-modu') {
+  const neblmölçmedimikamk = await require('quick.db').fetch(client.user.id);
+  if(neblmölçmedimikamk == true) {
+  var DURATION = require('humanize-duration');
+  const chimped = await db.fetch(client.user.id+':)');
+  var TIMESTAMP = Date.now() - chimped.time;
+  var RESULT = DURATION(TIMESTAMP, { language: 'tr', round: true, conjunction: ', ', serialComma: false });
+  message.react('❌');
+  return message.reply(`***${client.user.username}*** şu anda bakımda.\nYaklaşık ***${RESULT} önce*** bakıma alınmış.\nBakıma alan: ***${chimped.author.tag}***`);
+  };
+  };
 
     if (!message.guild) return
     if (perms < cmd.conf.permLevel) return;
