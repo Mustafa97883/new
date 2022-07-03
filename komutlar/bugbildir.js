@@ -2,7 +2,8 @@ const Discord = require('discord.js');
 
 
 exports.run = function(client, message, args) {
-    let type = args.slice(0).join(' ');
+   
+  let type = args.slice(0).join(' ');
     if (type.length < 1) return message.channel.send(
 new Discord.MessageEmbed()
 .setDescription('Kullanım: s!bugbildir <bulduğunuz bug>'));

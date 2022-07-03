@@ -4,6 +4,10 @@ const ayarlar = require('../ayarlar.json')
 let prefix = ayarlar.prefix
 
 exports.run = async (client, message, args) => {//krom code Krom#0516
+  const DBL = require('dblapi.js')
+const dbl = new DBL('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc1Njg4MzMwOTI3MDY2MzIyOSIsImJvdCI6dHJ1ZSwiaWF0IjoxNjU2MTEwOTkxfQ.7Oqg1lelprL5ACm4Yh0RKREKaOTPIyQRrSjDaT7uKko', client)
+dbl.hasVoted(message.author.id).then(voted => {
+      if(voted) {
   //krom code Krom#0516
   if (!args[0]) {//krom code Krom#0516
     
@@ -39,8 +43,13 @@ exports.run = async (client, message, args) => {//krom code Krom#0516
   return message.channel.send(kinda)//krom code Krom#0516
   } 
   
-  }//krom code Krom#0516
-//krom code Krom#0516
+ } else {
+        message.channel.send(` Bu Komutu Sadece 12 Saatte Bir Oyvererek Kullanabilirsiniz Oyvermek İçin (https://top.gg/bot/756883309270663229/vote) linke Tıklayarak Oyverebilirsiniz. Oy Verdiyseniz 5 Dakka Bekleyiniz`) 
+              
+}
+        })
+      
+      },
 exports.conf = {
   enabled: true,
   guildOnly: true,

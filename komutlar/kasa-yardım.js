@@ -4,7 +4,10 @@ const ayarlar = require('../ayarlar.json');
 let Prefix = ayarlar.prefix
 
 exports.run = (client, message) => {
-  
+  const DBL = require('dblapi.js')
+const dbl = new DBL('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc1Njg4MzMwOTI3MDY2MzIyOSIsImJvdCI6dHJ1ZSwiaWF0IjoxNjU2MTEwOTkxfQ.7Oqg1lelprL5ACm4Yh0RKREKaOTPIyQRrSjDaT7uKko', client)
+dbl.hasVoted(message.author.id).then(voted => {
+      if(voted) {
   const StromEmbed = new Strom.MessageEmbed()
   .setColor(0xff000)
  .setAuthor(`${client.user.username} | Ekonomi Sistemi Yardım Menüsü`)
@@ -29,8 +32,13 @@ exports.run = (client, message) => {
  .setFooter(`Strom Ekonomi Botu`)
  .setTimestamp()
  message.channel.send(StromEmbed)
+ } else {
+        message.channel.send(` Bu Komutu Sadece 12 Saatte Bir Oyvererek Kullanabilirsiniz Oyvermek İçin (https://top.gg/bot/756883309270663229/vote) linke Tıklayarak Oyverebilirsiniz. Oy Verdiyseniz 5 Dakka Bekleyiniz`) 
+              
 }
-
+        })
+      
+      },
 
 
 
