@@ -54,7 +54,8 @@
     "string-similarity": "^4.0.4",
     "superagent": "^6.1.0",
     "vultrex.db": "^1.4.1",
-    "weather-js": "^2.0.0"
+    "weather-js": "^2.0.0",
+    "akaneko": "^5.2.3"
   },
   "engines": {
     "node": "12.x"

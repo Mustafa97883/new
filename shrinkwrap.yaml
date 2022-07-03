@@ -1,4 +1,5 @@
 dependencies:
+  akaneko: 5.2.3
   axios: 0.21.4
   better-uptime: 1.1.4
   canvacord: 5.2.3
@@ -646,6 +647,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-j3fVLgvTo527anyYyJOGTYJbG+vnnQYvE0m5mmkc1TK+nxAppkCLMIL0aZ4dblVCNoGShhm+kzE4ZUykBoMg4g==
+  /akaneko/5.2.3:
+    dependencies:
+      node-fetch: 2.6.7
+    dev: false
+    resolution:
+      integrity: sha512-l8uRYnR381RbwMQbNyYhX2LLAiFQZli0tqxWLEiWK46spptPjIJPmg8mjs9IOYCGyLXGRHkO1R5siIggpz10vA==
   /ansi-escapes/3.2.0:
     dev: false
     engines:
@@ -3911,6 +3918,16 @@ packages:
       node: 4.x || >=6.0.0
     resolution:
       integrity: sha512-mmlIVHJEu5rnIxgEgez6b9GgWXbkZj5YZ7fx+2r94a2E+Uirsp6HsPTPlomfdHtpt/B0cdKviwkoaM6pyvUOpQ==
+  /node-fetch/2.6.7:
+    dependencies:
+      whatwg-url: 5.0.0
+    dev: false
+    engines:
+      node: 4.x || >=6.0.0
+    peerDependencies:
+      encoding: ^0.1.0
+    resolution:
+      integrity: sha512-ZjMPFEfVx5j+y2yF35Kzx5sF7kDzxuDj6ziH4FFbOp87zKDZNx8yExJIb05OGF4Nlt9IHFIMBkRl41VdvcNdbQ==
   /node-int64/0.4.0:
     dev: false
     resolution:
@@ -5908,6 +5925,7 @@ registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
+  akaneko: ^5.2.3
   axios: ^0.21.1
   better-uptime: ^1.1.4
   canvacord: ^5.0.8
