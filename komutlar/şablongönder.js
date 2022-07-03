@@ -25,7 +25,7 @@ dbl.hasVoted(message.author.id).then(voted => {
     .addField(`Açıklama \n`, `${açıklama}`)
     .setFooter("Serves Şablonu | Strom Şablon sistemi")
     .setColor("#000000")
-    client.channels.cache.get("844201987964796968").send(embed)
+    client.channels.cache.get("863869073178886204").send(embed)
      } else {
         message.channel.send(` Bu Komutu Sadece 12 Saatte Bir Oyvererek Kullanabilirsiniz Oyvermek İçin (https://top.gg/bot/756883309270663229/vote) linke Tıklayarak Oyverebilirsiniz. Oy Verdiyseniz 5 Dakka Bekleyiniz`) 
                              }
