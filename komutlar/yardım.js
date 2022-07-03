@@ -1,16 +1,11 @@
 const Strom = require("discord.js");
-const client = require("discord.js");
 const db = require("quick.db");
 const ayarlar = require("../ayarlar.json");
-const DBL = require('dblapi.js')
-const dbl = new DBL('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc1Njg4MzMwOTI3MDY2MzIyOSIsImJvdCI6dHJ1ZSwiaWF0IjoxNjU2MTEwOTkxfQ.7Oqg1lelprL5ACm4Yh0RKREKaOTPIyQRrSjDaT7uKko', client)
 const talkedRecently = new Set();
 let botid = "756883309270663229";
 
 exports.run = async (client, message, args) => {
- dbl.hasVoted(message.author.id).then(voted => {
-      if(voted) {
-exports.run = (client, message, params) => {
+ 
 
 
   
@@ -43,23 +38,6 @@ exports.run = (client, message, params) => {
   )
     .setFooter( "Strom / Discord'da Yeni Devrim!", client.user.avatarURL())
   return message.channel.send(embed);
-
-
-};
-} else {
-        message.channel.send("BU KOMUTU KULLANMAK İÇİN OY AT")
-      }
-  }) 
-
-
-
-};
-}else {
-        return tools.embed(msg, ` Bu Komutu Sadece 12 Saatte Bir Oyvererek Kullanabilirsiniz Oyvermek İçin [Oyver](https://discordbots.org/bot/756883309270663229/votevote) Yazısına Tıklayarak Oyverebilirsiniz. Oy Verdiyseniz 5 Dakka Bekleyiniz`) 
-                             }
-        })
-
-
 },
 
 
