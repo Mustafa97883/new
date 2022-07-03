@@ -3,7 +3,8 @@ const database = require('quick.db');
 const ms = require('ms');
 
 exports.run = async (client, message, args) => {// can#0002
-if(!message.member.hasPermission('MANAGE_MESSAGES')) return;
+
+  if(!message.member.hasPermission('MANAGE_MESSAGES')) return;
 
 const muteRoleFetch = await database.fetch(`Strom-mute-role.${message.guild.id}`);
 if(!muteRoleFetch) return message.channel.send('Bu sunucunun mute rolü yok, bir tane ayarlamak için `s!muterole ` veya bir tane oluşturmak için `s!muterole create [name]` kullanın.');

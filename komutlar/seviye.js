@@ -2,6 +2,8 @@ const { MessageAttachment } = require("discord.js");
 const canvacord = require("canvacord");
 
 module.exports.run = async (client, message, args) => {
+  
+  
   let user = message.mentions.users.first() || client.users.cache.get(args[0]) || message.author;
 
   let seyit = client.db.get(`level_${user.id}`) || 0;

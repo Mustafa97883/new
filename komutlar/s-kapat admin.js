@@ -1,5 +1,7 @@
 const Discord = require("discord.js");
 exports.run = (client, message, args) => {
+  
+  
   let every = message.guild.roles.cache.find(r => r.name ==='@member')
   message.channel.createOverwrite(every, {
     "SEND_MESSAGES": false,
