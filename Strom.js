@@ -295,7 +295,7 @@ client.on("message", async msg => {
             if (!msg.member.hasPermission("MANAGE_GUILD")) {
                   msg.delete();
                           
-                    return msg.channel.send(`${msg.author},  **Kanka Naber? Sanırsam Küfür Ediyorsun Fakat Ben Buradayken Bunu Yapamazsınn :))**`)
+                    return msg.channel.send(`${msg.author},  **HOPP BİLADER? Küfür etmek yasak bidaha olmasın :))**`)
                      .then(msg => msg.delete({ timeout: 25000 }));
          return msg.delete();
             }              
@@ -626,7 +626,7 @@ client.on("message", msg => {
         if (!msg.member.permissions.has("BAN_MEMBERS")) {
           msg.delete();
           return msg
-            .reply("**Kanka Naber? Sanırsam Reklam Yapıyorsun Fakat Ben Buradayken Bunu Yapamazsınn :))**.")
+            .reply("**HOPP BİLADER? Reklam yasak bidaha olmasın :))**.")
             .then(wiskyx => wiskyx.delete({ timeout: 5000 }));
         }
       } catch (err) {
@@ -1183,7 +1183,7 @@ client.on("message", async message => {
       if (message.member.hasPermission("BAN_MEMBERS")) return;
       message.channel
         .send(
-          `<@${message.author.id}> **Kanka Naber? Sanırsam Spam Yapıyorsun Ben Buradayken Bunu Yapamazsınn :))**`
+          `<@${message.author.id}> **HOPP BİLADER? spam yapmak yasak bidaha olmasın :))**`
         )
         .then(msg => msg.delete({ timeout: 25000 }));
       return message.delete();
