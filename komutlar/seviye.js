@@ -25,7 +25,13 @@ module.exports.run = async (client, message, args) => {
   const img = await card.build();
   
   return message.channel.send(new MessageAttachment(img, "rank.png"));
+
+
 };
+
+
+
+
 
 exports.conf = {
   aliases: ['seviye','rank'],

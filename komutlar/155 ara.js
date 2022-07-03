@@ -26,6 +26,7 @@ const EmbedFwhyCode = new Discord.MessageEmbed()
 
 return message.channel.send(EmbedFwhyCode);
   }
+
 };
 
 exports.conf = {
