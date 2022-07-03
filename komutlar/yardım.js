@@ -3,12 +3,14 @@ const db = require("quick.db");
 const ayarlar = require("../ayarlar.json");
 const talkedRecently = new Set();
 let botid = "756883309270663229";
+var prefix = ayarlar.prefix;
 
 exports.run = async (client, message, args) => {
   
-  let prefix = (await db.fetch(`prefix_${message.guild.id}`)) || "!";
-
-  
+ const DBL = require('dblapi.js')
+const dbl = new DBL('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc1Njg4MzMwOTI3MDY2MzIyOSIsImJvdCI6dHJ1ZSwiaWF0IjoxNjU2MTEwOTkxfQ.7Oqg1lelprL5ACm4Yh0RKREKaOTPIyQRrSjDaT7uKko', client)
+dbl.hasVoted(message.author.id).then(voted => {
+      if(voted) {
   
   const embed = new Strom.MessageEmbed()
     .setAuthor(
