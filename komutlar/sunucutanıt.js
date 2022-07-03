@@ -3,7 +3,10 @@ const fs = require('fs');
 const ms = require("ms")
 const db = require('quick.db')
 exports.run = async (client, message, args) => {
-  	
+  	const DBL = require('dblapi.js')
+const dbl = new DBL('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc1Njg4MzMwOTI3MDY2MzIyOSIsImJvdCI6dHJ1ZSwiaWF0IjoxNjU2MTEwOTkxfQ.7Oqg1lelprL5ACm4Yh0RKREKaOTPIyQRrSjDaT7uKko', client)
+dbl.hasVoted(message.author.id).then(voted => {
+      if(voted) {
   if (!message.guild) return
     if(!message.member.hasPermission("MANAGE_GUILD")) return message.channel.send("Bu Komutu kullanmanız için `Sunucu_Yönet` Yetkisine sahip olmalısınız.")
     let kullanildii = JSON.parse(fs.readFileSync('./sunucutanıt.json', 'utf8'));
@@ -58,13 +61,13 @@ exports.run = async (client, message, args) => {
   message.reply("Bu özelliği `(24)` Saat içinde yalnızca 1 kez kullanabilirsiniz")
   }
 
-
-
-
-
-
-
-};
+} else {
+        message.channel.send(` Bu Komutu Sadece 12 Saatte Bir Oyvererek Kullanabilirsiniz Oyvermek İçin (https://top.gg/bot/756883309270663229/vote) linke Tıklayarak Oyverebilirsiniz. Oy Verdiyseniz 5 Dakka Bekleyiniz`) 
+              
+}
+        })
+      
+      },
 exports.conf = {
     enabled: true,
     guildOnly: false,

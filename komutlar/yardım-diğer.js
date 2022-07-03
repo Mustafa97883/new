@@ -3,7 +3,13 @@ const data = require('quick.db');
 const client = new Discord.Client();
  
 module.exports.run = (client, message, args) => {   
-let pages = [
+
+  const DBL = require('dblapi.js')
+const dbl = new DBL('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc1Njg4MzMwOTI3MDY2MzIyOSIsImJvdCI6dHJ1ZSwiaWF0IjoxNjU2MTEwOTkxfQ.7Oqg1lelprL5ACm4Yh0RKREKaOTPIyQRrSjDaT7uKko', client)
+dbl.hasVoted(message.author.id).then(voted => {
+      if(voted) {
+  
+  let pages = [
 
 `**Sunucu Şablanları;**\n\n Yardım menüsünü görmeden önce <@!${client.user.id}> 'i kullandığınız için sizlere teşekkür ederiz.\n\n  \`s!tasarım-tema \` **Tasarım Sunucusu Şablonu Atar**\n\n \`s!bot-satış-tema \` **Bot Satış Sunucusu Şablonu Atar**.\n\n  \`s!kod-tema \` **Kod Sunucusu Şablonu Atar** \n\n \`s!uptime-support-tema \` **Uptimeli Support Sunucusu Şablonu Atar.** \n\n \`s!botlist-tema \` **Bot List Şablonu Atar** \n\n ** Şablonlara Bakmaya Devam Etmek için ➡ Emojisine Bas **`,
 `**Sunucu Şablanları;**\n\n \`s!j4j-tema \` **J4J Sunucu Şablonu Atar.** \n\n  \` s!site-satış-tema \` **Site Satış Sunucusu Şablonu Atar**\n\n  \`s!youtube-twitch-tema \` **Youtube/Twitch Şablonu Atar**.\n\n  \`s!zula-tema \` **Zula Klan Sunucusu Şablonu atar.** \n\n \`s!mta-tema \` **MTA Roleplay Sunucusu Şablonu atar.** \n\n \`s!atlantis-tema \` **Atlantis Sunucu Şablonu Atar.** \n\n ** Şablonlara Bakmaya Devam Etmek için ➡ Emojisine Bas**`,
@@ -43,8 +49,13 @@ msg.edit(embed)
 }) 
 })
 })
-};
- 
+} else {
+        message.channel.send(` Bu Komutu Sadece 12 Saatte Bir Oyvererek Kullanabilirsiniz Oyvermek İçin (https://top.gg/bot/756883309270663229/vote) linke Tıklayarak Oyverebilirsiniz. Oy Verdiyseniz 5 Dakka Bekleyiniz`) 
+              
+}
+        })
+      
+      },
 exports.conf = {
   enabled: true,
   guildOnly: true,
