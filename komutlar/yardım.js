@@ -42,12 +42,7 @@ const dbl = new DBL('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc1Njg4MzMwOT
   return message.channel.send(embed);
 },
 
-//
-  				} else {
-        return tools.embed(msg, ` Bu Komutu Sadece 12 Saatte Bir Oyvererek Kullanabilirsiniz Oyvermek İçin [Oyver](https://discordbots.org/bot/663092359835156506/vote) Yazısına Tıklayarak Oyverebilirsiniz. Oy Verdiyseniz 5 Dakka Bekleyiniz`) 
-                             }
-        })
-          //
+
   
   
   
