@@ -1,40 +1,62 @@
 const Discord = require("discord.js");
-const db = require("quick.db");
-const ayarlar = require("../ayarlar.json")
-exports.run = async (client, message, args) => {
+const db = require("croxydb");
+module.exports.run = async (client, message, args) => {
+  
+let csi = "KENDI ID YAZ";
+if (!csi === message.author.id){
+  return message.reply("**Bu Komut Bot Sahibine Özeldir!**")
+}
+  
+  let csb = db.get("csb");
 
-  if(message.author.id !== ayarlar.sahip)
-  if(message.author.id !== ayarlar.sahip)  {
-    const embed = new Discord.MessageEmbed()
-    .setDescription(`**:x: Bu Komut Yapımcıma Özeldir !**`)
-    .setColor('BLUE')
-    return message.channel.send(embed).then(msg=>msg.delete(5000));
-    }
-if(args[0] === "aç"){
-  if(!args[1]){
-  message.channel.send('Bakım modu sebebini belirtin!')
+  if (csb === "KAPALI") {
+    await db.set("csb", "AKTİF");
+    let cse = new Discord.MessageEmbed()
+      .setTitle(client.user.username + " Bot Bakım Modu")
+      .setColor("GREEN")
+      .setThumbnail(client.user.avatarURL())
+      .setTimestamp()
+      .setDescription(
+        "**Bakım Modu Aktif Edildi!\nBakım Modunu Kapatmak İçin Tekrar `!bakım` Yazın!**"
+      )
+      .setFooter("Strom");
+    message.channel.send(cse);
+    message.react("🔨");
+  } else {
+
+  if (csb === "AKTİF") {
+    await db.set("csb", "KAPALI");
+    let cse = new Discord.MessageEmbed()
+      .setTitle(client.user.username + " Bot Bakım Modu")
+      .setColor("RED")
+      .setThumbnail(client.user.avatarURL())
+      .setTimestamp()
+      .setDescription(
+        "**Bakım Modu Kapatıldı!\nBakım Modunu Açmam İçin Tekrar `!bakım` Yazın!**"
+      )
+      .setFooter("Strom");
+    message.channel.send(cse);
+    message.react("🔌");
+  } else {
+      await db.set("csb", "AKTİF");
+    let cse = new Discord.MessageEmbed()
+      .setTitle(client.user.username + " Bot Bakım Modu")
+      .setColor("GREEN")
+      .setThumbnail(client.user.avatarURL())
+      .setTimestamp()
+      .setDescription(
+        "**Bakım Modu Aktif Edildi!\nBakım Modunu Kapatmak İçin Tekrar `s!bakım` Yazın!**"
+      )
+      .setFooter("Strom");
+    message.channel.send(cse);
+    message.react("🔨");
   }
-  db.set('bakım', args.slice(1).join(' '))
-  if (args.slice(1).join(' ')) {
-  message.channel.send("Bakım açıldı")
-    }
-} else if(args[0]=== "kapat"){
-  message.channel.send("Bakım Kapatıldı")
-  db.delete('bakım')
-}
-
-}
-
-
-exports.conf = {
-  enabled: true,
-  guildOnly: false,
-  aliases: ['bakım'],
-  permLevel: 0
+  }
+};
+module.exports.conf = {
+  aliases: ["b"]
 };
 
-exports.help = {
-  name: 'bakım',
-  description: 'Bakım.',
-  usage: 'Bakım'
+module.exports.help = {
+  name: "bakım"
 };

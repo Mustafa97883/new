@@ -37,6 +37,14 @@ let client = message.client;
   };
 
   if (cmd) {
+  let csdb = require('croxydb')
+    let csd = await csdb.get('csb')
+    let csi = "846736343593779230"
+    if(!message.author.id == csi){
+    if(csd === "AKTİF"){
+     return message.reply("**BAKIMDA!!**")
+    }}
+
     if (!message.guild) return
     if (perms < cmd.conf.permLevel) return;
     if (db.fetch(`cokaradalistere_${message.author.id}`)) return message.channel.send("Olamaz sen botun karalistesinde bulunuyorsun botu kullanamazsın.")
