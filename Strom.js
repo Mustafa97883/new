@@ -288,7 +288,7 @@ client.on("message", async msg => {
 "yarrak kafalı","soğan sikli","siki başı sik","yarrağı kara","kara sikli","kara yarraklı","tam oç","tam öç","tem oç","tem öç","öç","yarrak kokusu",
 "sik kokusu","ananı sikim","ananı sikiyim","anneni sikim","anneni sikiyim","ablanı sikim","ablanı sikiyim","gacını sikiyim","karını sikiyim",
 "babanı sikiyim","aileni sikime oturturayım","muz istermisin","yarrağım","sikim","sik","nah","taşşak","taşak","yarak","yalak","kafasını siktiğim",
-"kafası sikik","bira","içki","turbo","amk","sik","Sik","Sİk","SİK"
+"kafası sikik","bira","içki","turbo","amk","sik","Sik","Sİk","SİK","Oruspu","Oruspu çocukları","Oruspi","Oruspu"
                   ]
             if (küfür.some(word => msg.content.includes(word))) {
           try {
