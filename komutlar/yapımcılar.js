@@ -7,7 +7,7 @@ module.exports.run = async (client, message) => {
     .addField(`Yapımcım`, `
 ✧ 《 Shadow Oracle zed》#6427
 
-✧ ShAdOw#5968
+✧ ShAdOw#6666
 
 
 `)

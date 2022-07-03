@@ -296,7 +296,8 @@ client.on("message", async msg => {
                   msg.delete();
                           
                     return msg.channel.send(`${msg.author},  **Kanka Naber? Sanırsam Küfür Ediyorsun Fakat Ben Buradayken Bunu Yapamazsınn :))**`)
-                      .then(msg => msg.delete(5000));
+                     .then(msg => msg.delete({ timeout: 25000 }));
+         return msg.delete();
             }              
                           msg.author
                 } catch(err) {
