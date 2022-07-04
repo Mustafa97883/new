@@ -2,7 +2,11 @@ const akaneko = require("akaneko")
 const Discord = require("discord.js")
 
 
-exports.run = async(client, bot, message, args) => {
+exports.run = async(bot, message, args) => {
+    
+  
+  
+  
   const answer = args.join(" ")
 
     if (!answer) {
@@ -132,6 +136,7 @@ exports.run = async(client, bot, message, args) => {
         message.channel.send(wrongarr)
 
     }
+
 
 };
 

@@ -2,10 +2,7 @@ const Discord = require('discord.js');
 const ayarlar = require('../ayarlar.json');
 const data = require('quick.db');
 exports.run = async (client, message, args) => {
-   const DBL = require('dblapi.js')
-const dbl = new DBL('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc1Njg4MzMwOTI3MDY2MzIyOSIsImJvdCI6dHJ1ZSwiaWF0IjoxNjU2MTEwOTkxfQ.7Oqg1lelprL5ACm4Yh0RKREKaOTPIyQRrSjDaT7uKko', client)
-dbl.hasVoted(message.author.id).then(voted => {
-      if(voted) {
+   
  
   const filter = (reaction, user) => {
   return ["➕","💡"].includes(reaction.emoji.name) && user.id === message.author.id && reaction.users.remove(message.author.id);
@@ -17,11 +14,12 @@ dbl.hasVoted(message.author.id).then(voted => {
   .setAuthor(client.user.username, client.user.avatarURL())
   .setDescription(`**Davet Komutları: ➕ \n Ana Menü: 💡** \n Yukardaki emojilerden birine basarak komutlara bakabilirsin.`)
   .setImage("https://images-ext-1.discordapp.net/external/Bb032GyJs8yCJiUy7tWQ-YnNRPreLuPDo-xp66eOIeU/https/images-ext-2.discordapp.net/external/H1PQhcDr-EaEvwENT8cUxj8S2yonFZl351YbXXH5sGs/https/media.discordapp.net/attachments/697145772801785876/716671769355747348/1.gif")
- var menü =  message.channel.send(yardım)
+ var menü = await message.channel.send(yardım)
  const collector = menü.createReactionCollector(filter, { time: 99999 });
   let emojiler = ["➕","💡"]
-   menü.react(emojiler[0])
-   menü.react(emojiler[1])
+  await menü.react(emojiler[0])
+  await menü.react(emojiler[1])
+
 collector.on('collect', (reaction, user) => {
 
   
@@ -42,13 +40,7 @@ collector.on('end', collected => {
   console.log(`Collected ${collected.size} items`);
 });
 
-} else {
-        message.channel.send(` Bu Komutu Sadece 12 Saatte Bir Oyvererek Kullanabilirsiniz Oyvermek İçin (https://top.gg/bot/756883309270663229/vote) linke Tıklayarak Oyverebilirsiniz. Oy Verdiyseniz 5 Dakka Bekleyiniz`) 
-              
-}
-        })
-      
-      },
+};
 
 exports.conf = {
  enabled: true,
