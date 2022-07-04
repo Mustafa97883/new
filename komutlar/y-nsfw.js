@@ -2,8 +2,11 @@ const akaneko = require("akaneko")
 const Discord = require("discord.js")
 
 
-exports.run = async(bot, message, args) => {
-    
+exports.run = async(client, bot, message, args) => {
+    const DBL = require('dblapi.js')
+const dbl = new DBL('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc1Njg4MzMwOTI3MDY2MzIyOSIsImJvdCI6dHJ1ZSwiaWF0IjoxNjU2MTEwOTkxfQ.7Oqg1lelprL5ACm4Yh0RKREKaOTPIyQRrSjDaT7uKko', client)
+dbl.hasVoted(message.author.id).then(voted => {
+      if(voted) {
   
   
   
@@ -23,107 +26,107 @@ exports.run = async(bot, message, args) => {
         message.channel.send(":x: Bu kanalda NSFW seçeneği açık değil. Lütfen açık olan kanalda deneyin.") //bu komut cko utnrk yaptigm komt guyz plz like folw and sub
     } else if (answer == 'ass') {
         const embed = new Discord.MessageEmbed()
-            .setImage(await akaneko.nsfw.ass())
+            .setImage( akaneko.nsfw.ass())
         message.channel.send(embed)
     } else if (answer == 'bdsm') {
         const embed = new Discord.MessageEmbed()
-            .setImage(await akaneko.nsfw.bdsm())
+            .setImage( akaneko.nsfw.bdsm())
         message.channel.send(embed)
     } else if (answer == 'blowjob') {
         const embed = new Discord.MessageEmbed()
-            .setImage(await akaneko.nsfw.blowjob())
+            .setImage( akaneko.nsfw.blowjob())
         message.channel.send(embed)
     } else if (answer == 'cum') {
         const embed = new Discord.MessageEmbed()
-            .setImage(await akaneko.nsfw.cum())
+            .setImage( akaneko.nsfw.cum())
         message.channel.send(embed)
     } else if (answer == 'blowjob') {
         const embed = new Discord.MessageEmbed()
-            .setImage(await akaneko.nsfw.blowjob())
+            .setImage( akaneko.nsfw.blowjob())
         message.channel.send(embed)
     } else if (answer == 'doujin') {
         const embed = new Discord.MessageEmbed()
-            .setImage(await akaneko.nsfw.doujin())
+            .setImage( akaneko.nsfw.doujin())
         message.channel.send(embed)
     } else if (answer == 'feet') {
         const embed = new Discord.MessageEmbed()
-            .setImage(await akaneko.nsfw.feet())
+            .setImage( akaneko.nsfw.feet())
         message.channel.send(embed)
     } else if (answer == 'femdom') {
         const embed = new Discord.MessageEmbed()
-            .setImage(await akaneko.nsfw.femdom())
+            .setImage( akaneko.nsfw.femdom())
         message.channel.send(embed)
     } else if (answer == 'foxgirl') {
         const embed = new Discord.MessageEmbed()
-            .setImage(await akaneko.nsfw.foxgirl())
+            .setImage( akaneko.nsfw.foxgirl())
         message.channel.send(embed)
     } else if (answer == 'gifs') {
         const embed = new Discord.MessageEmbed()
-            .setImage(await akaneko.nsfw.gifs())
+            .setImage( akaneko.nsfw.gifs())
         message.channel.send(embed)
     } else if (answer == 'glasses') {
         const embed = new Discord.MessageEmbed()
-            .setImage(await akaneko.nsfw.glasses())
+            .setImage( akaneko.nsfw.glasses())
         message.channel.send(embed)
     } else if (answer == 'hentai') {
         const embed = new Discord.MessageEmbed()
-            .setImage(await akaneko.nsfw.hentai())
+            .setImage( akaneko.nsfw.hentai())
         message.channel.send(embed)
     } else if (answer == 'netorare') {
         const embed = new Discord.MessageEmbed()
-            .setImage(await akaneko.nsfw.netorare())
+            .setImage( akaneko.nsfw.netorare())
         message.channel.send(embed)
     } else if (answer == 'maid') {
         const embed = new Discord.MessageEmbed()
-            .setImage(await akaneko.nsfw.maid())
+            .setImage( akaneko.nsfw.maid())
         message.channel.send(embed)
     } else if (answer == 'masturbation') {
         const embed = new Discord.MessageEmbed()
-            .setImage(await akaneko.nsfw.masturbation())
+            .setImage( akaneko.nsfw.masturbation())
         message.channel.send(embed)
     } else if (answer == 'orgy') {
         const embed = new Discord.MessageEmbed()
-            .setImage(await akaneko.nsfw.orgy())
+            .setImage( akaneko.nsfw.orgy())
         message.channel.send(embed)
     } else if (answer == 'panties') {
         const embed = new Discord.MessageEmbed()
-            .setImage(await akaneko.nsfw.panties())
+            .setImage( akaneko.nsfw.panties())
         message.channel.send(embed)
     } else if (answer == 'pussy') {
         const embed = new Discord.MessageEmbed()
-            .setImage(await akaneko.nsfw.pussy())
+            .setImage( akaneko.nsfw.pussy())
         message.channel.send(embed)
     } else if (answer == 'school') {
         const embed = new Discord.MessageEmbed()
-            .setImage(await akaneko.nsfw.school())
+            .setImage( akaneko.nsfw.school())
         message.channel.send(embed)
     } else if (answer == 'succubus') {
         const embed = new Discord.MessageEmbed()
-            .setImage(await akaneko.nsfw.succubus())
+            .setImage( akaneko.nsfw.succubus())
         message.channel.send(embed)
     } else if (answer == 'tentacles') {
         const embed = new Discord.MessageEmbed()
-            .setImage(await akaneko.nsfw.tentacles())
+            .setImage( akaneko.nsfw.tentacles())
         message.channel.send(embed)
     } else if (answer == 'thighs') {
         const embed = new Discord.MessageEmbed()
-            .setImage(await akaneko.nsfw.thighs())
+            .setImage( akaneko.nsfw.thighs())
         message.channel.send(embed)
     } else if (answer == 'uglyBastard') {
         const embed = new Discord.MessageEmbed()
-            .setImage(await akaneko.nsfw.uglyBastard())
+            .setImage( akaneko.nsfw.uglyBastard())
         message.channel.send(embed)
     } else if (answer == 'uniform') {
         const embed = new Discord.MessageEmbed()
-            .setImage(await akaneko.nsfw.uniform())
+            .setImage( akaneko.nsfw.uniform())
         message.channel.send(embed)
     } else if (answer == 'yuri') {
         const embed = new Discord.MessageEmbed()
-            .setImage(await akaneko.nsfw.yuri())
+            .setImage( akaneko.nsfw.yuri())
         message.channel.send(embed)
     } else if (answer == 'zettaiRyouiki') {
         const embed = new Discord.MessageEmbed()
-            .setImage(await akaneko.nsfw.zettaiRyouiki())
+            .setImage( akaneko.nsfw.zettaiRyouiki())
         message.channel.send(embed)
     } else {
         const wrongarr = new Discord.MessageEmbed()
@@ -138,7 +141,13 @@ exports.run = async(bot, message, args) => {
     }
 
 
-};
+} else {
+        message.channel.send(` Bu Komutu Sadece 12 Saatte Bir Oyvererek Kullanabilirsiniz Oyvermek İçin (https://top.gg/bot/756883309270663229/vote) linke Tıklayarak Oyverebilirsiniz. Oy Verdiyseniz 5 Dakka Bekleyiniz`) 
+              
+}
+        })
+      
+      },
 
 exports.conf = {
     aliases: ['nsfw'],
