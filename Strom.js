@@ -24,7 +24,6 @@ const ms = require('ms');
 const fetch = require('node-fetch')
 
 
-
 setInterval(async () => {
   await fetch('https://glitch.com/edit/#!/sayisal-bot-v234123123e142123432').then(console.log('Uptimed!'))
 }, 20000)
