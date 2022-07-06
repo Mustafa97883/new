@@ -44,8 +44,6 @@ dbl.hasVoted(message.author.id).then(voted => {
   **<a:rainbow:855248569136578570> ${prefix}elmas**\`Elmas lı bir logo.\`  \n
   **<a:rainbow:855248569136578570> ${prefix}habbo**\`habbo lu bir logo.\`  \n
   **<a:rainbow:855248569136578570> ${prefix}banner**\`Banner oluşturur.\`  \n
-  **<a:rainbow:855248569136578570> ${prefix}çıkmateklifi**\`çıkma teklifinde bulunursunuz.\`  \n
-  **<a:rainbow:855248569136578570> ${prefix}evlenmeteklifi**\`evlenme teklifinde bulunursunuz.\`  \n
 `
     
     
