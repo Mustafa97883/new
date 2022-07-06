@@ -24,7 +24,9 @@ module.exports.run = async (bot, message, args) => {
   "aslan",
   "ali",
   "bali",
-  "Strom" 
+  "Strom",
+  "kara panter",
+    "yenidena"
     
  
 ]
