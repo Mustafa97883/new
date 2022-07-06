@@ -58,13 +58,6 @@ dbl.hasVoted(message.author.id).then(voted => {
     else{
     message.channel.send(`${member}, ${kapak[Math.floor(Math.random() * 16)]}`)
     }
- 
-      
-  if(member.id === ayarlar.sahip)return message.channel.send({embed: {
- color: Math.floor(Math.random() * (0xFFFFFF + 1)),
- description: ('Ona Laf Sokamazsın!')
-}})
-      
       
       
       } else {
