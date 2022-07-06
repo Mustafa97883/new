@@ -43,10 +43,7 @@ if(member.bot == true)return msg.channel.send({embed: {
  color: Math.floor(Math.random() * (0xFFFFFF + 1)),
  description: ('BİR DE SAHİBİME SÖVECEK ANANI DÜKDÜKLERİM')
 }})
-  if(member.id === msg.guild.owner.id) return msg.channel.send({embed: {
- color: Math.floor(Math.random() * (0xFFFFFF + 1)),
- description: (`Ona söversem anamı siker!`)
-}})
+
   if(member.id === client.user.id){
     msg.channel.send({embed: {
  color: Math.floor(Math.random() * (0xFFFFFF + 1)),

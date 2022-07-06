@@ -8,9 +8,9 @@ exports.run = async (client, message, args) => {
   const silinecekkllnc = message.mentions.members.first();
   let para = args[1]
   if(!silinecekkllnc) return message.channel.send(`Bir kullanıcı belirtmelisin!`)
-  const bakiye = await db.fetch(`bakiyeStrom-${silinecekkllnc.id}`);
-  const hesapdurumu = await db.fetch(`hesapdurumasreaper-${silinecekkllnc.id}`);
-  const hesapismi = await db.fetch(`hesapismiasreaper-${silinecekkllnc.id}`);
+  const bakiye = await db.fetch(`bakiye-${silinecekkllnc.id}`);
+  const hesapdurumu = await db.fetch(`hesapdurum-${silinecekkllnc.id}`);
+  const hesapismi = await db.fetch(`hesapismi-${silinecekkllnc.id}`);
   
   if(!hesapdurumu) return message.channel.send(`Kayıtlı olan bir kullanıcı belirtmelisin!`)
   await db.add(`bakiyeStrom-${silinecekkllnc.id}`, para)
