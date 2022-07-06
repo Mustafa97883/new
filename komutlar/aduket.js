@@ -17,7 +17,7 @@ const EmbedFwhyCode = new Discord.MessageEmbed()
       `${FwhyCode} ` + `**${message.author.username}** Size Aduket Çekti`
     )
     .setImage(
-      "https://cdn.discordapp.com/attachments/747769679984066582/748464442249052251/street-fighter-60854-18102018130021.gif"
+      "https://c.tenor.com/aopdgb_gWPQAAAAC/aduket.gif"
     ) 
     .setFooter(client.user.username + " Sundu", client.user.avatarURL)
     .setTimestamp();
