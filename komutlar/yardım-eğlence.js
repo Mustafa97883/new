@@ -23,28 +23,29 @@ dbl.hasVoted(message.author.id).then(voted => {
     .setDescription(`**Bota Oy Vermek için** [TIKLA](https://top.gg/bot/756883309270663229/vote)
     **Bota yorum atıp 5 yıldız vermeyi unutma :)** [TIKLA](https://top.gg/bot/756883309270663229)
   
-  **<a:rainbow:855248569136578570> ${prefix}aşkölçer** \`Etiketlediğiniz kişi ile aşkınızı ölçer\n
-  **<a:rainbow:855248569136578570> ${prefix}benimki**  \`komik bir foto atar \n
-  **<a:rainbow:855248569136578570> ${prefix}manzara**  \`güzel bir manzara \n
+  **<a:rainbow:855248569136578570> ${prefix}aşkölçer** \`Etiketlediğiniz kişi ile aşkınızı ölçer.\`  \n
+  **<a:rainbow:855248569136578570> ${prefix}benimki**  \`komik bir foto atar.\`  \n
+  **<a:rainbow:855248569136578570> ${prefix}manzara**  \`güzel bir manzara.\`  \n
   **<a:rainbow:855248569136578570> ${prefix}hapishane**  \`pp nizi hapise koyar.\` \n
-  **<a:rainbow:855248569136578570> ${prefix}kaçcm**  \`Kaç santim malafatın var Bi bak istersen \n
-  **<a:rainbow:855248569136578570> ${prefix}kapaklaf**  \`Etiketlediğiniz kişiye laf sokar \n
-  **<a:rainbow:855248569136578570> ${prefix}missionfailed**\`Görev başarısız \n*
-  **<a:rainbow:855248569136578570> ${prefix}missionpassed**\`Görev başarılı. \n
-  **<a:rainbow:855248569136578570> ${prefix}adamasmaca**\`adamasmaca oyununu oynarsınız.\` \n
+  **<a:rainbow:855248569136578570> ${prefix}kaçcm**  \`Kaç santim malafatın var Bi bak istersen.\`  \n
+  **<a:rainbow:855248569136578570> ${prefix}kapaklaf**  \`Etiketlediğiniz kişiye laf sokar.\`  \n
+  **<a:rainbow:855248569136578570> ${prefix}missionfailed**\`Görev başarısız .\`  \n*
+  **<a:rainbow:855248569136578570> ${prefix}missionpassed**\`Görev başarılı. \`  \n
+  **<a:rainbow:855248569136578570> ${prefix}adamasmaca**\`adamasmaca oyununu oynarsınız.\`  \n
   **<a:rainbow:855248569136578570> ${prefix}şifre**\`Bot size dm den random şifre atar ve kırılması imkansız'dır.\`  \n
-  **<a:rainbow:855248569136578570> ${prefix}anime**\`Anime Font.\` * \n
+  **<a:rainbow:855248569136578570> ${prefix}anime**\`Anime Font.\`  \n
   **<a:rainbow:855248569136578570> ${prefix}ara155**\`polisi arar :).\`  \n
   **<a:rainbow:855248569136578570> ${prefix}green**\`yeşil bir logo atar.\`  \n
   **<a:rainbow:855248569136578570> ${prefix}alev**\`Alevli bir logo atar.\`  \n
   **<a:rainbow:855248569136578570> ${prefix}altın**\`Altın bir logo atar.\`  \n
-  **<a:rainbow:855248569136578570> ${prefix}arrow**\`Arrow Ne yazacağımı bulamadım  \n
+  **<a:rainbow:855248569136578570> ${prefix}arrow**\`Arrow Ne yazacağımı bulamadım :).\`  \n
   **<a:rainbow:855248569136578570> ${prefix}basit**\`Basıt bir logo.\`  \n
   **<a:rainbow:855248569136578570> ${prefix}elmas**\`Dinamik bir logo.\`  \n
   **<a:rainbow:855248569136578570> ${prefix}elmas**\`Elmas lı bir logo.\`  \n
   **<a:rainbow:855248569136578570> ${prefix}habbo**\`habbo lu bir logo.\`  \n
   **<a:rainbow:855248569136578570> ${prefix}banner**\`Banner oluşturur.\`  \n
-  **<a:rainbow:855248569136578570> ${prefix}çıkmateklifi**\`çıkma  \n
+  **<a:rainbow:855248569136578570> ${prefix}çıkmateklifi**\`çıkma teklifinde bulunursunuz.\`  \n
+  **<a:rainbow:855248569136578570> ${prefix}evlenmeteklifi**\`evlenme teklifinde bulunursunuz.\`  \n
 `
     
     
