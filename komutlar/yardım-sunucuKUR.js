@@ -15,7 +15,7 @@ let images = [''];
 message.channel.send(new Discord.MessageEmbed().setColor('#000001').setDescription(`**Sunucu-kur Ana Menüsüne Hoş Geldin Dostum :innocent:.
 ${client.user} Kullanırken Botun Özel Rolünü rolünü en yukarıda tutunuz.**
 **
-🐝 \`!sunucu-tema\` Menüsün de neler var?\`\n
+🐝 \`s!sunucu-tema\` Menüsün de neler var?\`\n
 
 > Public, Nitro, Oyun Gibi Sunucların Şablonları
 

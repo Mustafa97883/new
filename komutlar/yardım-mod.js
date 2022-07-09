@@ -12,7 +12,8 @@ const yardım = new Strom.MessageEmbed()
 .setAuthor(`Strom Yardım`)
 .setDescription(`**Bota Oy Vermek için** [TIKLA](https://top.gg/bot/756883309270663229/vote)
 **Bota yorum atıp 5 yıldız vermeyi unutma :)** [TIKLA](https://top.gg/bot/756883309270663229)
-
+  **Strom Müzik botunu eklemek için [TIKLA](https://discord.com/api/oauth2/authorize?client_id=854122011151826975&permissions=8&scope=bot%20applications.commands)
+  
 🔧 \`${prefix}ban\:  Belirttiğiniz Üyeyi Sunucudan Yasaklar\`\n
 🔧 \`${prefix}nuke\:  Kanaldaki bütün mesajları siler\`\n
 🔧 \`${prefix}otorol\:  Etiketlediğiniz rolü her gelen üyeye verir\`\n
