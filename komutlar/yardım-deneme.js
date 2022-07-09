@@ -1,61 +1,30 @@
-const Discord = require("discord.js");
+const Discord = require("discord.js")
 
-exports.run = async (client, message) => {
+exports.run = async(client, message) => {
+	
+	let prefix = 's!'
 
-var page = 0;
-  
-let arr = [];
-let emojiarr = message.guild.emojis.cache.array();
-
-for(let i =0; Number(i + "0") < (Math.round(emojiarr.length/10)*10 +1); ++i) {//kafami sktm birda
-var on = emojiarr.slice(Number(i + "0"), Number(i + "0")+10)
-arr.push(on.toString())
+	const codare = new Discord.RichEmbed()
+       .setAuthor(`Komutlar`)
+       .setTitle(`Örnek(Yetkili) Komutları`)
+       .setDescription(`!yardım = Yardım Komutlarını Gösterir. \n!davet = Botun Davet Linkini Gönderir \n Bu Şekilde yaparak komutlarınınızı ekleyin.`)
+       .addField("» Linkler", ` \n[Davet Et](https://goo.gl/2WhBSB)` + "**  **" + `\n[Destek Sunucusu](https://discord.gg/Hn2sqc5)`  + "**  **" + `\n [Web Sitesi](https://gnargebot.glitch.me/)  `, false)
+       .setFooter(`Yapımcı Sunucu CodAre`)
+  return message.channel.send(codare)
 }
-//console.log(arr)
-let embd = new Discord.MessageEmbed()
-message.channel.send(embd.setDescription(arr[0]).setFooter(`Sayfa ${page+1} / ${arr.length+1}`)).then(async msg => {
-      await msg.react("⬅️");
-      await msg.react("➡️");
 
-      let filter = (reaction, user) => user.id !== message.client.user.id && user.id === message.author.id;
 
-      var collector = msg.createReactionCollector(filter, {
-        time: 120000
-      });
 
-      collector.on("collect", async (reaction, user) => {
-        switch (reaction.emoji.name) {
-          case "⬅️":
-            reaction.users.remove(user).catch(console.error);
-            if (page == 0) return;
-            --page
-
-              embd.setColor("RANDOM");
-              embd.setFooter(`Sayfa ${page+1} / ${arr.length+1}`);
-              embd.setDescription(arr[page])
-            msg.edit(embd)
-           break;
-          case "➡️":
-            if (page == arr.length) return;
-            ++page
-            reaction.users.remove(user).catch(console.error);
-              embd.setColor("RANDOM");
-              embd.setFooter(`Sayfa ${page+1} / ${arr.length+1}`);
-              embd.setDescription(arr[page] || "Bulunamadi")
-            msg.edit(embd)
-          break;
-
-        }
-      });
-
-})
-}
 exports.conf = {
   enabled: true,
-  aliases: [],
-  permLevel: 0
+  guildOnly: false,
+  aliases: ['yardım-'],
+  permLevel: 0,
+  kategori: `Geliştirici`
 };
 
 exports.help = {
-  name: "emojiler"
+  name: 'yardım-',
+  description: '[Admin Komutu]',
+  usage: '!bakım-mod aç'
 };
