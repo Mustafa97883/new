@@ -56,10 +56,11 @@ message.delete()
 message.channel.send(`Çekiliş hangi kanalda yapılacak?`).then(() => {
 message.channel.awaitMessages(filter, { maxMatches: 1, time: 60000, errors: ['time'] }).then(collected => {
 let as = collected.first().content.replace('<#', '').replace('>', '')
-let ch = message.guild.channels.get(as)
+let ch = message.guild.channels.cache.get(as)
 if(!ch) return message.channel.send(`Etiketlediğin kanalı bulamadım, işlem iptal edildi.`)
 message.delete()
 message.channel.send(`Kanal: ${ch}`).then(() => kanal.push(ch.id))
+
   
 message.channel.send(`Çekiliş süresi ne kadar? (1 dakika/1 saat)`).then(() => {
 message.channel.awaitMessages(filter, { maxMatches: 1, time: 60000, errors: ['time'] }).then(collected => {
@@ -69,18 +70,19 @@ message.channel.send(`Süre: ${az}`).then(() => zaman.push(collected.first().con
   const sure = zaman.slice(0).join(' ')
     const bitecegizamanms = Date.now() + ms(sure.replace(' dakika', 'm').replace(' saat', 'h').replace(' saniye', 's').replace(' gün', 'd'))
   
-    const embed = new Discord.RichEmbed()
-  .setAuthor(client.user.username, client.user.avatarURL)
+    const embed = new Discord.MessageEmbed()
+  .setAuthor(client.user.username, client.user.avatarURL())
   .setTimestamp()
   .setFooter(`Çekiliş Sistemi`)
   .setDescription(`**Ödül**: ${ödül.slice(0).join(' ')}
+
 
 Başlatan: ${message.author.username}
 Zaman: ${sure}
 
 Katılmak için 🎉 tepkisine tıklayın.`)
   .setTitle(`Bir çekiliş başladı!`)
-message.guild.channels.get(kanal[0]).send(embed).then(async c => {
+message.guild.channels.cache.get(kanal[0]).send(embed).then(async c => {
 message.delete()
 data.set(`çk.${c.id}`)
 data.set(`ödü.${c.id}`, ödül.slice(0).join(' '))
@@ -88,14 +90,15 @@ data.set(`ma.${c.id}`, message.author.id)
 data.set(`..başladı.${message.guild.id}`, {ödül: ödül, host: message.author.username, host1: message.author.tag, message: c.id, channel: kanal[0], süre: bitecegizamanms})
 c.react('🎉').then(async reaction => {
 const interval = setInterval(async function(){
-const kalanzaman = bitecegizamanms - Date.now()   
+const kalanzaman = bitecegizamanms - Date.now()
+
 
 if (kalanzaman <= 0) {
 clearInterval(interval)
 const kişiler = reaction.users
 await sleep(50)
-const embed = new Discord.RichEmbed()
-  .setAuthor(client.user.username, client.user.avatarURL)
+const embed = new Discord.MessageEmbed()
+  .setAuthor(client.user.username, client.user.avatarURL())
   .setTimestamp()
   .setFooter(`Çekiliş Sistemi`)
   .setDescription(`**Ödül**: ${ödül.slice(0).join(' ')}
@@ -105,8 +108,8 @@ Başlatan: ${message.author.username}`)
   .setTitle(`Çekiliş bitti!`)
 c.edit(embed)
 
-let asd = c.reactions.get(`🎉`).users.random()
-message.guild.channels.get(kanal[0]).send(`Tebrikler, ${asd}! Bizden ${ödül[0]} kazandın.
+let asd = c.reactions.cache.get(`🎉`).users.random()
+message.guild.channels.cache.get(kanal[0]).send(`Tebrikler, ${asd}! Bizden ${ödül[0]} kazandın.
 Ödülünü alabilmek için: ${message.author.tag} kişisine ulaş.`)
 data.delete(`..başladı.${message.guild.id}`)
 } else {
