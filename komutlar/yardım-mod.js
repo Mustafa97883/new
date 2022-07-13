@@ -22,6 +22,7 @@ const yardım = new Strom.MessageEmbed()
 🔧\`${prefix}sunucutanıt\:  Sunucunuzu bizim sunucuda tanıtır.\`\n
 🔧\`${prefix}sayaç-ayarla\:  Sunucunuza sayaç ayarlarsınız.\`\n
  🔧\`${prefix}kurallar\:  Sunucu için kurallar atar.\`\n
+  🔧\`${prefix}slowmode\:  sohbet kanalına slowmode atarsınız.\`\n
  🔧\`${prefix}servericon\:  sunucu iconunu gösterir.\`\n
 🔧\`${prefix}rank\:  Seviyenizi gösterir.\`\n
 🔧\`${prefix}sohbet-aç\:  sohbet i yazılabilir hale getirir.\`\n
