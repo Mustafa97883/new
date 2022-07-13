@@ -156,17 +156,18 @@ let mesaj = args[2]
 if(!mesaj) return message.channel.send(`Bir mesaj ID'si girmeyi unuttun.`)
 if(isNaN(mesaj)) return message.channel.send(`Bir mesaj ID'si girmelisin.`)
 
-let asd = channel.fetchMessage(mesaj).then(async msg => {
+let asd = channel.users.messages(mesaj).then(async msg => {
 const ads = await data.fetch(`çk.${msg.id}`)
 const ödü = await data.fetch(`ödü.${msg.id}`)
 const ma = await data.fetch(`ma.${msg.id}`)
 if(!ads) return message.channel.send(`Hala bitmemiş olan veya çekiliş mesajı olmayan bir mesajın ID'sini girdin.`)
-let asdd = msg.reactions.get(`🎉`).users.random()
-let arc = msg.reactions.get(`🎉`);
+let asdd = msg.reactions.cache.get(`🎉`).users.random()
+let arc = msg.reactions.cache.get(`🎉`);
 if(!arc) return message.channel.send(`Bu mesaja kimse tepki vermemiş.`)
 channel.send(`Tebrikler, ${asdd}! Bizden ${ödü} kazandın.
-Ödülünü alabilmek için: ${client.users.get(ma)} kişisine ulaş.`)
+Ödülünü alabilmek için: ${client.users.cache.get(ma)} kişisine ulaş.`)
 })}
+
   
   
 };
