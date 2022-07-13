@@ -40,10 +40,10 @@ exports.run = async (client, message, args) => {// chimp#0110
 if(!message.member.hasPermission('ADMINISTRATOR')) return message.channel.send(`Gerekli yetkiye sahip değilsin.`)
 const asd = await data.fetch(`..başladı.${message.guild.id}`);
 if(asd) return message.channel.send('Bu sunucuda aktif bir çekiliş zaten var.');
-if(!args[0]) return message.channel.send(`Bir argüman girmelisin: !çekiliş başlat/tekrar`)
-let arg = ['başlat', 'tekrar']
-if(!arg.includes(args[0])) return message.channel.send(`Sadece !çekiliş başlat/tekrar kullanabilirsin.`)
-if(args[0] === 'başlat') {
+if(!args[0]) return message.channel.send(`Bir argüman girmelisin: s!çekiliş yap/tekrar`)
+let arg = ['yap', 'tekrar']
+if(!arg.includes(args[0])) return message.channel.send(`Sadece s!çekiliş yap/tekrar kullanabilirsin.`)
+if(args[0] === 'yap') {
 try {
 const filter = m => m.author.id == message.author.id;
      
