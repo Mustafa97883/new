@@ -17,6 +17,7 @@ dependencies:
   discord: 0.8.2
   discord-anti-spam-tr: 0.7.4
   discord-buttons: 4.0.0
+  discord-giveaways: 5.2.2
   discord-logs: 1.9.0
   discord.js: 12.5.3
   discord.js-commando: 0.10.0
@@ -1606,6 +1607,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-oIPzksmTg4/MriiaYGO+okXDT7ztn/w3Eptv/+gSIdMdKsJo0u4CfYNFJPy+4SKMuCqGw2wxnA+URMg3t8a/bQ==
+  /deepmerge-ts/4.2.1:
+    dev: false
+    engines:
+      node: '>=12.4.0'
+    resolution:
+      integrity: sha512-xzJLiUo4z1dD2nggSfaMvHo5qWLoy/JVa9rKuktC6FrQQEBI8Qnj7KwuCYZhqBoGOOpGqs6+3MR2ZhSMcTr4BA==
   /default-require-extensions/1.0.0:
     dependencies:
       strip-bom: 2.0.0
@@ -1735,6 +1742,17 @@ packages:
     dev: false
     resolution:
       integrity: sha512-E/eQX4Ktj7nKwNDsTfCezBNCu73FtPWJfQcpKohfl0jct/ucMUO+7uhL2MhGsZr4SCfojk7OzccAznuntB564w==
+  /discord-giveaways/5.2.2:
+    dependencies:
+      deepmerge-ts: 4.2.1
+      serialize-javascript: 6.0.0
+    dev: false
+    engines:
+      node: '>=16.6.0'
+    peerDependencies:
+      discord.js: '>=13.5.0'
+    resolution:
+      integrity: sha512-aYUF1IiPdni+yxdSbPoUtQT5DmU9SOxmFjeuOJLF+4GUVewwT3o+V3tG3P5oJRc3yyYgzCiaWhFCXeHTu4YReA==
   /discord-logs/1.9.0:
     dependencies:
       '@types/node': 14.17.27
@@ -4639,6 +4657,12 @@ packages:
       node: '>= 0.10.0'
     resolution:
       integrity: sha512-TuDE5KxZ0J461RVjrJZCJc+J+zCkTb1MbH9AQUq68sMhOMcy9jLcb3BrZKgp9q9Ncltdg4QVqWrH02W2EFFVYw==
+  /randombytes/2.1.0:
+    dependencies:
+      safe-buffer: 5.2.1
+    dev: false
+    resolution:
+      integrity: sha512-vYl3iOX+4CKUWuxGi9Ukhie6fsqXqS9FE2Zaic4tNFD2N2QQaXOMFbuKK4QmDHC0JO6B1Zp41J0LpT0oR68amQ==
   /range-parser/1.2.1:
     dev: false
     engines:
@@ -4966,6 +4990,12 @@ packages:
       node: '>= 0.8.0'
     resolution:
       integrity: sha512-qqWzuOjSFOuqPjFe4NOsMLafToQQwBSOEpS+FwEt3A2V3vKubTquT3vmLTQpFgMXp8AlFWFuP1qKaJZOtPpVXg==
+  /serialize-javascript/6.0.0:
+    dependencies:
+      randombytes: 2.1.0
+    dev: false
+    resolution:
+      integrity: sha512-Qr3TosvguFt8ePWqsvRfrKyQXIiW+nGbYpy8XK24NQHE83caxWt+mIymTT19DGFbNWNLfEwsrkSmN64lVWB9ag==
   /serve-static/1.15.0:
     dependencies:
       encodeurl: 1.0.2
@@ -5941,6 +5971,7 @@ specifiers:
   discord: ^0.8.2
   discord-anti-spam-tr: ^0.7.4
   discord-buttons: ^4.0.0
+  discord-giveaways: ^5.2.2
   discord-logs: ^1.9.0
   discord.js: ^12.5.3
   discord.js-commando: ^0.10.0

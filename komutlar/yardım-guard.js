@@ -17,6 +17,7 @@ const yardım = new Strom.MessageEmbed()
   
 🔰 \`${prefix}kanal-koruma\` : **Kanal Koruma Aç/Kapat**
 🔰 \`${prefix}küfür-engel\`:  **Küfür Engel Aç/Kapat**
+🔰 \`${prefix}reklam-log\` :  **küfür log kanalı açarsınız**
 🔰 \`${prefix}reklam-engel\` :  **Reklam Engel Aç/Kapat**
 🔰 \`${prefix}Antiraid\` :  **Antiraid sistemini Açıp Kapatırsınız**
 🔰 \`${prefix}caps-engel\` :  **Büyük harf engeli**
