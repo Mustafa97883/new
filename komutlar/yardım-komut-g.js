@@ -23,8 +23,8 @@ dbl.hasVoted(message.author.id).then(voted => {
   **Bota yorum atıp 5 yıldız vermeyi unutma :)** [TIKLA](https://top.gg/bot/756883309270663229)
   **Strom Müzik botunu eklemek için [TIKLA](https://discord.com/api/oauth2/authorize?client_id=854122011151826975&permissions=8&scope=bot%20applications.commands)
  
-  **<a:rainbow:855248569136578570> **s!v11tov12**\`komutunuzu v11 den v12 ye çevirir.\` \n
-   **<a:rainbow:855248569136578570> **s!v12tov13**\`komutunuzu v12 den v13 ye çevirir.\` \n
+  <a:rainbow:855248569136578570> **s!v11tov12**\`komutunuzu v11 den v12 ye çevirir.\` \n
+  <a:rainbow:855248569136578570> **s!v12tov13**\`komutunuzu v12 den v13 ye çevirir.\` \n
 `
     
     
