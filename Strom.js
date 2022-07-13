@@ -14,6 +14,7 @@ const moment = require('moment');
 var Jimp = require('jimp');
 const { Client, Util, Collection } = require('discord.js');
 const Database = require("./Helpers/Database");
+const { GiveawaysManager } = require('discord-giveaways');
 const Invites = new Collection(); //
 const fs = require('fs');
 const db = require('quick.db');
@@ -938,7 +939,7 @@ const Strom = new Strom.MessageEmbed()
 
 // çekiliş sistemi
 
-const { GiveawaysManager } = require('discord-giveaways');
+
 client.giveawaysManager = new GiveawaysManager(client, {
     storage: "./giveaways.json",
     updateCountdownEvery: 5000,

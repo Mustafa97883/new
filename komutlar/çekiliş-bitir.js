@@ -53,5 +53,5 @@ exports.conf = {
 exports.help = {
   name: "çekilişbitir",
   description: "çekilişi bitirir",
-  usage: "s!çekiliş-bitir"
+  usage: "w!çekiliş-bitir"
 }

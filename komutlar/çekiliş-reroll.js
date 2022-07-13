@@ -37,5 +37,5 @@ exports.conf = {
 exports.help = {
   name: "reroll",
   description: "reroll",
-  usage: "s!reroll"
+  usage: "w!reroll"
 }
