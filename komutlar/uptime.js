@@ -19,7 +19,7 @@ dbl.hasVoted(message.author.id).then(voted => {
     )
     .setColor("#d02090")
     .setTitle(` **Strom uptime** `)
-    .setDescription(`**uptime etmek için** [TIKLA](https://discord.gg/48NHnVYpNJ)
+    .setDescription(`[Uptime](https://discord.gg/48NHnVYpNJ)
 `
     
     
