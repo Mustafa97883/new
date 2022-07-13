@@ -5,7 +5,7 @@ app.get("/foo", (req, res, next) => {
 })
 process.on("unhandledRejection", (reason, promise) => {})
 
-const { GiveawaysManager } = require('discord-giveaways');
+
 const Strom = require('discord.js');
 const client = new Strom.Client();
 const ayarlar = require('./ayarlar.json');
@@ -939,14 +939,16 @@ const Strom = new Strom.MessageEmbed()
 // çekiliş sistemi
 
 
+const { GiveawaysManager } = require('discord-giveaways');
 client.giveawaysManager = new GiveawaysManager(client, {
     storage: "./giveaways.json",
     updateCountdownEvery: 5000,
     default: {
         botsCanWin: false,
+        exemptPermissions: [ "MANAGE_MESSAGES", "ADMINISTRATOR" ],
         embedColor: "#FF0000",
         reaction: "🎉"
-    }
+    }//#FF0000
 });
 
 
