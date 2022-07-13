@@ -1,4 +1,4 @@
-const Strom = require('discord.js')
+const Discord = require('discord.js')
 const db = require('quick.db');
 const ayarlar = require('../ayarlar.json')
 
@@ -8,12 +8,12 @@ exports.run = async (client, message, args) => {
   const silinecekkllnc = message.mentions.members.first();
   let para = args[1]
   if(!silinecekkllnc) return message.channel.send(`Bir kullanıcı belirtmelisin!`)
-  const bakiye = await db.fetch(`bakiye-${silinecekkllnc.id}`);
-  const hesapdurumu = await db.fetch(`hesapdurum-${silinecekkllnc.id}`);
-  const hesapismi = await db.fetch(`hesapismi-${silinecekkllnc.id}`);
+  const bakiye = await db.fetch(`bakiyecdare-${silinecekkllnc.id}`);
+  const hesapdurumu = await db.fetch(`hesapdurumcodare-${silinecekkllnc.id}`);
+  const hesapismi = await db.fetch(`hesapismiçodare-${silinecekkllnc.id}`);
   
   if(!hesapdurumu) return message.channel.send(`Kayıtlı olan bir kullanıcı belirtmelisin!`)
-  await db.add(`bakiyeStrom-${silinecekkllnc.id}`, para)
+  await db.add(`bakiyecdare-${silinecekkllnc.id}`, para)
   
   
   message.channel.send(`:+1:`)
@@ -22,12 +22,12 @@ exports.run = async (client, message, args) => {
 exports.conf = {
     enabled: true,
     guildOnly: true,
-    aliases: ['para-ekle'],
+    aliases: ['ekle'],
     permLevel: 0
 }
 
 exports.help = {
-    name: 'para-ekle',
-    description: 'Strom',
-    usage: 'Strom'
+    name: 'ekle',
+    description: 'Kullanıcıların kullanıcı adını tarar.',
+    usage: 'tag-taraması <tag>'
 }
