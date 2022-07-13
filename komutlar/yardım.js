@@ -37,8 +37,8 @@ dbl.hasVoted(message.author.id).then(voted => {
   <a:rainbow:855248569136578570> **s!nsfw**\`+18 komutları gösterir.\` \n
   <a:rainbow:855248569136578570> **s!uptime**\`Botunuzu 7/24 yapmaya yarar.\` \n
   <a:rainbow:855248569136578570> **s!komut-güncelleme\`komutlarınızı v11tov12, v12tov13.\` \n
-  <a:rainbow:855248569136578570> **s!yardım-çekiliş\`çekiliş komutlarını gösterir.\` \n
-  <a:rainbow:855248569136578570> **s!otorol-sistemi\`otorol komutlarını gösterir.\` \n
+  <a:rainbow:855248569136578570> s!çekiliş-sistemi\`çekiliş komutlarını gösterir.\` \n
+  <a:rainbow:855248569136578570> s!otorol-sistemi\`otorol komutlarını gösterir.\` \n
 `
     
     

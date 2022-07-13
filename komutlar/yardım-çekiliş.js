@@ -1,10 +1,10 @@
-const Strom = require('discord.js');
-const Discord = new Strom.Client();
+const AsreaperDiscord = require('discord.js');
+const AsreaperClient = new AsreaperDiscord.Client();
 const ayarlar = require('../ayarlar.json');
 let prefix = ayarlar.prefix
 
 exports.run = (client, message) => {
- const Strom = new Strom.MessageEmbed()
+ const AsreaperEmbed = new AsreaperDiscord.MessageEmbed()
  .setAuthor(`${client.user.username} Strom | çekiliş menüsü`)
  .setColor("RED")
 .addFields({
@@ -31,7 +31,7 @@ exports.run = (client, message) => {
   .setFooter(`*                                                               ${client.user.username} | © 2022                                                                      *`)
  .setImage()
  
- message.channel.send(Strom)
+ message.channel.send(AsreaperEmbed)
 }
 exports.conf = {
   enabled: true,

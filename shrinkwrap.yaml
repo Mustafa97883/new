@@ -17,7 +17,7 @@ dependencies:
   discord: 0.8.2
   discord-anti-spam-tr: 0.7.4
   discord-buttons: 4.0.0
-  discord-giveaways: 5.2.2
+  discord-giveaways: 4.5.1
   discord-logs: 1.9.0
   discord.js: 12.5.3
   discord.js-commando: 0.10.0
@@ -1607,12 +1607,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-oIPzksmTg4/MriiaYGO+okXDT7ztn/w3Eptv/+gSIdMdKsJo0u4CfYNFJPy+4SKMuCqGw2wxnA+URMg3t8a/bQ==
-  /deepmerge-ts/4.2.1:
+  /deepmerge/4.2.2:
     dev: false
     engines:
-      node: '>=12.4.0'
+      node: '>=0.10.0'
     resolution:
-      integrity: sha512-xzJLiUo4z1dD2nggSfaMvHo5qWLoy/JVa9rKuktC6FrQQEBI8Qnj7KwuCYZhqBoGOOpGqs6+3MR2ZhSMcTr4BA==
+      integrity: sha512-FJ3UgI4gIl+PHZm53knsuSFpE+nESMr7M4v9QcgB7S63Kj/6WqMiFQJpBBYz1Pt+66bZpP3Q7Lye0Oo9MPKEdg==
   /default-require-extensions/1.0.0:
     dependencies:
       strip-bom: 2.0.0
@@ -1742,17 +1742,13 @@ packages:
     dev: false
     resolution:
       integrity: sha512-E/eQX4Ktj7nKwNDsTfCezBNCu73FtPWJfQcpKohfl0jct/ucMUO+7uhL2MhGsZr4SCfojk7OzccAznuntB564w==
-  /discord-giveaways/5.2.2:
+  /discord-giveaways/4.5.1:
     dependencies:
-      deepmerge-ts: 4.2.1
-      serialize-javascript: 6.0.0
+      deepmerge: 4.2.2
+      serialize-javascript: 5.0.1
     dev: false
-    engines:
-      node: '>=16.6.0'
-    peerDependencies:
-      discord.js: '>=13.5.0'
     resolution:
-      integrity: sha512-aYUF1IiPdni+yxdSbPoUtQT5DmU9SOxmFjeuOJLF+4GUVewwT3o+V3tG3P5oJRc3yyYgzCiaWhFCXeHTu4YReA==
+      integrity: sha512-aSOD7IiCqfJ2sU1GbdH0EP/xwuXZW/h7+8RH6LzgfZaYy2V89O0qKwbe52Dy2ToymAexPhEGpDKZHrm6Vd0Jqw==
   /discord-logs/1.9.0:
     dependencies:
       '@types/node': 14.17.27
@@ -4990,12 +4986,12 @@ packages:
       node: '>= 0.8.0'
     resolution:
       integrity: sha512-qqWzuOjSFOuqPjFe4NOsMLafToQQwBSOEpS+FwEt3A2V3vKubTquT3vmLTQpFgMXp8AlFWFuP1qKaJZOtPpVXg==
-  /serialize-javascript/6.0.0:
+  /serialize-javascript/5.0.1:
     dependencies:
       randombytes: 2.1.0
     dev: false
     resolution:
-      integrity: sha512-Qr3TosvguFt8ePWqsvRfrKyQXIiW+nGbYpy8XK24NQHE83caxWt+mIymTT19DGFbNWNLfEwsrkSmN64lVWB9ag==
+      integrity: sha512-SaaNal9imEO737H2c05Og0/8LUXG7EnsZyMa8MzkmuHoELfT6txuj0cMqRj6zfPKnmQ1yasR4PCJc8x+M4JSPA==
   /serve-static/1.15.0:
     dependencies:
       encodeurl: 1.0.2
@@ -5971,7 +5967,7 @@ specifiers:
   discord: ^0.8.2
   discord-anti-spam-tr: ^0.7.4
   discord-buttons: ^4.0.0
-  discord-giveaways: ^5.2.2
+  discord-giveaways: ^4.2.1
   discord-logs: ^1.9.0
   discord.js: ^12.5.3
   discord.js-commando: ^0.10.0
