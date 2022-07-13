@@ -56,8 +56,7 @@
     "vultrex.db": "^1.4.1",
     "weather-js": "^2.0.0",
     "akaneko": "^5.2.3",
-    "discord-anti-spam-tr": "^0.7.4",
-    "discord-player": "^5.2.2"
+    "discord-anti-spam-tr": "^0.7.4"
   },
   "engines": {
     "node": "12.x"

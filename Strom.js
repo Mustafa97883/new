@@ -1,3 +1,11 @@
+const express = require("express")
+const app = express()
+app.get("/foo", (req, res, next) => {
+    const foo = JSON.parse(req.body.jsonString)
+})
+process.on("unhandledRejection", (reason, promise) => {})
+
+
 const Strom = require('discord.js');
 const client = new Strom.Client();
 const ayarlar = require('./ayarlar.json');
@@ -14,13 +22,7 @@ const path = require('path');
 const snekfetch = require('snekfetch');
 const ms = require('ms');
 const fetch = require('node-fetch')
-const discord = require('discord.js');
-const { Player } = require('discord-player');
-const player = new Player(client);
-client.player = player;
-client.emotes = require('./config/emojis.json');
-client.filters = require('./config/filters.json');
-client.commands = new discord.Collection();
+
 
 setInterval(async () => {
   await fetch('https://glitch.com/edit/#!/sayisal-bot-v234123123e142123432','https://sayisal-bot-v234123123e142123432.glitch.me').then(console.log('Uptimed!'))
@@ -65,15 +67,6 @@ fs.readdir('./komutlar/', (err, files) => {
 });
 
 
-fs.readdir('./player-events/', (err, files) => {
-    if (err) return console.error(err);
-    files.forEach(file => {
-        const event = require(`./player-events/${file}`);
-        let eventName = file.split(".")[0];
-        console.log(`Loading player event ${eventName}`);
-        client.player.on(eventName, event.bind(null, client));
-    });
-});
 
 
 client.reload = command => {
@@ -167,6 +160,7 @@ if (kurulus > 1296000000) kontrol = '**Güvenli**'
   return
     })
 
+client.login(process.env.token);
 
 //----------komut------------//
 
@@ -1656,4 +1650,3 @@ client.on("guildBanRemove", async (guild, user) => {
 });
 // ModLog Son
 
-client.login(process.env.token);
