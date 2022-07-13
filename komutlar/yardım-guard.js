@@ -21,6 +21,7 @@ const yardım = new Strom.MessageEmbed()
 🔰 \`${prefix}Antiraid\` :  **Antiraid sistemini Açıp Kapatırsınız**
 🔰 \`${prefix}caps-engel\` :  **Büyük harf engeli**
 🔰 \`${prefix}spam-engel\` :  **Spam yapanları durdurur**
+🔰 \`${prefix}spam-kapat\` :  **Spam engeli kapatırsınız**
 🔰 \`${prefix}everhereengel\` :  **@everyone @here engeli atar**
 🔰 \`${prefix}isim-reklam-koruma\`:  **Kullanıcının isminde reklam varsa onu sunucudan banlar**
 🔰 \`${prefix}sohbet aç-kapat\` :  **Sohbeti Açıp Kapatırsınız**
