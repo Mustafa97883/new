@@ -11,7 +11,7 @@ dbl.hasVoted(message.author.id).then(voted => {
   let v11Kod = args.slice(0).join(" ");
   if (!v11Kod) {
     return message.channel.send(
-      "Kodunu V13 Geçirmem İçin Kodunu Yazmalısın."
+      "Kodunu V12 Geçirmem İçin Kodunu Yazmalısın."
     );
   }
   if (v11Kod.length > 2000) {
@@ -96,7 +96,7 @@ dbl.hasVoted(message.author.id).then(voted => {
     .join("client.ws.ping")
 
   if (v11Kod == v12kod) {
-    return message.channel.send("Bu Komut Zaten V13");
+    return message.channel.send("Bu Komut Zaten V12");
   }
 
     
