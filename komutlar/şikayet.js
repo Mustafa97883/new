@@ -6,7 +6,7 @@ new Discord.MessageEmbed()
 .setDescription('Kullanım: s!sikayet <Şikayet>'));
 const embed = new Discord.MessageEmbed()
 .setColor('RANDOM')
-.setDescription('Şikayetiniz Bildirildi!')
+.setDescription('Şikayetiniz [SUNUCUDA](https://discord.gg/fr43SS2n64) Bildirildi!')
 message.channel.send(embed)
 const embed2 = new Discord.MessageEmbed()
 .setColor("RANDOM")

@@ -18,7 +18,6 @@ const yardım = new Strom.MessageEmbed()
 🔧 \`${prefix}nuke\:  Kanaldaki bütün mesajları siler\`\n
 🔧 \`${prefix}otorol\:  Etiketlediğiniz rolü her gelen üyeye verir\`\n
 🔧\`${prefix}ototag\:  Etiketlediğiniz tagı her gelen üyeye verir\`\n
-🔧\`${prefix}yetkilerim\:  Sunucudaki yetkilerinizi gösterir\`\n
 🔧\`${prefix}sunucutanıt\:  Sunucunuzu bizim sunucuda tanıtır.\`\n
 🔧\`${prefix}sayaç-ayarla\:  Sunucunuza sayaç ayarlarsınız.\`\n
  🔧\`${prefix}kurallar\:  Sunucu için kurallar atar.\`\n
@@ -31,10 +30,7 @@ const yardım = new Strom.MessageEmbed()
 🔧\`${prefix}ban-limit\: ban limiti ayarlarsınız.\`\n
 🔧 \`${prefix}oylama\: oylama.\`\n
 🔧 \`${prefix}çoklu-oylama\:  şıklı oylama.\`\n
-🔧 \`${prefix}komutlar\:  bottaki bütün komutları gösterir.\`\n
-🔧 \`${prefix}toplamkomut\:  bottaki toplam kaç komut var onu gösterir.\`\n
 🔧 \`${prefix}hesapla\:  Matematik işlemi.\`\n
-🔧 \`${prefix}gkanal \:  gelen-giden kanalı ayarlarsınız..\`\n
 `)
 .setThumbnail(message.author.avatarURL())
 message.channel.send(yardım)

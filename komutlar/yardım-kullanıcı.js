@@ -25,8 +25,9 @@ dbl.hasVoted(message.author.id).then(voted => {
     
   **<a:rainbow:855248569136578570> ${prefix}bugbildir\:  bu komut oluşabilecek hatalar içindir.\`\n
   **<a:rainbow:855248569136578570> ${prefix}kullanıcıbilgi\:  Kullanıcının bilgilerini gösterir.\`\n
-  ${prefix}şablon-gönder\: bize sunucu şablonu gönderir. Beğenirsek s!diğer-temalar larına eklenir.\`\n
+  **<a:rainbow:855248569136578570> ${prefix}şablon-gönder\: bize sunucu şablonu gönderir. Beğenirsek s!diğer-temalar larına eklenir.\`\n
   **<a:rainbow:855248569136578570> ${prefix}tavsiye\:  Bot için tafsiye verin.\`\n
+  **<a:rainbow:855248569136578570> ${prefix}şikayet\:  şikayette bulunursunuz.\`\n
 `
     
     
