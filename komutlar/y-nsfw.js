@@ -141,7 +141,7 @@ exports.run = async(bot, message, args) => {
 };
 
 exports.conf = {
-    aliases: ['nsfw'],
+    aliases: ['nsfw-anime','anime'],
     permLevel: 0,
     kategori: "Eğlence",
 };
