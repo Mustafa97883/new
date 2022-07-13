@@ -11,18 +11,6 @@ exports.run = (client, message) => {
                 name: '**s!çekiliş**',
                   value: "Çekiliş başlatır",
                 inline: true
-              },
-              {
-                name: '**s!reroll**',
-                    value: "Çekilişi yeniden çeker",
-                inline: true
-              },
-              {
-                name: '**s!çekilişbitir**',
-                    value: "Çekilişi bitirir",
-                inline: true
-             
-             
               
               
      
