@@ -1,9 +1,10 @@
 const akaneko = require("akaneko")
 const Discord = require("discord.js")
-
+const data = require("quick.db")
 
 exports.run = async(bot, message, args) => {
-    
+    if(message.channel.nsfw == false) return message.channel.send(new Discord.MessageEmbed().setTitle('Bir hata oldu!').setImage('https://support.discord.com/hc/article_attachments/360007795191/2_.jpg').setDescription(`${message.author} **Kanal __NSFW__ olarak aktif değil. Kontrol et!**`).setColor('#00001'))
+if(await data.fetch(`slm.${message.author.id}.${message.guild.id}.h`)) return message.channel.send(new Discord.MessageEmbed().setColor('#00001').setDescription(`**10 saniyenin altında hızlı kullanamazsın!**`));
   
   
   
