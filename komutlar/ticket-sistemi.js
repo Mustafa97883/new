@@ -5,7 +5,7 @@ exports.run = function(client, message, args) {
   const db = require('quick.db')
 let prefix = db.fetch(`prefix_${message.guild.id}`) || ayarlar.prefix;
 let embed = new Discord.MessageEmbed()
-.setTitle(`Zivo Code - Ticket  `)
+.setTitle(`Strom - Ticket  `)
 .setColor("RANDOM")
 .setDescription(`
 \`${prefix}ticket aç\` Ticket açar. 
