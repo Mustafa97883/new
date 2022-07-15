@@ -16,7 +16,7 @@ const yardım = new Strom.MessageEmbed()
   
 🔧 \`${prefix}ban\:  Belirttiğiniz Üyeyi Sunucudan Yasaklar\`\n
 🔧 \`${prefix}nuke\:  Kanaldaki bütün mesajları siler\`\n
-🔧 \`${prefix}otorol\:  Etiketlediğiniz rolü her gelen üyeye verir\`\n
+🔧 \`${prefix}otorol-sistemi\`otorol komutlarını gösterir\`\n
 🔧\`${prefix}ototag\:  Etiketlediğiniz tagı her gelen üyeye verir\`\n
 🔧\`${prefix}sunucutanıt\:  Sunucunuzu bizim sunucuda tanıtır.\`\n
 🔧\`${prefix}sayaç-ayarla\:  Sunucunuza sayaç ayarlarsınız.\`\n

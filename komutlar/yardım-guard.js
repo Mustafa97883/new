@@ -31,6 +31,7 @@ const yardım = new Strom.MessageEmbed()
 🔰 \`${prefix}istatistik\`:  **Botun İstatistiklerini Atar**
 🔰 \`${prefix}temizle\`:  **Belirttiğiniz Sayıda Mesajı Siler**
 🔰 \`${prefix}ping\`:  **Pinginizi Ölçüp Atar**
+🔰 \`${prefix}mute-sistemi**  \`İlk Olarak Kurulum Yapınız**
 
 `)
 .setThumbnail(message.author.avatarURL())

@@ -26,7 +26,6 @@ dbl.hasVoted(message.author.id).then(voted => {
   <a:rainbow:855248569136578570> **tag** \`Destek sunucusunun tagını gösterir.\`\n
   <a:rainbow:855248569136578570> **s!moderasyon-sistemi**  \`Moderasyon komutlarını gösterir.\` \n
   <a:rainbow:855248569136578570> **s!guard-sistemi**  \`Koruma Komutlarını Gösterir.\` \n
-  <a:rainbow:855248569136578570> **s!mutesistem**  \`İlk Olarak Kurulum Yapınız.\`\n
   <a:rainbow:855248569136578570> **s!kasa-yardım**  \`kasa Komutlarını Gösterir.\` \n
   <a:rainbow:855248569136578570> **s!say**  \`Sunucu Bilgilerini Gösterir.\` \n
   <a:rainbow:855248569136578570> **s!yardım-sunucu-kur**\`Sunucu-kur komutlarını gösterir.\`\n
@@ -39,7 +38,6 @@ dbl.hasVoted(message.author.id).then(voted => {
   <a:rainbow:855248569136578570> **s!uptime**\`Botunuzu 7/24 yapmaya yarar.\` \n
   <a:rainbow:855248569136578570> **s!komut-güncelleme\`komutlarınızı v11tov12, v12tov13.\` \n
   <a:rainbow:855248569136578570> s!çekiliş-sistemi\`çekiliş komutlarını gösterir.\` \n
-  <a:rainbow:855248569136578570> s!otorol-sistemi\`otorol komutlarını gösterir.\` \n
 `
     
     
