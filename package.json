@@ -57,7 +57,10 @@
     "weather-js": "^2.0.0",
     "akaneko": "^5.2.3",
     "discord-anti-spam-tr": "^0.7.4",
-    "discord-giveaways": "^4.2.1"
+    "discord-giveaways": "^4.2.1",
+    "ytdl-core": "^4.8.2",
+    "simple-youtube-api": "^5.2.1",
+    "join": "^3.0.0"
   },
   "engines": {
     "node": "12.x"
