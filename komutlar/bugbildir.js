@@ -1,35 +1,60 @@
-const Discord = require('discord.js');
-
+const Discord = require("discord.js");
+const ayarlar = require("../ayarlar.json");
 
 exports.run = function(client, message, args) {
-   
-  let type = args.slice(0).join(' ');
-    if (type.length < 1) return message.channel.send(
-new Discord.MessageEmbed()
-.setDescription('Kullanım: s!bugbildir <bulduğunuz bug>'));
-const embed = new Discord.MessageEmbed()
-.setColor('RANDOM')
-.setDescription('Hata Bildirildi!')
-message.channel.send(embed)
-const embed2 = new Discord.MessageEmbed()
-.setColor("RANDOM")
-.setDescription(`**${message.author.tag}** adlı kullanıcının tavsiyesi:`)
-.addField(`Kulanıcı Bilgileri`, `Kullanıcı ID: ${message.author.id}\nKullanıcı Adı: ${message.author.username}\nKullanıcı Tagı: ${message.author.discriminator}`)
-.addField("bug", type)
-.setThumbnail(message.author.avatarURL())
-client.channels.cache.get('989518783519555674').send(embed2); // Kanal ID
+  const db = require('quick.db')
+let p = db.fetch(`prefix_${message.guild.id}`) || ayarlar.prefix;
 
+
+const onerisiz = new Discord.MessageEmbed()
+.setColor("RED")
+.setTitle("• Hata: 0014 •")
+.setDescription("Hata bildirebilmek için hatayı yazmalısın.")
+.setFooter(`©️ Tüm hakları saklıdır | Yeni Nesil Gelişmiş Bot | 2021`);
+
+const onerili = new Discord.MessageEmbed()
+.setColor("GREEN")
+.setTitle("Başarılı")
+.setDescription("Hatanız alınmıştır! Teşekkür ederiz.")
+.setFooter(`©️ Tüm hakları saklıdır | Yeni Nesil Gelişmiş Bot | 2021`);  
+
+
+  var hata = args.slice(0).join(" ");
+
+  var guildID = "796388765257695273"; // Sunucu ID
+
+  var channelID = "833971968176291840"; // Kanal ID
+
+  if (!hata) {
+    return message.channel.send(embed);
+  } else {
+    var embed = new Discord.MessageEmbed()
+
+      .setTimestamp()
+
+      .setColor("RANDOM")
+
+      .setAuthor("👤 Hata!", client.user.avatarURL())
+      .addField("👤 Hatayı Bildiren Kullanıcı:", message.author.tag, true)
+      .addField("👤 Hatayı Bildiren Kullanıcı ID:", message.author.id,true)
+      .addField("📜 Hata:", hata)
+
+
+    client.guilds
+      .cache.get(guildID)
+      .channels.cache.get(channelID)
+      .send(embed);
+
+    message.channel.send(onerili);
+  }
 };
 
 exports.conf = {
-  enabled: true,
-  guildOnly: false,
-  aliases: [],
-  permLevel: 0
+enabled: true,
+guildOnly: false,
+aliases: ["hata"],
+permlevel: 0
 };
-
 exports.help = {
-  name: 'bugbildir',
-  description: 'Bot için tavsiye bildirirsiniz',
-  usage: 'tavsiye <tavsiyeniz>'
+  name: "hata-bildir"
 };
