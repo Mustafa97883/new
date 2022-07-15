@@ -25,8 +25,9 @@ dbl.hasVoted(message.author.id).then(voted => {
     
   **<a:rainbow:855248569136578570> ${prefix}hata-bildir \: herhangi bir hatayı'yı bize iletin.\`\n
   **<a:rainbow:855248569136578570> ${prefix}şablon-gönder \: bize sunucu şablonu gönderir. Beğenirsek s!diğer-temalar larına eklenir.\`\n
- **<a:rainbow:855248569136578570> ${prefix}tavsiye \: Bot için tavsiyede bulunursunuz..\`\n
+ **<a:rainbow:855248569136578570> ${prefix}öneri \: Bot için öneride bulunursunuz..\`\n
  **<a:rainbow:855248569136578570> ${prefix}şikayet \: Bot için şikayette bulunursunuz.\`\n
+  **<a:rainbow:855248569136578570> ${prefix}afk \: afk olurusnuz.\`\n
 `
     
     
