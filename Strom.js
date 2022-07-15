@@ -1234,43 +1234,28 @@ function exp(message) {
 ///seviye son
 
 
-// spam engel
-
-const dctrat = require('dctr-antispam.js'); 
-
-var authors = [];
-var warned = [];
-
-var messageLog = [];
-
-client.on('message', async message => {
-const spam = await db.fetch(`spam.${message.guild.id}`);
-if(!spam) return;
-const maxTime = await db.fetch(`max.${message.guild.id}.${message.author.id}`);
-const timeout = await db.fetch(`time.${message.guild.id}.${message.author.id}`);
-db.add(`mesaj.${message.guild.id}.${message.author.id}`, 1)
-if(timeout) {
-const sayı = await db.fetch(`mesaj.${message.guild.id}.${message.author.id}`);
-if(Date.now() < maxTime) {
-  const Strom = new Strom.MessageEmbed()
-  .setColor(0x36393F)
-  .setDescription(` <@${message.author.id}> ,  **HOPP BİLADER? spam yapmak yasak bidaha olmasın. :))**`)
- // .setFooter(`Bu mesaj otomatik olarak silinecektir.`)
- if (message.member.hasPermission("BAN_MEMBERS")) return ;
- message.channel.send(Strom).then(msg => msg.delete({timeout: 1500}));
-  return message.delete();
-  
-}
-} else {
-db.set(`time.${message.guild.id}.${message.author.id}`, 'ok');
-db.set(`max.${message.guild.id}.${message.author.id}`, Date.now()+3000);
-setTimeout(() => {
-db.delete(`mesaj.${message.guild.id}.${message.author.id}`);
-db.delete(`time.${message.guild.id}.${message.author.id}`);
-}, 500) // default : 500
-}
-
-
+// -------------------> [Spam-koruma] <--------------- \\
+client.on("message", msg => {
+  const antispam = require("discord-anti-spam-tr");
+  let spamEngel = JSON.parse(
+    fs.readFileSync("./jsonlar/spamEngelle.json", "utf8")
+  );
+  if (!msg.guild) return;
+  if (!spamEngel[msg.guild.id]) return;
+  if (spamEngel[msg.guild.id].spamEngel === "kapali") return;
+  if (spamEngel[msg.guild.id].spamEngel === "acik") {
+    antispam(client, {
+      uyarmaSınırı: 3,
+      banlamaSınırı: 7,
+      aralık: 1000,
+      uyarmaMesajı: "Spamı Durdur Yoksa Mutelerim.",
+      rolMesajı: "Spam için yasaklandı, başka biri var mı?",
+      maxSpamUyarı: 4,
+      maxSpamBan: 12,
+      zaman: 7,
+      rolİsimi: "spamMUTED"
+    });
+  }
 });
 
 

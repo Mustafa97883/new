@@ -1,23 +1,20 @@
 const Discord = require('discord.js');
-const data = require('quick.db');
+const db = require('quick.db')
+exports.run = (client, message, args) => { 
 
-exports.run = async (client, message, args) => {
-  const nn = new Discord.MessageEmbed().setThumbnail();
-  if (!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send(` Bu komutu kullanabilmek için "\`Yönetici\`" yetkisine sahip olmalısın.`);
-const sistem = await data.fetch(`spam.${message.guild.id}`);
-if(sistem) return message.channel.send(nn.setDescription(` Spam koruma zaten aktif.`)).then(a => a.delete({timeout: 10000}));
 
-data.set(`spam.${message.guild.id}`, 'asreaper');
-return message.channel.send(nn.setTitle(`İşlem başarılı!`).setColor(0x36393F).setDescription(`Spam koruma başarıyla açıldı.`)).then(a => a.delete({timeout: 10000}));
 
-};
+message.channel.send(`Sunucunuzu Korumamam İçin YÖNETİCİ Yetkisi Olmalı Ve Sonrasında Kendiliğinden Saldırıları Önlerim.`) 
+  };
 exports.conf = {
-  enabled: true,
-  guildOnly: true,
-  aliases: ['spam-engel', 'spamengel', 'spam-koruma', 'spamkoruma'],
+  enabled: true,  
+  guildOnly: false, 
+  aliases: ["spam-koruma"], 
   permLevel: 0
-}
+};
 
 exports.help = {
-  name: 'spam'
+  name: 'spambotkorumasi',
+  description: 'sayaç', 
+  usage: 'sayaç'
 };
