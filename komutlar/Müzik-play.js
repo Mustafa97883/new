@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const YouTube = require('simple-youtube-api');
 const ytdl = require('ytdl-core');
-const youtube = new YouTube('AIzaSyAqi6LvT3nLMefsoDiXuHaptzamMUjU3Z8');
+const youtube = new YouTube('AIzaSyDk8AEVKtIDgmhlIhBC51JDFimQKmSk6m0');
 
 exports.run = async (client, message, args) => {
     const queue = client.queue;
