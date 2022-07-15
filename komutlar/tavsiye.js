@@ -16,7 +16,7 @@ ${hata}
 \`${prefix}öneri <öneririniz>\`**`));
 
 const ace = new Discord.MessageEmbed()
-.setDescription(`<@${message.author.id}>\n\n Öneriniz Bildirildi! En Kısa Sürede Geri Dönüş Yapılıcakatır.\n\n Anlayışınız İçin Teşekkürler.\n\n [KONTROL](https://discord.gg/6xQtMXjRsA)`)
+.setDescription(`<@${message.author.id}>\n\n Öneriniz Bildirildi! En Kısa Sürede Geri Dönüş Yapılıcakatır.\n\n Anlayışınız İçin Teşekkürler`)
 .setThumbnail(message.author.avatarURL({ dynamic: true, format: 'png', size: 1024 }))
 message.channel.send(ace)
 
@@ -28,6 +28,8 @@ const acee = new Discord.MessageEmbed()
 **__Kullanıcı Adı:__** **\`${message.author.username}\`**
 **__Kullanıcı Tagı:__** **\`#${message.author.discriminator}\`**`)
 .addField("Kullanıcı Önerisi", type)
+.addField('önerinizi kontrol etmek için **')
+.addField("[KONTROL](https://discord.gg/6xQtMXjRsA)")
 .setThumbnail(message.author.avatarURL)
  client.channels.cache.get(şikayetlog).send(acee);
 };
