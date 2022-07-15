@@ -10,20 +10,20 @@ const onerisiz = new Discord.MessageEmbed()
 .setColor("RED")
 .setTitle("• Hata: 0014 •")
 .setDescription("Hata bildirebilmek için hatayı yazmalısın.")
-.setFooter(`©️ Tüm hakları saklıdır | Yeni Nesil Gelişmiş Bot | 2021`);
+.setFooter(`©️ Tüm hakları saklıdır. | 2022`);
 
 const onerili = new Discord.MessageEmbed()
 .setColor("GREEN")
 .setTitle("Başarılı")
 .setDescription("Hatanız alınmıştır! Teşekkür ederiz.")
-.setFooter(`©️ Tüm hakları saklıdır | Yeni Nesil Gelişmiş Bot | 2021`);  
+.setFooter(`©️ Tüm hakları saklıdır. | 2022`);  
 
 
   var hata = args.slice(0).join(" ");
 
   var guildID = "796388765257695273"; // Sunucu ID
 
-  var channelID = "833971968176291840"; // Kanal ID
+  var channelID = "997597475957387274"; // Kanal ID
 
   if (!hata) {
     return message.channel.send(embed);
