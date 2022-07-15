@@ -21,7 +21,8 @@ require('./util/eventLoader.js')(client);
 const path = require('path');
 const snekfetch = require('snekfetch');
 const ms = require('ms');
-const fetch = require('node-fetch');
+const fetch = require('node-fetch')
+
 
 setInterval(async () => {
   await fetch('https://glitch.com/edit/#!/sayisal-bot-v234123123e142123432','https://sayisal-bot-v234123123e142123432.glitch.me').then(console.log('Uptimed!'))

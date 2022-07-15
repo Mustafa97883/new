@@ -1,28 +1,36 @@
-const Discord = require('discord.js');
-const ayarlar = require('../ayarlar.json')
+const AsreaperDiscord = require('discord.js');
+const AsreaperClient = new AsreaperDiscord.Client();
+const ayarlar = require('../ayarlar.json');
+let prefix = ayarlar.prefix
 
-exports.run = (bot, message, args) => {
-    const embed = new Discord.MessageEmbed()
-.setTitle("Strom - Çekiliş Sistemi")
-.setColor("PINK")
-.setDescription(`
-\`${ayarlar.prefix}çekiliş-rol\` Çekiliş yapacak rol ayarlar.
-\`${ayarlar.prefix}çekiliş-başlat\` Çekiliş başlatırsın.
-\`${ayarlar.prefix}çekiliş-yenile\` Kazanan kişiyi yeniler.
-\`${ayarlar.prefix}çekiliş-sonladır\` Yapılan çekilişi bitirir.
-\`${ayarlar.prefix}çekiliş-log\` Logların düşeceği kanalı ayarlar.
-`)
+exports.run = (client, message) => {
+ const AsreaperEmbed = new AsreaperDiscord.MessageEmbed()
+ .setAuthor(`${client.user.username} Strom | çekiliş menüsü`)
+ .setColor("RED")
+.addFields({
+                name: '**s!çekiliş**',
+                  value: "Çekiliş başlatır",
+                inline: true
+              
+              
+     
+
+              }) 
+  .setFooter(`*                                                               ${client.user.username} | © 2022                                                                      *`)
+ .setImage()
+ 
+ message.channel.send(AsreaperEmbed)
 }
-
 exports.conf = {
-    enabled: true,
-    guildOnly: true,
-    aliases: ['çekiliş-yardım'],
-    permLevel: 0
+  enabled: true,
+  guildOnly: false,
+  aliases: ['çekiliş-sistemi'],
+  kategori: "Bot",
+  permLevel: 0
 };
 
 exports.help = {
-    name: 'çekiliş-sistemi',
-    description: 'çekilişyap.',
-    usage: 'çekilişyap'
-}
+  name: 'çekilişsistemi',
+  description: 'Bot ile ilgili bilgi verir.',
+  usage: 'bilgi'
+};
