@@ -1459,7 +1459,7 @@ packages:
   /cookie-signature/1.0.6:
     dev: false
     resolution:
-      integrity: sha1-4wOogrNCzD7oylE6eZmXNNqzriw=
+      integrity: sha512-QADzlaHc8icV8I7vbaJXJwod9HWYp8uCqf1xa4OfNu1T7JVxQIrUgOWtHdNDtPiywmFbiS12VjotIXLrKM3orQ==
   /cookie/0.5.0:
     dev: false
     engines:
@@ -1864,7 +1864,7 @@ packages:
   /ee-first/1.1.1:
     dev: false
     resolution:
-      integrity: sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
+      integrity: sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==
   /emoji-regex/8.0.0:
     dev: false
     resolution:
@@ -3567,7 +3567,7 @@ packages:
     engines:
       node: '>= 0.6'
     resolution:
-      integrity: sha1-hxDXrwqmJvj/+hzgAWhUUmMlV0g=
+      integrity: sha512-dq+qelQ9akHpcOl/gUVRTxVIOkAJ1wR3QAvb4RsVjS8oVoFjDGTc679wJYmUmknUF5HwMLOgb5O+a3KxfWapPQ==
   /mem/1.1.0:
     dependencies:
       mimic-fn: 1.2.0
@@ -3584,7 +3584,7 @@ packages:
   /merge-descriptors/1.0.1:
     dev: false
     resolution:
-      integrity: sha1-sAqqVW3YtEVoFQ7J0blT8/kMu2E=
+      integrity: sha512-cCi6g3/Zr1iqQi6ySbseM1Xvooa98N0w31jzUYrXPX2xqObmFGHJ0tQ5u74H3mVh7wLouTseZyYIq39g8cNp1w==
   /merge/1.2.1:
     dev: false
     resolution:
@@ -5972,7 +5972,7 @@ specifiers:
   discord.js: ^12.5.3
   discord.js-commando: ^0.10.0
   discord.js-reaction-menu: ^1.1.1
-  express: ^4.18.1
+  express: ^4.17.1
   foo: 0.0.7
   fs: ^0.0.2
   generate-password: ^1.6.0

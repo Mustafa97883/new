@@ -943,7 +943,6 @@ const Strom = new Strom.MessageEmbed()
 
 // çekiliş sistemi
 
-
 const { GiveawaysManager } = require('discord-giveaways');
 client.giveawaysManager = new GiveawaysManager(client, {
     storage: "./giveaways.json",
@@ -955,6 +954,8 @@ client.giveawaysManager = new GiveawaysManager(client, {
         reaction: "🎉"
     }//#FF0000
 });
+
+//// otorol sistemi
 
 
 //görsel engel
