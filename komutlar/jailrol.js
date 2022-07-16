@@ -10,7 +10,7 @@ dbl.hasVoted(message.author.id).then(voted => {
   const ayarlar = require('../ayarlar.json')
 const db = require('quick.db')
 let prefix = db.fetch(`prefix_${message.guild.id}`) || ayarlar.prefix;
-  if(!message.member.permissions.has('ADMINISTRATOR')) return message.channel.send(new Discord.MessageEmbed().setThumbnail(message.author.avatarURL() ? message.author.avatarURL({dynamic: true}) : 'https://cdn.glitch.com/8e70d198-9ddc-40aa-b0c6-ccb4573f14a4%2F6499d2f1c46b106eed1e25892568aa55.png').setImage('https://cdn.glitch.com/0c8ef551-5187-48a8-9daf-f2cc35630f21%2Fyoneticigif.gif').setTitle('Bir hata oldu!').setDescription(`• \`${prefix}jail-karantina-role \` **kullanmak için,** \`Yönetici\` **yetkisine sahip olman gerekiyor.**`));
+  if(!message.member.permissions.has('ADMINISTRATOR')) return message.channel.send(new Discord.MessageEmbed().setThumbnail(message.author.avatarURL() ? message.author.avatarURL({dynamic: true}) : 'https://cdn.glitch.global/d80f45da-14d1-42a7-a16d-8f3385ce86a4/c10f8dedd93c798ce1e36ad9acb26fd4.png?v=1657994146595').setImage('https://cdn.glitch.com/0c8ef551-5187-48a8-9daf-f2cc35630f21%2Fyoneticigif.gif').setTitle('Bir hata oldu!').setDescription(`• \`${prefix}jail-karantina-role \` **kullanmak için,** \`Yönetici\` **yetkisine sahip olman gerekiyor.**`));
   if(!message.mentions.roles.first()) return message.channel.send(new Discord.MessageEmbed().setColor('#00001').setTitle('Bir hata oldu!').setDescription('Bir rol etiketlemeyi unuttunuz.'));
   let mentionRole = message.mentions.roles.first();
   data.set(`jail.karantinarole.${message.guild.id}`, mentionRole.id);
