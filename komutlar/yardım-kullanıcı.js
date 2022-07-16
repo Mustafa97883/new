@@ -23,11 +23,11 @@ dbl.hasVoted(message.author.id).then(voted => {
     **Bota yorum atıp 5 yıldız vermeyi unutma :)** [TIKLA](https://top.gg/bot/756883309270663229)
     **Strom Müzik botunu eklemek için [TIKLA](https://discord.com/api/oauth2/authorize?client_id=854122011151826975&permissions=8&scope=bot%20applications.commands)
     
-  **<a:rainbow:855248569136578570> ${prefix}hata-bildir \: herhangi bir hatayı'yı bize iletin.\`\n
-  **<a:rainbow:855248569136578570> ${prefix}şablon-gönder \: bize sunucu şablonu gönderir. Beğenirsek s!diğer-temalar larına eklenir.\`\n
- **<a:rainbow:855248569136578570> ${prefix}öneri \: Bot için öneride bulunursunuz..\`\n
- **<a:rainbow:855248569136578570> ${prefix}şikayet \: Bot için şikayette bulunursunuz.\`\n
-  **<a:rainbow:855248569136578570> ${prefix}afk \: afk olurusnuz.\`\n
+<a:rainbow:855248569136578570> ${prefix}hata-bildir \: herhangi bir hatayı'yı bize iletin.\`\n
+<a:rainbow:855248569136578570> ${prefix}şablon-gönder \: bize sunucu şablonu gönderir. Beğenirsek s!diğer-temalar larına eklenir.\`\n
+<a:rainbow:855248569136578570> ${prefix}öneri \: Bot için öneride bulunursunuz..\`\n
+<a:rainbow:855248569136578570> ${prefix}şikayet \: Bot için şikayette bulunursunuz.\`\n
+<a:rainbow:855248569136578570> ${prefix}afk \: afk olurusnuz.\`\n
 `
     
     
