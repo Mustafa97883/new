@@ -33,7 +33,7 @@ let client = message.client;
     });
 
     const rifleman = require('string-similarity').findBestMatch(command, laura);
-    message.channel.send(`bunu mu demek istediniz? **s!${rifleman.bestMatch.target}**`)
+    message.channel.send(`Doğru kullanımı. **s!${rifleman.bestMatch.target}**`)
   };
 
   if (cmd) {
