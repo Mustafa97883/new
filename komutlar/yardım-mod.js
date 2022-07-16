@@ -17,17 +17,17 @@ const yardım = new Strom.MessageEmbed()
 🔧 \`${prefix}ban\:  Belirttiğiniz Üyeyi Sunucudan Yasaklar\`\n
 🔧 \`${prefix}nuke\:  Kanaldaki bütün mesajları siler\`\n
 🔧 \`${prefix}otorol-sistemi\`otorol komutlarını gösterir\`\n
-🔧\`${prefix}ototag\:  Etiketlediğiniz tagı her gelen üyeye verir\`\n
-🔧\`${prefix}sunucutanıt\:  Sunucunuzu bizim sunucuda tanıtır.\`\n
-🔧\`${prefix}sayaç-ayarla\:  Sunucunuza sayaç ayarlarsınız.\`\n
- 🔧\`${prefix}kurallar\:  Sunucu için kurallar atar.\`\n
-  🔧\`${prefix}slowmode\:  sohbet kanalına slowmode atarsınız.\`\n
- 🔧\`${prefix}servericon\:  sunucu iconunu gösterir.\`\n
-🔧\`${prefix}rank\:  Seviyenizi gösterir.\`\n
-🔧\`${prefix}sohbet-aç\:  sohbet i yazılabilir hale getirir.\`\n
- 🔧\`${prefix}sohbet-kapat\:  sohbet i yazılamaz hale getirir.\`\n
- 🔧\`${prefix}kick-limit\:  kick limiti ayarlarsınız.\`\n
-🔧\`${prefix}ban-limit\: ban limiti ayarlarsınız.\`\n
+🔧 \`${prefix}ototag\:  Etiketlediğiniz tagı her gelen üyeye verir\`\n
+🔧 \`${prefix}sunucutanıt\:  Sunucunuzu bizim sunucuda tanıtır.\`\n
+🔧 \`${prefix}sayaç-ayarla\:  Sunucunuza sayaç ayarlarsınız.\`\n
+🔧 \`${prefix}kurallar\:  Sunucu için kurallar atar.\`\n
+🔧 \`${prefix}slowmode\:  sohbet kanalına slowmode atarsınız.\`\n
+🔧 \`${prefix}servericon\:  sunucu iconunu gösterir.\`\n
+🔧 \`${prefix}rank\:  Seviyenizi gösterir.\`\n
+🔧 \`${prefix}sohbet-aç\:  sohbet i yazılabilir hale getirir.\`\n
+🔧 \`${prefix}sohbet-kapat\:  sohbet i yazılamaz hale getirir.\`\n
+🔧 \`${prefix}kick-limit\:  kick limiti ayarlarsınız.\`\n
+🔧 \`${prefix}ban-limit\: ban limiti ayarlarsınız.\`\n
 🔧 \`${prefix}oylama\: oylama.\`\n
 🔧 \`${prefix}çoklu-oylama\:  şıklı oylama.\`\n
 🔧 \`${prefix}hesapla\:  Matematik işlemi.\`\n

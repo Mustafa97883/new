@@ -32,6 +32,7 @@ const yardım = new Strom.MessageEmbed()
 🔰 \`${prefix}temizle\`:  **Belirttiğiniz Sayıda Mesajı Siler**
 🔰 \`${prefix}ping\`:  **Pinginizi Ölçüp Atar**
 🔰 \`${prefix}mute-sistemi**  \`İlk Olarak Kurulum Yapınız**
+🔰 \`${prefix}Mod-log**  \`Sunucuda silinen msj vs.. kanala atar.**
 
 `)
 .setThumbnail(message.author.avatarURL())
