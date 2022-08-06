@@ -14,6 +14,7 @@ const moment = require('moment');
 var Jimp = require('jimp');
 const { Client, Util, Collection } = require('discord.js');
 const Database = require("./Helpers/Database");
+const keep_alive = require("./keep_alive.js");
 const Invites = new Collection(); //
 const fs = require('fs');
 const db = require('quick.db');
@@ -25,7 +26,7 @@ const fetch = require('node-fetch')
 
 
 setInterval(async () => {
-  await fetch('https://glitch.com/edit/#!/sayisal-bot-v234123123e142123432','https://sayisal-bot-v234123123e142123432.glitch.me').then(console.log('Uptimed!'))
+  await fetch('https://ilhanilhan2312.glitch.me','https://glitch.com/edit/#!/ilhanilhan2312').then(console.log('Uptimed!'))
 }, 20000)
 
 let prefix = ayarlar.prefix;
@@ -304,7 +305,7 @@ const küfür = [
 		"skim",
 		"skm",
 		"sg",
-   "Amk", "mk", "amk", "aq", "orospu", "oruspu", "oç", "sikerim", "yarrak", "piç", "amq", "sik", "amcık", "çocu", "sex", "seks", "amına", "orospu çocuğu", "sg", "siktir git","A M K","A m K","a M K","a m k","porno","p o r n o","ororspu çocugu","orusbu","orusbu çocuğu","orosbu cocu","orospu cocu","orosbuçoocu","anancı","anneni sikeyim","ananı sikeyim","annen piç","anai sikeyim","ananı sikeyim","ananı skm","anneni skm","anneni sikm","siqerim","siqerim seni","siqim","siqim seni","skEİRM","yarak","ospu","ospu çocuğu","ospu çocu","sikik","oç","orospu","orospu çocuğu","öröspü çöcüğü","Oç","oÇ","OÇ","sikerim","kafasız","porno","pörnö","pornocu","31","31.",
+   "Amk", "mk", "amk", "aq", "orospu", "oruspu", "oç", "sikerim", "yarrak", "piç", "amq", "sik", "amcık", "çocu", "sex", "seks", "amına", "orospu çocuğu", "sg", "siktir git","A M K","A m K","a M K","a m k","porno","p o r n o","ororspu çocugu","orusbu","orusbu çocuğu","orosbu cocu","orospu cocu","orosbuçoocu","anancı","anneni sikeyim","ananı sikeyim","annen piç","anai sikeyim","ananı sikeyim","ananı skm","anneni skm","anneni sikm","siqerim","siqerim seni","siqim","siqim seni","skEİRM","yarak","ospu","ospu çocuğu","ospu çocu","sikik","oç","orospu","orospu çocuğu","öröspü çöcüğü","Oç","oÇ","OÇ","sikerim","kafasız","porno","pörnö","pornocu","31","31.","otuzbir","otuz bir",
 "31 çeken","am","amcık","am çorbası","amcık çorbası","tam sikmelik","sikiş","sikmek","sik çorbası","sik suyu","am suyu","amcık suyu","yarrak","amcık hoşafı","AMCIK HOŞAFI","Amcık Hoşafı",
 "yarrak kafalı","soğan sikli","siki başı sik","yarrağı kara","kara sikli","kara yarraklı","tam oç","tam öç","tem oç","tem öç","öç","yarrak kokusu",
 "sik kokusu","ananı sikim","ananı sikiyim","anneni sikim","anneni sikiyim","ablanı sikim","ablanı sikiyim","gacını sikiyim","karını sikiyim",
@@ -388,7 +389,7 @@ const botistatistik = new Strom.MessageEmbed()
 //https://cnslink.cf
 botdurum.send(botistatistik);
 
-  }, 300000); //Milisaniye cinsinden. 1 saniye =  1000 milisaniye. Örnek Olarak 1 saat = 3600000milisaniye
+  }, 600000); //Milisaniye cinsinden. 1 saniye =  1000 milisaniye. Örnek Olarak 1 saat = 3600000milisaniye
   //https://convertlive.com/tr/u/dönüştürmek/milisaniye/a/saniye Bu siteden hesaplamasını yapabilirsiniz.
 });
 
@@ -1175,19 +1176,6 @@ if(data && data === role.id) require('quick.db').delete(`strom-mute-role.${role.
 ///mute son
 
 
-///boost
-
-const logs = require('discord-logs');
-logs(client);
-
-client.on('guildMemberBoost', (member) => {// 
-let kanal = client.channels.cache.get('864544996337123348');
-kanal.send(`${member.user.tag} kullanıcısı ${member.guild.name} sunucusuna boost bastı!`);
-member.send(`${member.guild.name} sunucusuna boost bastığın için teşekkürler!`);
-});//
-
-///boost son
-
 
 ///bot yönetici yetkisi alma
 
@@ -1676,3 +1664,171 @@ client.channels.cache.get(modlog).send(embed)
 
 })
 // mod log son ///
+
+//panel
+
+
+client.on("message", async (msg) => {
+  let ever = msg.guild.roles.find(c => c.name === "@everyone")
+	let sistem = await db.fetch(`panell_${msg.guild.id}`);
+	if(sistem == "açık") {
+		let kategori = msg.guild.channels.find(c => c.name.startsWith(msg.guild.name));
+		if(!kategori) {
+			msg.guild.createChannel(`${msg.guild.name} | Sunucu Paneli`, {
+				type: 'category',
+				permissionOverwrites: [{
+					id: msg.guild.id,
+					deny: ['CONNECT']
+				}]
+			}).then(parent => {
+        setTimeout(async function() {
+          let eo = msg.guild.roles.find(r => r.name == "@everyone")
+          parent.overwritePermissions(eo, {
+            CONNECT: false
+          })
+          setTimeout(async function() {
+            parent.setPosition(0);
+          })
+          db.set(`panelParentID_${msg.guild.id}`, parent.id);
+          let toplamUye = msg.guild.channels.find(c => c.name.startsWith('Toplam Üye •'));
+          if(!toplamUye) {
+            try {
+              let s = msg.guild.memberCount;
+              msg.guild.createChannel(`Toplam Üye • ${s}`, {
+                type: 'voice'
+              }).then(ch => {
+                setTimeout(function() {
+                  ch.overwritePermissions(ever, {
+                    CONNECT: false
+                  })
+                  db.set(`toplamID_${msg.guild.id}`, ch.id)
+                  ch.setParent(parent);
+                  ch.setPosition(1);
+                }, 120)
+              })
+            } catch (err) {
+
+            }
+          }
+        let uyesayısı = msg.guild.channels.find(c => c.name.startsWith('Üye Sayısı •'));
+        if(!uyesayısı) {
+          try {
+            let uyesayı = msg.guild.members.filter(m => !m.user.bot).size;
+            msg.guild.createChannel(`Üye Sayısı • ${uyesayı}`, {
+              type: 'voice'
+            }).then(ch => {
+              let ever = msg.guild.roles.find(role => role.name === "@everyone")
+                setTimeout(function() {
+                ch.overwritePermissions(ever, {
+                  CONNECT: false
+                })
+                ch.setParent(parent);
+                ch.setPosition(2);
+                db.set(`uyeSayıID_${msg.guild.id}`, ch.id);
+              }, 120)
+            })
+          } catch (err) {
+
+          }
+          let botsayı = msg.guild.members.filter(m => m.user.bot).size;
+          try {
+            msg.guild.createChannel(`Bot Sayısı • ${botsayı}`, {
+              type: 'voice'
+            }).then(ch => {
+              let ever = msg.guild.roles.find(role => role.name === "@everyone")
+              setTimeout(function() {
+                ch.overwritePermissions(ever, {
+                  CONNECT: false
+                })
+                ch.setParent(parent);
+                ch.setPosition(3);
+                db.set(`botSayıID_${msg.guild.id}`, ch.id);
+              }, 120)
+            })
+          } catch (err) {
+
+          }
+          let onl = msg.guild.members.filter(m => m.presence.status != "offline" && !m.user.bot).size;
+          try {
+            msg.guild.createChannel(`Çevrimiçi Üye • ${onl}`, {
+              type: 'voice'
+            }).then(ch => {
+              let ever = msg.guild.roles.find(role => role.name === "@everyone");
+              setTimeout(function() {
+                ch.setParent(parent);
+                ch.setPosition(4);
+                db.set(`onlSayıID_${msg.guild.id}`, ch.id);
+                ch.overwritePermissions(ever, {
+                  CONNECT: false
+                })
+              }, 120)
+          })
+        } catch (err) {
+          
+        }
+      }
+        }, 50)
+			})
+		} else {
+      let parent = msg.guild.channels.find(c => c.name == `${msg.guild.name} | Sunucu Paneli`)
+      if(msg.content.includes('panel kapat')) return false;
+      let toplamuye = msg.guild.channels.find(c => c.name.startsWith(`Toplam Üye •`));
+      toplamuye.setParent(parent);
+      toplamuye.setName(`Toplam Üye • ${msg.guild.memberCount}`);
+      let uyesayı = msg.guild.channels.find(c => c.name.startsWith(`Üye Sayısı •`));
+      uyesayı.setParent(parent);
+      uyesayı.setName(`Üye Sayısı • ${msg.guild.members.filter(m => !m.user.bot).size}`);
+      let botuye = msg.guild.channels.find(c => c.name.startsWith(`Bot Sayısı •`));
+      botuye.setParent(parent);
+      botuye.setName(`Bot Sayısı • ${msg.guild.members.filter(m => m.user.bot).size}`);
+      let onl = msg.guild.channels.find(c => c.name.startsWith('Çevrimiçi Üye •'));
+      onl.setParent(parent);
+      onl.setName(`Çevrimiçi Üye • ${msg.guild.members.filter(m => m.presence.status != "offline" && !m.user.bot).size}`);
+		}
+	} else {
+
+	}
+})  
+
+//panel son//OtoRol Baş
+
+client.on("guildMemberAdd", async member => {
+  let kanal = await db.fetch(`otoRK_${member.guild.id}`);
+  let rol = await db.fetch(`otoRL_${member.guild.id}`);
+  let mesaj = db.fetch(`otoRM_${member.guild.id}`);
+  if (!rol) return;
+
+  if (!mesaj) {
+    client.channels.cache
+      .get(kanal)
+      .send(
+        ":loudspeaker: :inbox_tray: Otomatik Rol Verildi Seninle Beraber `" +
+          member.guild.memberCount +
+          "` Kişiyiz! Hoşgeldin! `" +
+          member.user.username +
+          "`"
+      );
+    return member.roles.add(rol);
+  }
+
+  if (mesaj) {
+    var mesajs = mesaj
+      .replace("-uye-", `${member.user}`)
+      .replace("-uyetag-", `${member.user.tag}`)
+      .replace("-rol-", `${member.guild.roles.cache.get(rol).name}`)
+      .replace("-server-", `${member.guild.name}`)
+      .replace("-uyesayisi-", `${member.guild.memberCount}`)
+      .replace(
+        "-botsayisi-",
+        `${member.guild.members.cache.filter(m => m.user.bot).size}`
+      )
+      .replace("-bolge-", `${member.guild.region}`)
+      .replace("-kanalsayisi-", `${member.guild.channels.size}`);
+    member.roles.add(rol);
+    return client.channels.cache.get(kanal).send(mesajs);
+  }
+});
+
+//OtORol Son
+
+
