@@ -7,7 +7,8 @@ let cse = new Discord.MessageEmbed()//discord.gg/turkiye
 .setDescription(`
 
 
-🔞 **s!moderasyon-sistemi**  \`Moderasyon komutlarını gösterir.\` \n
+🔞 **s!nsfw**  \`nsfw komutlarını gösterir.\` \n
+🔞 **s!nsfw-anime**  \`nsfw-anime komutlarını gösterir.\` \n
 
 
 
@@ -23,7 +24,7 @@ aliases: []
 }
 
 module.exports.help = {
-name: "yardım",
+name: "nsfw-yardım",
 usage: "!yardım"
 
 };

@@ -20,15 +20,16 @@ exports.run = async (client, message, args) => {
   **Bota yorum atıp 5 yıldız vermeyi unutma :)** [TIKLA](https://top.gg/bot/756883309270663229)
   **Strom Müzik botunu eklemek için [TIKLA](https://discord.com/api/oauth2/authorize?client_id=854122011151826975&permissions=8&scope=bot%20applications.commands)
   
-  <a:rainbow:855248569136578570> **s!uyarı**  \`bir kullanıcıya uyarı puanı verirsiniz..\` \n
-  <a:rainbow:855248569136578570> **s!uyarı-sil**  \`bir kullanıcıdan uyarı puanı silersiniz.\` \n
-  <a:rainbow:855248569136578570> **s!uyarılar**  \`bir kullanıcının uyarılarına bakarsınız.\`\n
-  <a:rainbow:855248569136578570> **s!sicil**  \`bir kullanıcının siciline bakarsınız.\` \n
-  <a:rainbow:855248569136578570> **s!mute**  \`bir kullanıcıyı susturursunuz.\` \n
-  <a:rainbow:855248569136578570> **s!muterol**\`mute rolu ayarlarsınız.\`\n
-  <a:rainbow:855248569136578570> **s!kurallar**\`sunucu kuralı eklersiniz. \`\n
-  <a:rainbow:855248569136578570> **s!kick-limit**\`kick limiti belirlersiniz.\` \n
-  <a:rainbow:855248569136578570> **s!ban-limit**\`ban limiti belirlersiniz.\` \n
+🛡️ **s!uyarı**  \`bir kullanıcıya uyarı puanı verirsiniz..\` \n
+🛡️ **s!uyarı-sil**  \`bir kullanıcıdan uyarı puanı silersiniz.\` \n
+🛡️ **s!uyarılar**  \`bir kullanıcının uyarılarına bakarsınız.\`\n
+🛡️ **s!sicil**  \`bir kullanıcının siciline bakarsınız.\` \n
+🛡️ **s!mute**  \`bir kullanıcıyı susturursunuz.\` \n
+🛡️ **s!kurallar**\`sunucu kuralı eklersiniz. \`\n
+🛡️ **s!kick-limit**\`kick limiti belirlersiniz.\` \n
+🛡️ **s!ban-limit**\`ban limiti belirlersiniz.\` \n
+🛡️ **s!ban**\`sunucudaki birini banlarsınız.\` \n
+🛡️ **s!kick**\`sunucudaki birini kicklersiniz.\` \n
 `
     
     
