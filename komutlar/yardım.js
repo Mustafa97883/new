@@ -4,7 +4,8 @@ let cse = new Discord.MessageEmbed()//discord.gg/turkiye
 .setTitle(client.user.username+" Yardım Menüsü")
 .setColor("BLUE")
 .setThumbnail(client.user.avatarURL())
-.setDescription(`
+.setDescription(`[OYVER](https://top.gg/bot/756883309270663229/vote)
+**Strom Müzik botunu eklemek için [TIKLA](https://discord.com/api/oauth2/authorize?client_id=854122011151826975&permissions=8&scope=bot%20applications.commands)
 
 • **tag** \`Destek sunucusunun tagını gösterir.\`\n
 • **s!moderasyon-sistemi**  \`Moderasyon komutlarını gösterir.\` \n

@@ -6,13 +6,14 @@ let cse = new Discord.MessageEmbed()//discord.gg/turkiye
 .setThumbnail(client.user.avatarURL())
 .setDescription(`
 
-🤖 hata-bildir \: herhangi bir hatayı'yı bize iletin.\`\n
-🤖 şablon-gönder \: bize sunucu şablonu gönderir. Beğenirsek s!diğer-temalar larına eklenir.\`\n
-🤖 öneri \: Bot için öneride bulunursunuz..\`\n
-🤖 şikayet \: Bot için şikayette bulunursunuz.\`\n
-🤖 afk \: afk olurusnuz.\`\n
-🤖 yapımcılar \: yapımcıları gösterir.\`\n
-🤖 şifre \: rastgele şifre oluşturur.\`\n
+
+• **s!hata-bildir**  \`herhangi bir hatayı'yı bize iletin.\` \n
+• **s!şablon-gönder**  \`bize sunucu şablonu gönderir. Beğenirsek s!diğer-temalar larına eklenir.\` \n
+• **s!öneri**  \`Bot için öneride bulunursunuz.\` \n
+• **s!şikayet**  \`Bot için şikayette bulunursunuz.\` \n
+• **s!afk**\`afk olurusnuz.\`\n
+• **s!şifre**\`rastgele şifre oluşturur. \`\n
+• **s!yapımcılar**\`yapımcıları gösterir.\` \n
 
 
 
@@ -25,12 +26,12 @@ let cse = new Discord.MessageEmbed()//discord.gg/turkiye
 
 
 `)
-.setFooter("Strom")
+.setFooter("Strom / Discord'da Yeni Devrim")
 .setTimestamp()
 message.channel.send(cse)
 }
 module.exports.conf = {
-aliases: ["kullanıcı"]
+aliases: ["kullanıcı","kullanıcı-yardım"]
 }
 
 module.exports.help = {
