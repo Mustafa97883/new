@@ -6,12 +6,12 @@ let cse = new Discord.MessageEmbed()//discord.gg/turkiye
 .setThumbnail(client.user.avatarURL())
 .setDescription(`
 
-• **tag** \`Destek sunucusunun tagını gösterir.\`\n
-• **s!moderasyon-sistemi**  \`Moderasyon komutlarını gösterir.\` \n
-• **s!kayıt-yardım**  \`kayıt komutlarını gösterir.\` \n
-• **s!guard-sistemi**  \`Koruma Komutlarını Gösterir.\` \n
-• **s!kasa-yardım**  \`kasa Komutlarını Gösterir.\` \n
-• **s!yardım-sunucu-kur**\`Sunucu-kur komutlarını gösterir.\`\n
+• **s!ban** \`Belirttiğiniz Üyeyi Sunucudan Yasaklar.\`\n
+• **s!nuke**  \`Kanaldaki bütün mesajları siler.\` \n
+• **s!otorol**  \`Etiketlediğiniz rolü her gelen üyeye verir.\` \n
+• **s!ototag**  \`Etiketlediğiniz tagı her gelen üyeye verir.\` \n
+• **s!yetkilerim**  \`Sunucudaki yetkilerinizi gösterir.\` \n
+• **s!sunucutanıt**\`Sunucu-kur komutlarını gösterir.\`\n
 • **s!rütbe-yardım**\`rütbe sistemini gösterir. \`\n
 • **s!eğlence-yardım**\`Eğlence komutlarını gösterir.\` \n
 • **s!jail-yardım**\`jail komutlarını gösterir.\` \n
