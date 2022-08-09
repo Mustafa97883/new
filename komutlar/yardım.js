@@ -31,7 +31,7 @@ let cse = new Discord.MessageEmbed()//discord.gg/turkiye
 
 
 `)
-.setFooter("Strom / Discord'da Yeni Devrim")
+.setFooter("Strom / Discord'da Yeni Devrim \n herhangi bir hatada s!hata (hata)\n  önerileriniz için s!öneri (öneriniz)")
 .setTimestamp()
 message.channel.send(cse)
 }
