@@ -12,13 +12,14 @@ let cse = new Discord.MessageEmbed()//discord.gg/turkiye
 • **s!kayıt-yardım**  \`kayıt komutlarını gösterir.\` \n
 • **s!guard-sistemi**  \`Koruma Komutlarını Gösterir.\` \n
 • **s!kasa-yardım**  \`kasa Komutlarını Gösterir.\` \n
-• **s!yardım-sunucu-kur**\`Sunucu-kur komutlarını gösterir.\`\n
-• **s!rütbe-yardım**\`rütbe sistemini gösterir. \`\n
-• **s!eğlence-yardım**\`Eğlence komutlarını gösterir.\` \n
-• **s!jail-yardım**\`jail komutlarını gösterir.\` \n
-• **s!kullanıcı-yardım**\`kullanıcı komutlarını gösterir.\` \n
-• **s!nsfw-yardım**\`+18 komutları gösterir.\` \n
-• **s!çekiliş-sistemi**\`çekiliş komutlarını gösterir.\` \n
+• **s!yardım-sunucu-kur**       \`Sunucu-kur komutlarını gösterir.\`\n
+• **s!rütbe-yardım**      \`rütbe sistemini gösterir. \`\n
+• **s!eğlence-yardım**        \`Eğlence komutlarını gösterir.\` \n
+• **s!jail-yardım**      \`jail komutlarını gösterir.\` \n
+• **s!kullanıcı-yardım**      \`kullanıcı komutlarını gösterir.\` \n
+• **s!nsfw-yardım**     \`+18 komutları gösterir.\` \n
+• **s!çekiliş-sistemi**      \`çekiliş komutlarını gösterir.\` \n
+• **s!yardım-botlist**     \`Botlist komutlarını gösterir.\` \n
 
 
 

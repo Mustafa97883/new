@@ -64,7 +64,7 @@ exports.run = function(client, message, args) {
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: ['botlistayar','botlistayarla'],
+  aliases: ['botlistayar','botlistayarla',"botlist-yardım","yardım-botlist"],
   permLevel: 0,
 };
 
