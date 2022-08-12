@@ -1,42 +1,51 @@
 const Discord = require('discord.js');
 const db = require('quick.db');
-const botlist  = require('../botlist.json')
-
-exports.run = async(client, message, args) => {
-
-  if(message.channel.id !== botlist.başvurukanal) return message.channel.send(`<#${botlist.başvurukanal}> sadece bu kanalda kullanabılır.`)
 
 
-let botid = args[0]
-let prefix = args[1]
- let dbl = args[2]
-if(!botid) return message.channel.send("<a:alarm3:823900153831620658> Bir Bot İd Gir.")
-if(!prefix) return message.channel.send("<a:alarm3:823900153831620658> Prefix Giriniz.")
-if(!dbl) return message.channel.send("<a:alarm3:823900153831620658> Lütfen botun DBL onaylı olup olmadığını yaz.").then(m => m.delete({timeout: 10000}))
-message.delete()
+exports.run = function(client, message, args) {
+
+	let botid = args[0]
+	let prefix = args[1]
+  let onaylımı = args[2]
+  let basvuru = db.fetch(`basvuruk_${message.guild.id}`)
+	let kanal = db.fetch(`bot-ekle_${message.guild.id}`)
+  let log =   db.fetch(`bot-log_${message.guild.id}`)
+	if(!log) return message.channel.send("Bu komudu kullanmak için botlist kanallarının sunucuda ayarlı olması gerekiyor.")
+  if(!basvuru) return message.channel.send("Bu komudu kullanmak için botlist kanallarının sunucuda ayarlı olması gerekiyor.")
+  if(!kanal) return message.channel.send("Bu komudu kullanmak için botlist kanallarının sunucuda ayarlı olması gerekiyor.")
   
-message.channel.send("✅ **|** Botunuz Sisteme Eklendi Lütfen Onay Almasını Bekleyınız.")
-  
-  client.channels.cache.get(botlist.log).send(`<@&${botlist.yetkili}>`)
-  
-  let embed = new Discord.MessageEmbed()
-  .setColor("RANDOM")
-  .addField(`Bot İd`, ` \`\`\`${botid}\`\`\` `)
-   .addField(`Bot Sahip`, ` \`\`\`${message.author.tag}\`\`\` `)
-  .addField(`Prefix`, ` \`\`\`${prefix}\`\`\` `)
-  .addField("DBL Onaylı Mı?", dbl)
-  .addField(`Ekle`,`[0 Perm](https://discord.com/api/oauth2/authorize?client_id=${botid}&permissions=0&scope=bot) **|** [8 Perm](https://discord.com/api/oauth2/authorize?client_id=${botid}&permissions=8&scope=bot)`)
-client.channels.cache.get(botlist.log).send(embed)
-  
+  if (message.channel.id !== kanal) return message.channel.send(`Bu komutu sadece <#${kanal}> kanalında kullanabilirsin.`).then(msg => msg.delete(10000))
+	if (message.channel.id == kanal) {
+  if (!botid) return message.channel.send(`:no_entry: Botunun ID'sini yazmalısın.`).then(msg => msg.delete(10000))
+  if (!prefix) return message.channel.send(`:no_entry: Botunun prefixini yazmalısın.`).then(msg => msg.delete(10000))
+  if (!onaylımı) return message.channel.send(`:no_entry: Botunun Dbl onaylımı onu yazmalısın`).then(msg => msg.delete(10000))
+  message.delete()
+  const basvuruuu = new Discord.MessageEmbed()
+  .setColor("PURPLE")
+  .setDescription(`${message.author} adlı kullanıcının <@${botid}> adlı botu sıraya ekledi. Botu onaylanmayı bekliyor. `)
+  const embed = new Discord.MessageEmbed()
+  .setColor("BLUE")
+  .setDescription(`[Ekle](https://discordapp.com/oauth2/authorize?client_id=${botid}&scope=bot&permissions=0)`, true)
+  .setTitle("Bot Ekletme")
+  .addField("Bot Sahibi", message.author.tag)
+  .addField("Bot ID", botid)
+  .addField("Bot Prefix", prefix)
+  .addField("Bot Onaylımı?", onaylımı)
+  client.channels.cache.get(basvuru).send(embed)
+  client.channels.cache.get(log).send(basvuruuu)
+  message.channel.send(`Bot ekleme isteğiniz alındı.`).then(msg => msg.delete(1000))
+  }
+};
 
-}
 exports.conf = {
-	enabled: true,
-	guildOnly: false,
-	aliases:[],
-	permlevel: 0
+  enabled: true,
+  guildOnly: false,
+  aliases: ['bot-ekle'],
+  permLevel: 0
 };
 
 exports.help = {
-	name: "ekle"
-}
+  name: 'botekle', 
+  description: "Sunucuya bot eklemenizi sağlar.",
+  usage: 'botekle <botid> <prefix>'
+};
