@@ -3,7 +3,7 @@ const ms = require('ms');
 exports.run = async (client, message, args) => {
 
     if(!message.member.hasPermission('MANAGE_MESSAGES')){
-        return message.channel.send(':x: Bu Komutu Kullanmak İçin "Mesajları Yönet" Yetkisine Sahip Olman Gerekiyor!');
+        return message.channel.send(':x: Bu Komutu Kullanmak İçin "Mesajları Yönet" Yetkisine Sahip Olman Gerekiyor.');
     }
 
     if(!args[0]){
@@ -16,21 +16,19 @@ exports.run = async (client, message, args) => {
     client.giveawaysManager.giveaways.find((g) => g.messageID === args[0]);
 
     if(!giveaway){
-        return message.channel.send('Çekiliş Mesajı Bulunamadı `'+ args.join(' ') + '`.').then(m => m.delete({timeout: 5000, reason:"It had to be done"}));
+        return message.channel.send('Çekiliş Mesajı Bulunamadı `'+ args.join(' ') +'`.').then(m => m.delete({timeout: 5000, reason:"It had to be done"}));
                 message.delete({timeout: 6000, reason:"It had to be done"});
     }
 
-    client.giveawaysManager.edit(giveaway.messageID, {
-        setEndTimestamp: Date.now()
-    })
+    client.giveawaysManager.reroll(giveaway.messageID)
     .then(() => {
-
-        message.channel.send('Çekiliş Başarıyla Sona Erdirildi!').then(m => m.delete({timeout: 5000, reason:"It had to be done"}));
+        message.channel.send('Çekiliş Kazananı Yenilendi!').then(m => m.delete({timeout: 5000, reason:"It had to be done"}));
                 message.delete({timeout: 6000, reason:"It had to be done"});
-    })
+       })
+
     .catch((e) => {
         if(e.startsWith(`${giveaway.messageID} ID'li Çekiliş Sona Ermedi.`)){
-            message.channel.send('Çekiliş Başarıyla Sonlandırıldı!');
+            message.channel.send('Bu çekiliş henüz bitmedi!')
         } else {
             console.error(e);
             message.channel.send('Bir Hata Oluştu...');
@@ -40,11 +38,11 @@ exports.run = async (client, message, args) => {
 };
 
 exports.conf = {
-  aliases: ['end',"bitir"],
+  aliases: ['yenile'],
   permLevel: 0,
 };
 exports.help = {
-  name: 'sonlandır',
-   description: 'Çekilişi Sonlandırır.',
-  usage: 'end <mesajID>'
+  name: 'reroll',
+   description: 'Çekilişi yeniler.',
+  usage: 'reroll <mesajID>'
 };
