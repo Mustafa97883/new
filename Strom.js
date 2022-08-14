@@ -19,6 +19,7 @@ const Invites = new Collection(); //
 const fs = require('fs');
 const db = require('quick.db');
 require('./util/eventLoader.js')(client);
+const { GiveawaysManager } = require("discord-giveaways");
 const path = require('path');
 const snekfetch = require('snekfetch');
 const ms = require('ms');
@@ -940,20 +941,46 @@ const Strom = new Strom.MessageEmbed()
 
 // çekiliş sistemi
 
+if (!db.get("giveaways")) db.set("giveaways", []);
 
-const { GiveawaysManager } = require('discord-giveaways');
-client.giveawaysManager = new GiveawaysManager(client, {
-    storage: "./giveaways.json",
-    updateCountdownEvery: 5000,
-    default: {
-        botsCanWin: false,
-        exemptPermissions: [ "MANAGE_MESSAGES", "ADMINISTRATOR" ],
-        embedColor: "#FF0000",
-        reaction: "🎉"
-    }//#FF0000
+const GiveawayManagerWithOwnDatabase = class extends GiveawaysManager {
+  async getAllGiveaways() {
+    return db.get("giveaways");
+  }
+
+  async saveGiveaway(messageID, giveawayData) {
+    db.push("giveaways", giveawayData);
+    return true;
+  }
+
+  async editGiveaway(messageID, giveawayData) {
+    const giveaways = db.get("giveaways");
+    const newGiveawaysArray = giveaways.filter(
+      giveaway => giveaway.messageID !== messageID
+    );
+    newGiveawaysArray.push(giveawayData);
+    db.set("giveaways", newGiveawaysArray);
+    return true;
+  }
+
+  async deleteGiveaway(messageID) {
+    const newGiveawaysArray = db
+      .get("giveaways")
+      .filter(giveaway => giveaway.messageID !== messageID);
+    db.set("giveaways", newGiveawaysArray);
+    return true;
+  }
+};
+const manager = new GiveawayManagerWithOwnDatabase(client, {
+  storage: false,
+  updateCountdownEvery: 5000,
+  default: {
+    botsCanWin: false,
+    embedColor: "#0a99ff",
+    reaction: "🎉"
+  }
 });
-
-
+client.giveawaysManager = manager;
 //görsel engel
 client.on("message", async message => {
   let kanal = db.fetch(`görselengel.${message.guild.id}`);
