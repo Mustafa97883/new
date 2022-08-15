@@ -39,7 +39,7 @@ let cse = new Discord.MessageEmbed()//discord.gg/turkiye
 message.channel.send(cse)
 }
 module.exports.conf = {
-aliases: ["mod","moderasyon","moderasyon-sistemi"]
+aliases: ["mod","moderasyon"]
 }
 
 module.exports.help = {
