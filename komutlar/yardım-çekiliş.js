@@ -10,6 +10,12 @@ exports.run = (client, message) => {
 .addFields({
                 name: '**s!çekiliş**',
                   value: "Çekiliş başlatır",
+                inline: true,
+   name: '**s!bitir**',
+                  value: "Çekilişi Sonlandırır",
+                inline: true,
+    name: '**s!reroll**',
+                  value: "Çekilişi yeniler",
                 inline: true
               
               
@@ -24,7 +30,7 @@ exports.run = (client, message) => {
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: [''],
+  aliases: [],
   kategori: "Bot",
   permLevel: 0
 };
