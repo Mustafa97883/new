@@ -1,5 +1,5 @@
 {
-  "name": "hello-express",
+  "name": "cooperative-spiffy-dead",
   "version": "0.0.1",
   "description": "ramo",
   "main": "Strom.js",
@@ -64,7 +64,7 @@
     "node": "12.x"
   },
   "repository": {
-    "url": "https://glitch.com/edit/#!/hello-express"
+    "url": "https://glitch.com/edit/#!/cooperative-spiffy-dead"
   },
   "license": "MIT",
   "keywords": [
