@@ -30,9 +30,7 @@ exports.run = async (client, message, args) => {
   <a:rainbow:855248569136578570> **s!rütbe-yardım**\`rütbe sistemini gösterir. \`\n
   <a:rainbow:855248569136578570> **s!eğlence-yardım**\`Eğlence komutlarını gösterir.\` \n
   <a:rainbow:855248569136578570> **s!jail-yardım**\`jail.\` \n
-  <a:rainbow:855248569136578570> **s!kullanıcı-yardım**\`kullanıcı komutlarını gösterir.\` \n
-  <a:rainbow:855248569136578570> **s!nsfw-anime**\`+18 komutları gösterir.\` \n (anime)
-  <a:rainbow:855248569136578570> **s!nsfw**\`+18 komutları gösterir.\` \n
+  <a:rainbow:855248569136578570> **s!kullanıcı-yardım**\`kullanıcı komutlarını gösterir.\` \n  
   <a:rainbow:855248569136578570> **s!komut-güncelleme\`komutlarınızı v11tov12, v12tov13.\` \n
   <a:rainbow:855248569136578570> s!çekiliş-sistemi\`çekiliş komutlarını gösterir.\` \n
 `
