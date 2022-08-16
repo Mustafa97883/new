@@ -8,7 +8,6 @@ dependencies:
   chalk: 4.1.2
   common-tags: 1.8.0
   cool-images: 1.0.3
-  cpu-stat: 2.0.1
   croxydb: 0.0.7
   crypto: 1.0.1
   dabi-images: 2.7.5
@@ -1495,10 +1494,6 @@ packages:
     dev: false
     resolution:
       integrity: sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ==
-  /cpu-stat/2.0.1:
-    dev: false
-    resolution:
-      integrity: sha512-bC4ts/0IjYfNV6Dc7F2NauWM0tip0fneZjRek8HqX2ZERC4oSt6dmV+GTN1mfE9OKbLAppv58M2PVzKLGB731w==
   /cross-spawn/5.1.0:
     dependencies:
       lru-cache: 4.1.5
@@ -5963,7 +5958,6 @@ specifiers:
   chalk: ^4.1.1
   common-tags: ^1.8.0
   cool-images: ^1.0.3
-  cpu-stat: ^2.0.1
   croxydb: ^0.0.7
   crypto: ^1.0.1
   dabi-images: ^2.7.5

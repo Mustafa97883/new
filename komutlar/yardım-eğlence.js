@@ -27,6 +27,8 @@ exports.run = async (client, message, args) => {
   **<a:rainbow:855248569136578570> ${prefix}hapishane**  \`pp nizi hapise koyar.\` \n
   **<a:rainbow:855248569136578570> ${prefix}kaçcm**  \`Kaç santim malafatın var Bi bak istersen.\`  \n
   **<a:rainbow:855248569136578570> ${prefix}kapaklaf**  \`Etiketlediğiniz kişiye laf sokar.\`  \n
+  **<a:rainbow:855248569136578570> ${prefix}missionfailed**\`Görev başarısız .\`  \n*
+  **<a:rainbow:855248569136578570> ${prefix}missionpassed**\`Görev başarılı. \`  \n
   **<a:rainbow:855248569136578570> ${prefix}adamasmaca**\`adamasmaca oyununu oynarsınız.\`  \n
   **<a:rainbow:855248569136578570> ${prefix}şifre**\`Bot size dm den random şifre atar ve kırılması imkansız'dır.\`  \n
   **<a:rainbow:855248569136578570> ${prefix}anime**\`Anime Font.\`  \n

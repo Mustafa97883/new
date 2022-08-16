@@ -13,7 +13,7 @@ if (message.author.id !== "846736343593779230") return message.channel.send(":no
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: ["ka"],
+  aliases: ["kapat"],
   kategori: "sohbet",
   permLevel: 3
 };

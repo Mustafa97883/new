@@ -26,7 +26,7 @@ exports.run = async (client, message, args) => {
     
     
   )
-    .setFooter( "Strom / Discord'da Yeni Devrim \nherhangi bir hatada s!hata (hata)\nönerileriniz için s!öneri (öneriniz)", client.user.avatarURL())
+    .setFooter( "Strom / Discord'da Yeni Devrim!", client.user.avatarURL())
   return message.channel.send(embed);
 
       
