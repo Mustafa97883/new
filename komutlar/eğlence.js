@@ -8,7 +8,7 @@ exports.run = async (client, message) => {
   const embedeğlence = new Discord.MessageEmbed()
     .setAuthor(`Strom | Eğlence`)
     .setTitle(``)
-    .setColor(`BLACK`)
+    .setColor(`RANDOM`)
     .setThumbnail(
       "https://cdn.discordapp.com/avatars/854450815149277214/74b8c7ed3f881b718c504a44158bff3d.png"
     )

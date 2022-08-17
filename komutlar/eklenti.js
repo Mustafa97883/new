@@ -8,7 +8,7 @@ exports.run = async (client, message) => {
   const sunucu = new Discord.MessageEmbed()
     .setAuthor(`Strom  | Eklentiler`)
     .setTitle(``)
-    .setColor("#00ff00")
+    .setColor("RANDOM")
     .setThumbnail(
       "https://cdn.discordapp.com/avatars/854450815149277214/74b8c7ed3f881b718c504a44158bff3d.png"
     )
@@ -37,12 +37,12 @@ exports.run = async (client, message) => {
     )
    .addField(
       `__botlist sistem__`,
-      `♻️ \`${prefix}öneri-sistem\` Ayarlanabilir Öneri Sistem`,
+      `♻️ \`${prefix}botlist-sistem\` Ayarlanabilir botlist sistem`,
       true
     )
   .addField(
       `__kayıt__`,
-      `♻️ \`${prefix}kayıt-sistem [Oyun]\` Ayarlanabilir Kayıt sistemi.`,
+      `♻️ \`${prefix}kayıt-sistem [Oyun]\` Ayarlanabilir Kayıt sistem`,
       true
     )
     .addField(
@@ -57,7 +57,7 @@ exports.run = async (client, message) => {
     )
     .addField(
       `__Bilgilendirme__`,
-      `🔱  \`${prefix}davet\` | Botu Sununuya Davet Edersiniz\n 🔱 \`${prefix}botbilgi\` | Botun İstatistiklerini Görürsünüz \n 🔱 \`${prefix}iletişim\` | QualitySel  İletişim Bilgileri.`
+      `🔱  \`${prefix}davet\` | Botu Sununuya Davet Edersiniz\n 🔱 \`${prefix}botbilgi\` | Botun İstatistiklerini Görürsünüz \n 🔱 \`${prefix}iletişim\` | Strom  İletişim Bilgileri.`
     );
   return message.channel.send(sunucu);
 };
