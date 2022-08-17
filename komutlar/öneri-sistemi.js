@@ -29,8 +29,8 @@ exports.run = async (bot, msg, args) => {
       true
     )
     .addField(
-      `**__Shadow Sunucuya Özel Öneri__**`,
-      `<a:green:822530401301954632> \`${prefix}öneri\` \n Discord Sunucumuza Bota Veya MCSunucumuza Öneri Yapabilirsiniz..`,
+      `**Destek Sunucusuna Özel Öneri__**`,
+      `🟢 \`${prefix}öneri\` \n Discord Sunucumuza Bota Öneri Yapabilirsiniz..`,
       true
     )
     .addField(
