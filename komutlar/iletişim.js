@@ -17,7 +17,7 @@ exports.run = (client, message, args) => {
         
         `)
         .setThumbnail(client.user.avatarURL)
-        .setFooter(`${message.author.username} Başarıyla ${ayarlar.prefix}davet Sistemi Kullandı!`, message.author.avatarURL)
+        .setFooter(`${message.author.username} Başarıyla ${ayarlar.prefix}iletişim komutunu Kullandı!`, message.author.avatarURL)
     .setColor(`RANDOM`)
     return message.channel.send(embed);
   
