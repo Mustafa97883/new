@@ -21,25 +21,25 @@ exports.run = async (client, message, args) => {
     **Bota yorum atıp 5 yıldız vermeyi unutma :)** [TIKLA](https://top.gg/bot/756883309270663229)
     **Strom Müzik botunu eklemek için [TIKLA](https://discord.com/api/oauth2/authorize?client_id=854122011151826975&permissions=8&scope=bot%20applications.commands)
     
-  **<a:rainbow:855248569136578570> ${prefix}aşkölçer** \`Etiketlediğiniz kişi ile aşkınızı ölçer.\`  \n
-  **<a:rainbow:855248569136578570> ${prefix}benimki**  \`komik bir foto atar.\`  \n
-  **<a:rainbow:855248569136578570> ${prefix}manzara**  \`güzel bir manzara.\`  \n
-  **<a:rainbow:855248569136578570> ${prefix}hapishane**  \`pp nizi hapise koyar.\` \n
-  **<a:rainbow:855248569136578570> ${prefix}kaçcm**  \`Kaç santim malafatın var Bi bak istersen.\`  \n
-  **<a:rainbow:855248569136578570> ${prefix}kapaklaf**  \`Etiketlediğiniz kişiye laf sokar.\`  \n
-  **<a:rainbow:855248569136578570> ${prefix}adamasmaca**\`adamasmaca oyununu oynarsınız.\`  \n
-  **<a:rainbow:855248569136578570> ${prefix}şifre**\`Bot size dm den random şifre atar ve kırılması imkansız'dır.\`  \n
-  **<a:rainbow:855248569136578570> ${prefix}anime**\`Anime Font.\`  \n
-  **<a:rainbow:855248569136578570> ${prefix}ara155**\`polisi arar :).\`  \n
-  **<a:rainbow:855248569136578570> ${prefix}green**\`yeşil bir logo atar.\`  \n
-  **<a:rainbow:855248569136578570> ${prefix}alev**\`Alevli bir logo atar.\`  \n
-  **<a:rainbow:855248569136578570> ${prefix}altın**\`Altın bir logo atar.\`  \n
-  **<a:rainbow:855248569136578570> ${prefix}arrow**\`Arrow Ne yazacağımı bulamadım :).\`  \n
-  **<a:rainbow:855248569136578570> ${prefix}basit**\`Basıt bir logo.\`  \n
-  **<a:rainbow:855248569136578570> ${prefix}elmas**\`Dinamik bir logo.\`  \n
-  **<a:rainbow:855248569136578570> ${prefix}elmas**\`Elmas lı bir logo.\`  \n
-  **<a:rainbow:855248569136578570> ${prefix}habbo**\`habbo lu bir logo.\`  \n
-  **<a:rainbow:855248569136578570> ${prefix}banner**\`Banner oluşturur.\`  \n
+  🎡 ${prefix}aşkölçer** \`Etiketlediğiniz kişi ile aşkınızı ölçer.\`  \n
+  🎡 ${prefix}benimki**  \`komik bir foto atar.\`  \n
+  🎡 ${prefix}manzara**  \`güzel bir manzara.\`  \n
+  🎡 ${prefix}hapishane**  \`pp nizi hapise koyar.\` \n
+  🎡 ${prefix}kaçcm**  \`Kaç santim malafatın var Bi bak istersen.\`  \n
+  🎡 ${prefix}kapaklaf**  \`Etiketlediğiniz kişiye laf sokar.\`  \n
+  🎡 ${prefix}adamasmaca**\`adamasmaca oyununu oynarsınız.\`  \n
+  🎡 ${prefix}şifre**\`Bot size dm den random şifre atar ve kırılması imkansız'dır.\`  \n
+  🎡 ${prefix}anime**\`Anime Font.\`  \n
+  🎡 ${prefix}ara155**\`polisi arar :).\`  \n
+  🎡 ${prefix}green**\`yeşil bir logo atar.\`  \n
+  🎡 ${prefix}alev**\`Alevli bir logo atar.\`  \n
+  🎡 ${prefix}altın**\`Altın bir logo atar.\`  \n
+  🎡 ${prefix}arrow**\`Arrow Ne yazacağımı bulamadım :).\`  \n
+  🎡 ${prefix}basit**\`Basıt bir logo.\`  \n
+  🎡 ${prefix}elmas**\`Dinamik bir logo.\`  \n
+  🎡 ${prefix}elmas**\`Elmas lı bir logo.\`  \n
+  🎡 ${prefix}habbo**\`habbo lu bir logo.\`  \n
+  🎡 ${prefix}banner**\`Banner oluşturur.\`  \n
 `
     
     
