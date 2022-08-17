@@ -126,7 +126,7 @@ exports.run = function(client, message, args) {
 exports.conf = {
   enabled: true,
   guildOnly: true,
-  aliases: ["k.b"],
+  aliases: ["k.b","profil"],
   permLevel: 0
 };
 exports.help = {

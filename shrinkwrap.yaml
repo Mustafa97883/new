@@ -47,6 +47,7 @@ dependencies:
   pretty-ms: 7.0.1
   quick.db: 7.1.3
   snekfetch: 4.0.4
+  steam-provider: 0.3.2
   string-similarity: 4.0.4
   superagent: 6.1.0
   vultrex.db: 1.4.1
@@ -1251,6 +1252,10 @@ packages:
       npm: 1.2.8000 || >= 1.4.16
     resolution:
       integrity: sha512-DfJ+q6EPcGKZD1QWUjSpqp+Q7bDQTsQIF4zfUAtZ6qk+H/3/QRhg9CEp39ss+/T2vw0+HaidC0ecJj/DRLIaKg==
+  /boolbase/1.0.0:
+    dev: false
+    resolution:
+      integrity: sha512-JZOSA7Mo9sNGB8+UjSgzdLtokWAky1zbztM3WRLCbZ70/3cTANmQmOdR7y2g+J0e2WXywy1yS468tY+IruqEww==
   /brace-expansion/1.1.11:
     dependencies:
       balanced-match: 1.0.2
@@ -1474,6 +1479,31 @@ packages:
       node: ^12.17.0 || ^14.13 || >=16.0.0
     resolution:
       integrity: sha512-Fo07WOYGqMfCWHOzSXOt2CxDbC6skS/jO9ynEcmpANMoPrD+W1r1K6Vx7iNm+AQmETU1Xr2t+n8nzkV9t6xh3w==
+  /cheerio-select/2.1.0:
+    dependencies:
+      boolbase: 1.0.0
+      css-select: 5.1.0
+      css-what: 6.1.0
+      domelementtype: 2.3.0
+      domhandler: 5.0.3
+      domutils: 3.0.1
+    dev: false
+    resolution:
+      integrity: sha512-9v9kG0LvzrlcungtnJtpGNxY+fzECQKhK4EGJX2vByejiMX84MFNQw4UxPJl3bFbTMw+Dfs37XaIkCwTZfLh4g==
+  /cheerio/1.0.0-rc.12:
+    dependencies:
+      cheerio-select: 2.1.0
+      dom-serializer: 2.0.0
+      domhandler: 5.0.3
+      domutils: 3.0.1
+      htmlparser2: 8.0.1
+      parse5: 7.0.0
+      parse5-htmlparser2-tree-adapter: 7.0.0
+    dev: false
+    engines:
+      node: '>= 6'
+    resolution:
+      integrity: sha512-VqR8m68vM46BNnuZ5NtnGBKIE/DfN0cRIzg9n40EIq9NOv90ayxLBXA8fXC5gquFRGJSTRqBq25Jt2ECLR431Q==
   /chownr/1.1.4:
     dev: false
     resolution:
@@ -1677,6 +1707,22 @@ packages:
     dev: false
     resolution:
       integrity: sha512-VxBKmeNcqQdiUQUW2Tzq0t377b54N2bMtXO/qiLa+6eRRmmC4qT3D4OnTGoT/U6O9aklQ/jTwbOtRMTTY8G0Ig==
+  /css-select/5.1.0:
+    dependencies:
+      boolbase: 1.0.0
+      css-what: 6.1.0
+      domhandler: 5.0.3
+      domutils: 3.0.1
+      nth-check: 2.1.1
+    dev: false
+    resolution:
+      integrity: sha512-nwoRF1rvRRnnCqqY7updORDsuqKzqYJ28+oSMaJMMgOauh3fvwHqMS7EZpIPqK8GL+g9mKxF1vP/ZjSeNjEVHg==
+  /css-what/6.1.0:
+    dev: false
+    engines:
+      node: '>= 6'
+    resolution:
+      integrity: sha512-HTUrgRJ7r4dsZKU6GjmpfRK1O76h97Z8MfS1G0FozR+oF2kG6Vfe8JE6zwrkbxigziPHinCJ+gCPjA9EaBDtRw==
   /cssom/0.3.8:
     dev: false
     resolution:
@@ -2016,10 +2062,38 @@ packages:
     dev: false
     resolution:
       integrity: sha512-n8uOSuwvh+JLS3nrU/Jjom7TYX3jpAueTQ4NSQLf+SMsBZAjdzll4+zwYxxHxH7hvngmT12P0zP08dfHGh1xmQ==
+  /dom-serializer/2.0.0:
+    dependencies:
+      domelementtype: 2.3.0
+      domhandler: 5.0.3
+      entities: 4.3.1
+    dev: false
+    resolution:
+      integrity: sha512-wIkAryiqt/nV5EQKqQpo3SToSOV9J0DnbJqwK7Wv/Trc92zIAYZ4FlMu+JPFW1DfGFt81ZTCGgDEabffXeLyJg==
   /dom-walk/0.1.2:
     dev: false
     resolution:
       integrity: sha512-6QvTW9mrGeIegrFXdtQi9pk7O/nSK6lSdXW2eqUspN5LWD7UTji2Fqw5V2YLjBpHEoU9Xl/eUWNpDeZvoyOv2w==
+  /domelementtype/2.3.0:
+    dev: false
+    resolution:
+      integrity: sha512-OLETBj6w0OsagBwdXnPdN0cnMfF9opN69co+7ZrbfPGrdpPVNBUj02spi6B1N7wChLQiPn4CSH/zJvXw56gmHw==
+  /domhandler/5.0.3:
+    dependencies:
+      domelementtype: 2.3.0
+    dev: false
+    engines:
+      node: '>= 4'
+    resolution:
+      integrity: sha512-cgwlv/1iFQiFnU96XXgROh8xTeetsnJiDsTc7TYCLFd9+/WNkIqPTxiM/8pSd8VIrhXGTf1Ny1q1hquVqDJB5w==
+  /domutils/3.0.1:
+    dependencies:
+      dom-serializer: 2.0.0
+      domelementtype: 2.3.0
+      domhandler: 5.0.3
+    dev: false
+    resolution:
+      integrity: sha512-z08c1l761iKhDFtfXO04C7kTdPBLi41zwOZl00WS8b5eiaebNpY00HKbztwBq+e3vyqWNwWF3mP9YLUeqIrF+Q==
   /duplexer/0.1.2:
     dev: false
     resolution:
@@ -2051,6 +2125,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-+uw1inIHVPQoaVuHzRyXd21icM+cnt4CzD5rW+NC1wjOUSTOs+Te7FOv7AhN7vS9x/oIyhLP5PR1H+phQAHu5Q==
+  /entities/4.3.1:
+    dev: false
+    engines:
+      node: '>=0.12'
+    resolution:
+      integrity: sha512-o4q/dYJlmyjP2zfnaWDUC6A3BQFmVTX+tZPezK7k0GLSU9QYCauscf5Y+qcEPzKL+EixVouYDgLQK5H9GrLpkg==
   /errno/0.1.8:
     dependencies:
       prr: 1.0.1
@@ -2813,6 +2893,15 @@ packages:
     dev: false
     resolution:
       integrity: sha512-71lZziiDnsuabfdYiUeWdCVyKuqwWi23L8YeIgV9jSSZHCtb6wB1BKWooH7L3tn4/FuZJMVWyNaIDr4RGmaSYw==
+  /htmlparser2/8.0.1:
+    dependencies:
+      domelementtype: 2.3.0
+      domhandler: 5.0.3
+      domutils: 3.0.1
+      entities: 4.3.1
+    dev: false
+    resolution:
+      integrity: sha512-4lVbmc1diZC7GUJQtRQ5yBAeUCL1exyMwmForWkRLnwyzWBFxN633SALPMGYaWZvKe9j1pRZJpauvmxENSp/EA==
   /http-errors/2.0.0:
     dependencies:
       depd: 2.0.0
@@ -4325,6 +4414,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-AqZtDUWOMKs1G/8lwylVjrdYgqA4d9nu8hc+0gzRxlDb1I10+FHBGMXs6aiQHFdCUUlqH99MUMuLfzWDNDtfxw==
+  /nth-check/2.1.1:
+    dependencies:
+      boolbase: 1.0.0
+    dev: false
+    resolution:
+      integrity: sha512-lqjrjmaOoAnWfMmBPL+XNnynZh2+swxiX3WUE0s4yEHI6m+AwrK2UZOimIRl3X/4QctVqS8AiZjFqyOGrMXb/w==
   /number-is-nan/1.0.1:
     dev: false
     engines:
@@ -4552,10 +4647,23 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-kHt7kzLoS9VBZfUsiKjv43mr91ea+U05EyKkEtqp7vNbHxmaVuEqN7XxeEVnGrMtYOAxGrDElSi96K7EgO1zCA==
+  /parse5-htmlparser2-tree-adapter/7.0.0:
+    dependencies:
+      domhandler: 5.0.3
+      parse5: 7.0.0
+    dev: false
+    resolution:
+      integrity: sha512-B77tOZrqqfUfnVcOrUvfdLbz4pu4RopLD/4vmu3HUPswwTA8OH0EMW9BlWR2B0RCoiZRAHEUu7IxeP1Pd1UU+g==
   /parse5/1.5.1:
     dev: false
     resolution:
       integrity: sha512-w2jx/0tJzvgKwZa58sj2vAYq/S/K1QJfIB3cWYea/Iu1scFPDQQ3IQiVZTHWtRBwAjv2Yd7S/xeZf3XqLDb3bA==
+  /parse5/7.0.0:
+    dependencies:
+      entities: 4.3.1
+    dev: false
+    resolution:
+      integrity: sha512-y/t8IXSPWTuRZqXc0ajH/UwDj4mnqLEbSttNbThcFhGrZuOyoyvNBO85PBp2jQa55wY9d07PBNjsK8ZP3K5U6g==
   /parseurl/1.3.3:
     dev: false
     engines:
@@ -5441,6 +5549,12 @@ packages:
       node: '>= 0.8'
     resolution:
       integrity: sha512-RwNA9Z/7PrK06rYLIzFMlaF+l73iwpzsqRIFgbMLbTcLD6cOao82TaWefPXQvB2fOC4AjuYSEndS7N/mTCbkdQ==
+  /steam-provider/0.3.2:
+    dependencies:
+      cheerio: 1.0.0-rc.12
+    dev: false
+    resolution:
+      integrity: sha512-RvslE4DLTdwL5SNeg7ODknxF1syiTIiRu+Uoy6I1cyairuUnwlkR1SR9pZFw8f4pHbnAldhLzjxiJQx9dEaI6Q==
   /steno/1.0.0:
     dev: false
     resolution:
@@ -6138,8 +6252,8 @@ specifiers:
   canvacord: ^5.0.8
   canvas: ^2.8.0
   captcha-plus: ^2.5.2
-  chalk: ^4.1.1
-  common-tags: ^1.8.0
+  chalk: ^4.1.2
+  common-tags: ^1.8.2
   cool-images: ^1.0.3
   cpu-stat: ^2.0.1
   croxydb: ^0.0.7
@@ -6159,7 +6273,7 @@ specifiers:
   express: ^4.18.1
   foo: 0.0.7
   fs: ^0.0.2
-  generate-password: ^1.6.0
+  generate-password: ^1.7.0
   hastebin-gen: ^2.0.5
   hex-color-regex: ^1.1.0
   humanize-duration: ^3.27.0
@@ -6167,12 +6281,12 @@ specifiers:
   jimp: ^0.16.1
   join: ^3.0.0
   lowdb: ^2.1.0
-  math-expression-evaluator: ^1.3.7
+  math-expression-evaluator: ^1.4.0
   moment: ^2.29.1
   moment-duration-format: ^2.3.2
   mongoose: ^5.11.9
   ms: ^2.1.3
-  node-fetch: ^2.6.1
+  node-fetch: ^2.6.7
   node-superfetch: ^0.1.11
   npm: ^7.20.6
   parse-ms: ^2.1.0
@@ -6180,6 +6294,7 @@ specifiers:
   pretty-ms: ^7.0.1
   quick.db: ^7.1.3
   snekfetch: ^4.0.4
+  steam-provider: ^0.3.2
   string-similarity: ^4.0.4
   superagent: ^6.1.0
   vultrex.db: ^1.4.1

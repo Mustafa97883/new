@@ -10,7 +10,7 @@ let cse = new Discord.MessageEmbed()//discord.gg/turkiye
 .setThumbnail(client.user.avatarURL())
 .setDescription(`[OYVER](https://top.gg/bot/756883309270663229/vote)
 **Strom Müzik botunu eklemek için [TIKLA](https://discord.com/api/oauth2/authorize?client_id=854122011151826975&permissions=8&scope=bot%20applications.commands)
-**Onay sürecinde olduğu için bazı komutlar çalışamaz!**
+
 
 
 🎉 **s!reroll**  \`Çekilişi yeniler.\` \n

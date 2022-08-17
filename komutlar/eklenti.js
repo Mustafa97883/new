@@ -22,7 +22,7 @@ exports.run = async (client, message) => {
     )
     .addField(
       `__Rütbe Sistem__`,
-      `♻️ \`${prefix}seviye-sistem\` Gelişmiş Seviye Sistem`,
+      `♻️ \`${prefix}rütbe-sistem\` Gelişmiş Seviye Sistem`,
       true
     )
     .addField(
@@ -33,6 +33,11 @@ exports.run = async (client, message) => {
     .addField(
       `__Öneri Sistem__`,
       `♻️ \`${prefix}öneri-sistem\` Ayarlanabilir Öneri Sistem`,
+      true
+    )
+  .addField(
+      `__kayıt__`,
+      `📯 \`${prefix}kayıt-sistem [Oyun]\` Ayarlanabilir Kayıt sistemi.`,
       true
     )
     .addField(

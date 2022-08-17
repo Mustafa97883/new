@@ -20,6 +20,11 @@ exports.run = async (client, message) => {
       `📯 \`${prefix}steamoyun [Oyun]\` Yazdıgınız Oyunun Steamdaki Bilgileri Verir.`,
       true
     )
+  .addField(
+      `__kac cm__`,
+      `📯 \`${prefix}kaccm [Oyun]\` Malafatın boyunu söyler.`,
+      true
+    )
     .addField(
       `__Minecraft Ödül__`,
       `📯 \`${prefix}mcödül \` Yazdıgınız Cümleyi Minecraft Ödüle Aktarır.`,
