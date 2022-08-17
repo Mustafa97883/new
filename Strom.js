@@ -604,7 +604,7 @@ global.onUpdateInvite = (guildMember, guild, total) => {
 
 //AFK Baş
 
-const ms = require("parse-ms");
+
 const { DiscordAPIError } = require("discord.js");
 
 client.on("message", async message => {
@@ -616,7 +616,7 @@ client.on("message", async message => {
     db.delete(`afk_${message.author.id}`);
     db.delete(`afk_süre_${message.author.id}`);
 
-    const embed = new Discord.MessageEmbed()
+    const embed = new Strom.MessageEmbed()
 
       .setColor("#00ff00")
       .setAuthor(message.author.username, message.author.avatarURL)
@@ -633,7 +633,7 @@ client.on("message", async message => {
     let süre = await db.fetch(`afk_süre_${USER.id}`);
     let timeObj = ms(Date.now() - süre);
 
-    const afk = new Discord.MessageEmbed()
+    const afk = new Strom.MessageEmbed()
 
       .setColor("#00ff00")
       .setDescription(
