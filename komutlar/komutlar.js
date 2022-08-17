@@ -1,22 +1,30 @@
 const Discord = require("discord.js");
+exports.run = async (client, message, args, level) => {
+  const toplamkomut = new Discord.MessageEmbed()
 
-module.exports.run = async (client, message, args) => {
-    try {
-        await message.channel.send(`Komutlar: \n${client.komutlar.map(props => `\`${props.help.name}\``).join(" | ")}`);
-    } catch (e) {
-        throw e;
-    }
-}
+    .setTitle(``)
+    .setAuthor(`Strom  | Discord Bot Toplam Komut Sayısı`)
+    .setDescription(
+      `✅ **Strom  Toplam**  \`` +
+        client.commands.size +
+        `\` **Komut Vardır!**`
+    )
+    .setColor("#00ff00")
+    .setTimestamp()
+    .setFooter(`Strom`, client.user.avatarURL());
 
-module.exports.conf = {
+  return message.channel.send(toplamkomut);
+};
+
+exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: ["komutlar"],
+  aliases: [],
   permLevel: 0
 };
 
-module.exports.help = {
-  name: 'komutlar',
-  description: 'Botta bulunan tüm komutları gösterir',
-  usage: 'komutlar'
+exports.help = {
+  name: "komutlar",
+  description: "Toplam Komut",
+  usage: "toplamkomut"
 };
