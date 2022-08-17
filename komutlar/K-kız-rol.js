@@ -6,18 +6,18 @@ const DBL = require('dblapi.js')
 const dbl = new DBL('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc1Njg4MzMwOTI3MDY2MzIyOSIsImJvdCI6dHJ1ZSwiaWF0IjoxNjYwNzM0NTkyfQ.Tci7n9zVPbCAfU70t8CccDiH7lg7pGrvYHnIvRk9f1s', client)
 dbl.hasVoted(message.author.id).then(voted => {
       if(voted) {
-  if (!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send(` Bu komutu kullanabilmek için "\`yönetici\`" yetkisine sahip olmalısın`);
+    if (!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send(` Bu komutu kullanabilmek için "\`yönetici\`" yetkisine sahip olmalısın`);
 
 if(args[0] === "sıfırla") {
 const sıfırlandı = new discord.MessageEmbed()
 .setAuthor(client.user.username, client.user.avatarURL)  
-.setTitle(`${client.user.username} - Kayıt Rol Sıfırla `)
+.setTitle(`${client.user.username} - Kız Rol Sıfırla `)
 .setColor('BLACK')
-.setDescription(`Sunucu İçin Ayarladığınız Kayıt Rol Başarıyla Sıfırlandı ! `)
+.setDescription(`Sunucu İçin Ayarladığınız Kız Rolü Başarıyla Sıfırlandı !`)
 .setThumbnail(client.user.avatarURL)
 .setFooter(`Komut ${message.author.tag} Tarafından Kullanıldı ! `)
 message.channel.send(sıfırlandı)
-db.delete(`kayıtçırol_${message.guild.id}`)
+db.delete(`kızrol_${message.guild.id}`)
 return;
 }
 
@@ -25,19 +25,19 @@ let rol = message.mentions.roles.first();
 if (!rol) {
   const ayarlanmadı = new discord.MessageEmbed()
 .setAuthor(client.user.username, client.user.avatarURL)  
-.setTitle(`${client.user.username} - Kayıt Rol Ayarla `)
+.setTitle(`${client.user.username} - Kız Rol Ayarla `)
 .setColor('BLACK')
-.setDescription(`Ayarlayacağınız Kayıt Rolü Belirtiniz ! `)
+.setDescription(`Ayarlayacağınız Kız Rolünü Belirtiniz ! `)
 .setThumbnail(client.user.avatarURL)
 .setFooter(`Komut ${message.author.tag} Tarafından Kullanıldı ! `)
 message.channel.send(ayarlanmadı)
 }
-db.set(`kayıtçırol_${message.guild.id}`, rol.id)
+db.set(`kızrol_${message.guild.id}`, rol.id)
 const ayarlandı = new discord.MessageEmbed()
 .setAuthor(client.user.username, client.user.avatarURL)  
-.setTitle(`${client.user.username} - Kayıt Rol Ayarlandı `)
+.setTitle(`${client.user.username} - kız Rol Ayarlandı `)
 .setColor('BLACK')
-.setDescription(`Kayıt Edecek Rol Başarıyla ${rol} Olarak Ayarlandı ! `)
+.setDescription(`Kız Rolü Başarıyla ${rol} Olarak Ayarlandı ! `)
 .setThumbnail(client.user.avatarURL)
 .setFooter(`Komut ${message.author.tag} Tarafından Kullanıldı ! `)
 message.channel.send(ayarlandı)
@@ -53,11 +53,11 @@ message.channel.send(ayarlandı)
 exports.conf = {
   enabled: true,
   guildonly: false,
-  aliases: ['kayıtırol'],
+  aliases: ['kızrol', 'krol', 'k-rol'],
   permlevel: 0
 }
 exports.help = {
-  name: 'kayıt-rol',
+  name: 'kız-rol',
   description: 'kız rolünü ayarlar',
   usage: '!kız-rol @rol'
 }

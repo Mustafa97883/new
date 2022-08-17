@@ -6,41 +6,43 @@ const DBL = require('dblapi.js')
 const dbl = new DBL('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc1Njg4MzMwOTI3MDY2MzIyOSIsImJvdCI6dHJ1ZSwiaWF0IjoxNjYwNzM0NTkyfQ.Tci7n9zVPbCAfU70t8CccDiH7lg7pGrvYHnIvRk9f1s', client)
 dbl.hasVoted(message.author.id).then(voted => {
       if(voted) {
-  if (!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send(` Bu komutu kullanabilmek için "\`yönetici\`" yetkisine sahip olmalısın`);
+    
+if (!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send(` Bu komutu kullanabilmek için "\`yönetici\`" yetkisine sahip olmalısın`);
+
 
 if(args[0] === "sıfırla") {
-const sıfırlandı = new discord.MessageEmbed()
+const Darkcode = new discord.MessageEmbed()
 .setAuthor(client.user.username, client.user.avatarURL)  
-.setTitle(`${client.user.username} - Kayıt Rol Sıfırla `)
+.setTitle(`${client.user.username} - Kayıt Kanal Sıfırla `)
 .setColor('BLACK')
-.setDescription(`Sunucu İçin Ayarladığınız Kayıt Rol Başarıyla Sıfırlandı ! `)
+.setDescription(`Kayıt Olunacak Kanal Başarıyla Sıfırlandı ! `)
 .setThumbnail(client.user.avatarURL)
 .setFooter(`Komut ${message.author.tag} Tarafından Kullanıldı ! `)
-message.channel.send(sıfırlandı)
-db.delete(`kayıtçırol_${message.guild.id}`)
+message.channel.send(Darkcode)
+db.delete(`kayıtkanal_${message.guild.id}`)
 return;
 }
 
-let rol = message.mentions.roles.first();   
-if (!rol) {
-  const ayarlanmadı = new discord.MessageEmbed()
+let kanal = message.mentions.channels.first();   
+if (!kanal) {
+  const DarkCode = new discord.MessageEmbed()
 .setAuthor(client.user.username, client.user.avatarURL)  
-.setTitle(`${client.user.username} - Kayıt Rol Ayarla `)
+.setTitle(`${client.user.username} - Kayıt Kanal Ayarla `)
 .setColor('BLACK')
-.setDescription(`Ayarlayacağınız Kayıt Rolü Belirtiniz ! `)
+.setDescription(`Kayıt Olunacak Kanalı Belirtiniz !  `)
 .setThumbnail(client.user.avatarURL)
 .setFooter(`Komut ${message.author.tag} Tarafından Kullanıldı ! `)
-message.channel.send(ayarlanmadı)
+message.channel.send(DarkCode)
 }
-db.set(`kayıtçırol_${message.guild.id}`, rol.id)
-const ayarlandı = new discord.MessageEmbed()
+db.set(`kayıtkanal_${message.guild.id}`, kanal.id)
+const darkcode = new discord.MessageEmbed()
 .setAuthor(client.user.username, client.user.avatarURL)  
-.setTitle(`${client.user.username} - Kayıt Rol Ayarlandı `)
+.setTitle(`${client.user.username} - Kayıt Kanal Ayarlandı `)
 .setColor('BLACK')
-.setDescription(`Kayıt Edecek Rol Başarıyla ${rol} Olarak Ayarlandı ! `)
+.setDescription(`Kayıt Olunacak Kanal ${kanal} Olarak Ayarlandı ! `)
 .setThumbnail(client.user.avatarURL)
 .setFooter(`Komut ${message.author.tag} Tarafından Kullanıldı ! `)
-message.channel.send(ayarlandı)
+message.channel.send(darkcode)
   
 
 } else {
@@ -53,11 +55,11 @@ message.channel.send(ayarlandı)
 exports.conf = {
   enabled: true,
   guildonly: false,
-  aliases: ['kayıtırol'],
+  aliases: ['kayıtkanal', 'kkanal', 'k-kanal'],
   permlevel: 0
 }
 exports.help = {
-  name: 'kayıt-rol',
-  description: 'kız rolünü ayarlar',
-  usage: '!kız-rol @rol'
+  name: 'kayıt-kanal',
+  description: 'Kayıt Olunacak Kanalı Ayarlar',
+  usage: '!kayıt-kanal #kanal'
 }

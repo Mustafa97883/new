@@ -3,6 +3,10 @@ const fs = require('fs');
 const ms = require("ms")
 const db = require('quick.db')
 exports.run = async (client, message, args) => {
+  const DBL = require('dblapi.js')
+const dbl = new DBL('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc1Njg4MzMwOTI3MDY2MzIyOSIsImJvdCI6dHJ1ZSwiaWF0IjoxNjYwNzM0NTkyfQ.Tci7n9zVPbCAfU70t8CccDiH7lg7pGrvYHnIvRk9f1s', client)
+dbl.hasVoted(message.author.id).then(voted => {
+      if(voted) {
   	if (!message.guild) {
     const ozelmesajuyari = new Discord.MessageEmbed()
     .setColor(0xFF0000)
@@ -52,7 +56,13 @@ exports.run = async (client, message, args) => {
       description: '**BAŞARISIZ TANITIM** \n\nBu komut zaten kullanılmış!\n\nSunucunu 12 saate 1 defa tanıtabilirsin! \n\n [DESTEK](https://discord.gg/fr43SS2n64) \n[Strom Ekle](https://discord.com/api/oauth2/authorize?client_id=756883309270663229&permissions=8&scope=bot)'
             }});
   }
-};
+} else {
+        message.channel.send(` Bu Komutu Sadece 12 Saatte Bir Oyvererek Kullanabilirsiniz Oyvermek İçin (https://top.gg/bot/756883309270663229/vote) linke Tıklayarak Oyverebilirsiniz. Oy Verdiyseniz 5 Dakka Bekleyiniz`) 
+              
+}
+        })
+      
+      },
 exports.conf = {
     enabled: true,
     guildOnly: false,

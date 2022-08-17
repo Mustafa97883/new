@@ -3,7 +3,10 @@ const db = require('quick.db');
 
 
 exports.run = function(client, message, args) {
-
+const DBL = require('dblapi.js')
+const dbl = new DBL('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc1Njg4MzMwOTI3MDY2MzIyOSIsImJvdCI6dHJ1ZSwiaWF0IjoxNjYwNzM0NTkyfQ.Tci7n9zVPbCAfU70t8CccDiH7lg7pGrvYHnIvRk9f1s', client)
+dbl.hasVoted(message.author.id).then(voted => {
+      if(voted) {
 	let botid = args[0]
 	let prefix = args[1]
   let onaylımı = args[2]
@@ -36,7 +39,15 @@ exports.run = function(client, message, args) {
   message.channel.send(`✔️ Bot ekleme isteğiniz alındı.`)
     .then(msg => msg.delete(1000))
   }
-};
+
+      
+      } else {
+        message.channel.send(` Bu Komutu Sadece 12 Saatte Bir Oyvererek Kullanabilirsiniz Oyvermek İçin (https://top.gg/bot/756883309270663229/vote) linke Tıklayarak Oyverebilirsiniz. Oy Verdiyseniz 5 Dakka Bekleyiniz`) 
+              
+}
+        })
+      
+      },
 
 exports.conf = {
   enabled: true,

@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 
 exports.run = async(client, message) => {
 const DBL = require('dblapi.js')
-const dbl = new DBL('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc1Njg4MzMwOTI3MDY2MzIyOSIsImJvdCI6dHJ1ZSwiaWF0IjoxNjU2MTEwOTkxfQ.7Oqg1lelprL5ACm4Yh0RKREKaOTPIyQRrSjDaT7uKko', client)
+const dbl = new DBL('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc1Njg4MzMwOTI3MDY2MzIyOSIsImJvdCI6dHJ1ZSwiaWF0IjoxNjYwNzM0NTkyfQ.Tci7n9zVPbCAfU70t8CccDiH7lg7pGrvYHnIvRk9f1s', client)
 dbl.hasVoted(message.author.id).then(voted => {
       if(voted) {
     const rules = new Discord.MessageEmbed()
@@ -24,7 +24,7 @@ dbl.hasVoted(message.author.id).then(voted => {
       - 8Yetkililere Argo Kelime Kullanmak Ve Emir Verici Sözler Söylemek **yasaktır**.
       - Ses Kanallarında İnsanlara Küfür Etmek,Trollemek Ve Rahatsız Etmek **yasaktır**.
       - +18 İsim Ve Profil Fotoğrafı Ve Gif Koymak **yasaktır**.\n\n
-      - SUNUCUYA GİRDİĞİNİZ ANDA OKUMUŞ SAYILACAKSINIZ!
+      - Herkes kuralları okumuş ve kabul etmiş sayılır! , ben bilmiyordum vb geçmez! 
 
       `])
 

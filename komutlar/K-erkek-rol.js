@@ -9,38 +9,38 @@ dbl.hasVoted(message.author.id).then(voted => {
   if (!message.member.hasPermission("ADMINISTRATOR")) return message.channel.send(` Bu komutu kullanabilmek için "\`yönetici\`" yetkisine sahip olmalısın`);
 
 if(args[0] === "sıfırla") {
-const sıfırlandı = new discord.MessageEmbed()
+const darkcodeee = new discord.MessageEmbed()
 .setAuthor(client.user.username, client.user.avatarURL)  
-.setTitle(`${client.user.username} - Kayıt Rol Sıfırla `)
+.setTitle(`${client.user.username} - Erkek Rol Sıfırla `)
 .setColor('BLACK')
-.setDescription(`Sunucu İçin Ayarladığınız Kayıt Rol Başarıyla Sıfırlandı ! `)
+.setDescription(`Sunucu İçin Ayarladığınız Erkek Rolü Başarıyla Sıfırlandı !`)
 .setThumbnail(client.user.avatarURL)
 .setFooter(`Komut ${message.author.tag} Tarafından Kullanıldı ! `)
-message.channel.send(sıfırlandı)
-db.delete(`kayıtçırol_${message.guild.id}`)
+message.channel.send(darkcodeee)
+db.delete(`erkekrol_${message.guild.id}`)
 return;
 }
 
 let rol = message.mentions.roles.first();   
 if (!rol) {
-  const ayarlanmadı = new discord.MessageEmbed()
+  const darkcodee = new discord.MessageEmbed()
 .setAuthor(client.user.username, client.user.avatarURL)  
-.setTitle(`${client.user.username} - Kayıt Rol Ayarla `)
+.setTitle(`${client.user.username} - Erkek Rol Ayarla `)
 .setColor('BLACK')
-.setDescription(`Ayarlayacağınız Kayıt Rolü Belirtiniz ! `)
+.setDescription(`Ayarlayacağınız Erkek Rolünü Belirtiniz ! `)
 .setThumbnail(client.user.avatarURL)
 .setFooter(`Komut ${message.author.tag} Tarafından Kullanıldı ! `)
-message.channel.send(ayarlanmadı)
+message.channel.send(darkcodee)
 }
-db.set(`kayıtçırol_${message.guild.id}`, rol.id)
-const ayarlandı = new discord.MessageEmbed()
+db.set(`erkekrol_${message.guild.id}`, rol.id)
+const darkcode = new discord.MessageEmbed()
 .setAuthor(client.user.username, client.user.avatarURL)  
-.setTitle(`${client.user.username} - Kayıt Rol Ayarlandı `)
+.setTitle(`${client.user.username} - Erkek Rol Ayarlandı `)
 .setColor('BLACK')
-.setDescription(`Kayıt Edecek Rol Başarıyla ${rol} Olarak Ayarlandı ! `)
+.setDescription(`Erkek Rolü Başarıyla ${rol} Olarak Ayarlandı ! `)
 .setThumbnail(client.user.avatarURL)
 .setFooter(`Komut ${message.author.tag} Tarafından Kullanıldı ! `)
-message.channel.send(ayarlandı)
+message.channel.send(darkcode)
   
 
 } else {
@@ -53,11 +53,11 @@ message.channel.send(ayarlandı)
 exports.conf = {
   enabled: true,
   guildonly: false,
-  aliases: ['kayıtırol'],
+  aliases: ['erkekrol', 'erol', 'e-rol'],
   permlevel: 0
 }
 exports.help = {
-  name: 'kayıt-rol',
-  description: 'kız rolünü ayarlar',
-  usage: '!kız-rol @rol'
+  name: 'erkek-rol',
+  description: 'erkek rolünü ayarlar',
+  usage: '!erkek-rol @rol'
 }

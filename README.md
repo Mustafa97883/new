@@ -1,1 +1,0 @@
-# Stromdan Saygılar.
