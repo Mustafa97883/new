@@ -29,11 +29,6 @@ exports.run = async (bot, msg, args) => {
       true
     )
     .addField(
-      `**Destek Sunucusuna Özel Öneri__**`,
-      `🟢 \`${prefix}öneri\` \n Discord Sunucumuza Bota Öneri Yapabilirsiniz..`,
-      true
-    )
-    .addField(
       `__Bilgilendirme__`,
       `⚜️  \`${prefix}davet\` | Botu Sununuya Davet Edersiniz\n ⚜️ \`${prefix}botbilgi\` | Botun İstatistiklerini Görürsünüz \n ⚜️ \`${prefix}iletişim\` | Strom İletişim Bilgileri.`
     );

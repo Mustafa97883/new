@@ -53,7 +53,7 @@ message.channel.send(ayarlandı)
 exports.conf = {
   enabled: true,
   guildonly: false,
-  aliases: ['kayıtırol'],
+  aliases: ['kayıtırol',"kayıtırol-sıfırla"],
   permlevel: 0
 }
 exports.help = {

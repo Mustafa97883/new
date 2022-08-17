@@ -25,6 +25,7 @@ exports.run = async (client, message, args) => {
   **s!alınacak-rol**  \`Kayıt Olunca Alınacak Rolü Ayarlar örn: Kayıtsız üye.\`\n
   **s!kayıt-kanal**  \`Kayıt kanalı ayarlarsınız.\` \n
   **s!kayıt-rol**  \`Kayıt görevlisini ayarlar.\` \n
+  **s!kayıtırol-sıfırla**  \`Kayıt görevlisini sıfırlar.\` \n
   **s!kayıt-ver**\`Kayıt yetkisi verir.\`\n
   **s!erkek**\`erkek olarak kayıt eder. \`\n
   **s!kız**\`kız olarak kayıt eder.\` \n

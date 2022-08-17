@@ -28,7 +28,7 @@ exports.run = (client, message, args) => {
     );
 
   message.channel.send(
-    "✔️ Önerin log kanalına iletildi. "
+    "✅ öneriniz iletildi. "
   );
   let codeming = new Discord.MessageEmbed()
     .setThumbnail(message.author.avatarURL())
