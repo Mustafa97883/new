@@ -31,7 +31,12 @@ exports.run = async (client, message) => {
     )
     .addField(
       `__Davet__`,
-      ` 🚩   \`${prefix}davet\` ShadowRise Network Davet Menüsünü Görürsün.`,
+      ` 🚩   \`${prefix}davet\` Strom Davet Menüsünü Görürsün.`,
+      true
+    )
+  .addField(
+      `__sunucutanıt__`,
+      ` 🚩   \`${prefix}sunucutanıt\` Sunucunuzu Destek sunucusunda tanıtır.`,
       true
     )
     .addField(
