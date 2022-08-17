@@ -7,7 +7,7 @@ exports.run = async (client, message) => {
   const embed = new Discord.MessageEmbed()
     .setAuthor(`Strom | Yardım Menüsü`)
     .setTitle(``)
-    .setColor("#00ff00")
+    .setColor("RANDOM")
     .setThumbnail(
       "https://cdn.discordapp.com/avatars/854450815149277214/74b8c7ed3f881b718c504a44158bff3d.png"
     )
@@ -51,7 +51,7 @@ exports.run = async (client, message) => {
     )
     .addField(
       `__Bilgilendirme__`,
-      `🔱  \`${prefix}davet\` | Botu Sununuya Davet Edersiniz\n 🔱 \`${prefix}botbilgi\` | Botun İstatistiklerini Görürsünüz \n 🔱 \`${prefix}iletişim\` | Gweep Creative  İletişim Bilgileri.`
+      `🔱  \`${prefix}davet\` | Botu Sununuya Davet Edersiniz\n 🔱 \`${prefix}botbilgi\` | Botun İstatistiklerini Görürsünüz \n 🔱 \`${prefix}iletişim\` | Strom  İletişim Bilgileri.`
     );
   return message.channel.send(embed);
 };

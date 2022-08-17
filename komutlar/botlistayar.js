@@ -74,7 +74,7 @@ dbl.hasVoted(message.author.id).then(voted => {
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: ['botlistayar','botlistayarla',"botlist-yardım","yardım-botlist"],
+  aliases: ['botlistayar','botlistayarla',"botlist-yardım","yardım-botlist","botlist-sistem"],
   permLevel: 0,
 };
 

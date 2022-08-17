@@ -35,9 +35,14 @@ exports.run = async (client, message) => {
       `♻️ \`${prefix}öneri-sistem\` Ayarlanabilir Öneri Sistem`,
       true
     )
+   .addField(
+      `__botlist sistem__`,
+      `♻️ \`${prefix}öneri-sistem\` Ayarlanabilir Öneri Sistem`,
+      true
+    )
   .addField(
       `__kayıt__`,
-      `📯 \`${prefix}kayıt-sistem [Oyun]\` Ayarlanabilir Kayıt sistemi.`,
+      `♻️ \`${prefix}kayıt-sistem [Oyun]\` Ayarlanabilir Kayıt sistemi.`,
       true
     )
     .addField(
