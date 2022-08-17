@@ -1,7 +1,6 @@
 const Strom = require('discord.js');
 const ayarlar = require('../ayarlar.json')
 exports.run = function(client, message) {
-  const DBL = require('dblapi.js')
 
   let prefix  = ayarlar.prefix
 
