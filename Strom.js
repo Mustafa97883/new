@@ -183,14 +183,7 @@ if (message.content === `<@${client.user.id}>`) {
 });
 
 
-///tag//
 
-client.on('message', message => {
-let prefix = ayarlar.prefix;
-if (message.content === `tag`) {
- message.reply(`**Tagımızı Alarak Bize Destek Çıkabilirsin! Tag: ✧ **`)
-}
-});
 
 
 
