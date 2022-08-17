@@ -8,7 +8,14 @@ exports.run = (client, message, args) => {
     const embed = new Strom.MessageEmbed() 
         
         .setTitle(`${client.user.username} DAVET SİSTEMİ `)
-        .setDescription(`💼 **Botun Davet Linki İçin** [TIKLA](https://discord.com/api/oauth2/authorize?client_id=756883309270663229&permissions=8&scope=bot) \n **Destek Sunucusu İçin** [TIKLA](https://discord.gg/fr43SS2n64)`)
+        .setDescription(`💼 **Destek Sunucusu** [TIKLA](https://discord.gg/fr43SS2n64) 
+        
+       🔰 **Yapımcı** : <@846736343593779230>
+       🔰 **Geliştirici** <@468501741558693889> 
+       🔰 **Destekçi** : <@623973913415647292>
+        
+        
+        `)
         .setThumbnail(client.user.avatarURL)
         .setFooter(`${message.author.username} Başarıyla ${ayarlar.prefix}davet Sistemi Kullandı!`, message.author.avatarURL)
     .setColor(`RANDOM`)
@@ -25,7 +32,7 @@ exports.conf = {
 };
 
 exports.help = {
-  name: 'davet',
+  name: 'iletişim',
   description: '',
-  usage: 'davet'
+  usage: 'iletişim'
 };
