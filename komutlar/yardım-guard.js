@@ -44,7 +44,7 @@ message.channel.send(yardım)
 exports.conf = {
   enabled: true,
   guildOnly: false, 
-  aliases: ['guardyardım','guard'], 
+  aliases: ['guardyardım','guard',"koruma"], 
   permLevel: 0
 };
 

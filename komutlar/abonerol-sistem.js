@@ -5,7 +5,7 @@ exports.run = async (bot, msg, args) => {
   const seviye = new Discord.MessageEmbed()
     .setAuthor(`Strom  | AboneRol Sistem`)
     .setTitle(``)
-    .setColor("#00ff00")
+    .setColor("RANDOM")
     .setThumbnail(
       "https://cdn.discordapp.com/avatars/854450815149277214/74b8c7ed3f881b718c504a44158bff3d.png"
     )
