@@ -30,7 +30,7 @@ message.channel.send(cse)
       
       },
 module.exports.conf = {
-aliases: ["çekiliş-sistemi"]
+aliases: ["çekiliş-sistemi","çekiliş"]
 }
 
 module.exports.help = {

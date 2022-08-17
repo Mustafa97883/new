@@ -1,35 +1,70 @@
-const Discord = require("discord.js")
-module.exports.run= async(client, message, args) => {
-let cse = new Discord.MessageEmbed()//discord.gg/turkiye
-.setTitle(client.user.username+" Yardım Menüsü")
-.setColor("BLUE")
-.setThumbnail(client.user.avatarURL())
-.setDescription(`[OYVER](https://top.gg/bot/756883309270663229/vote)
-**Strom Müzik botunu eklemek için [TIKLA](https://discord.com/api/oauth2/authorize?client_id=854122011151826975&permissions=8&scope=bot%20applications.commands)
+const Discord = require("discord.js");
+const ayarlar = require("../ayarlar.json");
 
+exports.run = async (client, message) => {
+  let prefix = ayarlar.prefix;
 
-• **s!moderasyon-sistemi**  \`Moderasyon komutlarını gösterir.\` \n
-• **s!guard-sistemi**  \`Koruma Komutlarını Gösterir.\` \n
-• **s!yardım-sunucu-kur**       \`Sunucu-kur komutlarını gösterir.\`\n
-• **s!rütbe-yardım**      \`rütbe sistemini gösterir. \`\n
-• **s!eğlence-yardım**        \`Eğlence komutlarını gösterir.\` \n
-• **s!jail-yardım**      \`jail komutlarını gösterir.\` \n
-• **s!çekiliş-sistemi**      \`çekiliş komutlarını gösterir.\` \n
-• **s!yardım-botlist**     \`Botlist komutlarını gösterir.\` \n
+  const embed = new Discord.MessageEmbed()
+    .setAuthor(`Strom | Yardım Menüsü`)
+    .setTitle(``)
+    .setColor("#00ff00")
+    .setThumbnail(
+      "https://cdn.discordapp.com/avatars/854450815149277214/74b8c7ed3f881b718c504a44158bff3d.png"
+    )
+    .setDescription(
+      `🎧 Strom Botumuzu Eklemek İçin \`${prefix}davet\` yazabilirsiniz.`
+    )
+    .addField(
+      `__Genel Komutlar__`,
+      `💬 \`${prefix}genel\``,
+      true
+    )
+    .addField(
+      `__Sunucu Koruma__`,
+      `🔰 \`${prefix}koruma\`  `,
+      true
+    )
+    .addField(
+      `__Kullanıcı Komutlar__`,
+      `🌀 \`${prefix}kullanıcı\` `,
+      true
+    )
+    .addField(
+      `__Oyun Komutlar(Eklenecek)__`,
+      ` 🎮 \`${prefix}oyunlar\` `,
+      true
+    )
+    .addField(
+      `__Çekiliş Komutlar__`,
+      `🎉 \`${prefix}çekiliş\` `,
+      true
+    )
+    .addField(
+      `__Eklenti Komutlar__`,
+      `🎏 \`${prefix}eklenti\``,
+      true
+    )
+    .addField(
+      `__Eğlence Komutlar__`,
+      `🎲 \`${prefix}eğlence\``,
+      true
+    )
+    .addField(
+      `__Bilgilendirme__`,
+      `🔱  \`${prefix}davet\` | Botu Sununuya Davet Edersiniz\n 🔱 \`${prefix}botbilgi\` | Botun İstatistiklerini Görürsünüz \n 🔱 \`${prefix}iletişim\` | Gweep Creative  İletişim Bilgileri.`
+    );
+  return message.channel.send(embed);
+};
 
+exports.conf = {
+  enabled: true,
+  guildOnly: false,
+  aliases: [],
+  permLevel: 0
+};
 
-
-`)
-.setFooter("Strom / Discord'da Yeni Devrim \nherhangi bir hatada s!hata (hata)\nönerileriniz için s!öneri (öneriniz)")
-.setTimestamp()
-message.channel.send(cse)
-}
-module.exports.conf = {
-aliases: ["yardim","help"]
-}
-
-module.exports.help = {
-name: "yardım",
-usage: "!yardım"
-
+exports.help = {
+  name: "yardım",
+  description: "Yardım Menüsü",
+  usage: "yardım"
 };
