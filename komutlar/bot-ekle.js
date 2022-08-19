@@ -17,11 +17,11 @@ dbl.hasVoted(message.author.id).then(voted => {
   if(!basvuru) return message.channel.send("Bu komudu kullanmak için botlist kanallarının sunucuda ayarlı olması gerekiyor.")
   if(!kanal) return message.channel.send("Bu komudu kullanmak için botlist kanallarının sunucuda ayarlı olması gerekiyor.")
   
-  if (message.channel.id !== kanal) return message.channel.send(`Bu komutu sadece <#${kanal}> kanalında kullanabilirsin.`).then(msg => msg.delete(10000))
+  if (message.channel.id !== kanal) return message.channel.send(`Bu komutu sadece <#${kanal}> kanalında kullanabilirsin.`).then(Strom => Strom.delete({ timeout: 10000 }));
 	if (message.channel.id == kanal) {
-  if (!botid) return message.channel.send(`:no_entry: Botunun ID'sini yazmalısın.`).then(msg => msg.delete(10000))
-  if (!prefix) return message.channel.send(`:no_entry: Botunun prefixini yazmalısın.`).then(msg => msg.delete(10000))
-  if (!onaylımı) return message.channel.send(`:no_entry: Botunun Dbl onaylımı onu yazmalısın`).then(msg => msg.delete(10000))
+  if (!botid) return message.channel.send(`:no_entry: Botunun ID'sini yazmalısın.`).then(Strom => Strom.delete({ timeout: 10000 }));
+  if (!prefix) return message.channel.send(`:no_entry: Botunun prefixini yazmalısın.`).then(Strom => Strom.delete({ timeout: 10000 }));
+  if (!onaylımı) return message.channel.send(`:no_entry: Botunun Dbl onaylımı onu yazmalısın`).then(Strom => Strom.delete({ timeout: 10000 }));
   message.delete()
   const basvuruuu = new Discord.MessageEmbed()
   .setColor("PURPLE")
@@ -37,7 +37,7 @@ dbl.hasVoted(message.author.id).then(voted => {
   client.channels.cache.get(basvuru).send(embed)
   client.channels.cache.get(log).send(basvuruuu)
   message.channel.send(`✔️ Bot ekleme isteğiniz alındı.`)
-    .then(msg => msg.delete(1000))
+    .then(Strom => Strom.delete({ timeout: 10000 }));
   }
 
       
