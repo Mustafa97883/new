@@ -17,6 +17,7 @@
     "common-tags": "^1.8.2",
     "simple-youtube-api": "^5.2.1",
     "ytdl-core": "^4.8.2",
+    "node-opus": "^0.3.3",
     "cool-images": "^1.0.3",
     "cpu-stat": "^2.0.1",
     "croxydb": "^0.0.7",
