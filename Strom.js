@@ -1454,3 +1454,17 @@ client.on("message", message => {
     }
 });
 //// DM Mesaj son
+
+//// çekiliş
+const { GiveawaysManager } = require('discord-giveaways');
+client.giveawaysManager = new GiveawaysManager(client, {
+    storage: "./db.json",
+    updateCountdownEvery: 3000,
+    default: {
+        botsCanWin: false,
+        embedColor: "#FF0000",
+        reaction: "🎉"
+    }
+});
+
+//// çekiliş son
