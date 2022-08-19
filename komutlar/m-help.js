@@ -2,7 +2,7 @@ const Discord = require('discord.js')
 const {prefix} = require('../ayarlar.json')
 module.exports = {
   name: "müzik-yardım",
-  description: "müzik-yardım",
+  description: "müzik",
   execute(client, message) {
   message.channel.send(new Discord.MessageEmbed()
                       .setDescription(

@@ -1,12 +1,12 @@
 const { Util } = require("discord.js");
-const { YOUTUBE_API_KEY } = require("../config.json");
+const { YOUTUBE_API_KEY } = require("../ayarlar.json");
 const ytdl = require("ytdl-core");
 const YoutubeAPI = require("simple-youtube-api");
 const youtube = new YoutubeAPI(YOUTUBE_API_KEY);
 const Discord = require('discord.js')
 const { play } = require("../system/music.js") 
 module.exports = {
-  name: "oynat",
+  name: "oooynat",
   description: "PLAY THE SOFTNESS OF THE SOUND",
   async execute(client, message, args) {
 

@@ -1,5 +1,5 @@
 module.exports = {
-  name: "döngü",
+  name: "dddöngü",
   description: "LOOP THE QUEUE",
   execute (client, message, args) {
     

@@ -1,5 +1,5 @@
 module.exports = {
-  name: "sıra",
+  name: "sssıra",
   description: "get list of added songs",
   execute: (client, message, args) => {
     const { channel } = message.member.voice;
