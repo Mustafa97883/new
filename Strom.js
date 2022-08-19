@@ -22,7 +22,10 @@ const path = require('path');
 const snekfetch = require('snekfetch');
 const ms = require('ms');
 const fetch = require('node-fetch')
-
+const queue = new Map();
+const YouTube = require("simple-youtube-api");
+const ytdl = require("ytdl-core");
+client.queue = new Map();
 
 setInterval(async () => {
   await fetch('https://cooperative-spiffy-dead.glitch.me','https://glitch.com/edit/#!/cooperative-spiffy-dead').then(console.log('Uptimed!'))
@@ -223,7 +226,7 @@ client.on("emojiDelete", async (emoji, message, channels) => {
       .fetchAuditLogs({ type: "EMOJI_DELETE" })
       .then(audit => audit.entries.first());
     if (entry.executor.id == client.user.id) return;
-    if (entry.executor.id == emoji.guild.owner.id) return;
+    if (entry.executor.id == emoji.guild.sahip.id) return;
     if (
       !emoji.guild.members.cache
         .get(entry.executor.id)
@@ -1492,7 +1495,7 @@ client.on("message", async (msg, message) => {
     if (!voiceChannel)
       return msg.channel.send(
         new Strom.MessageEmbed()
-          .setColor("BLACK")
+          .setColor("RANDOM")
           .setDescription(
             ":x: **Bu komutu kullanmak için bir ses kanalında olmanız gerekir.**"
           )
@@ -1501,7 +1504,7 @@ client.on("message", async (msg, message) => {
     if (!permissions.has("CONNECT")) {
       return msg.channel.send(
         new Strom.MessageEmbed()
-          .setColor("BLACK")
+          .setColor("RANDOM")
           .setTitle(
             ":x: **Bu komutu kullanmak için bir ses kanalında olmanız gerekir.**"
           )
@@ -1510,7 +1513,7 @@ client.on("message", async (msg, message) => {
     if (!permissions.has("SPEAK")) {
       return msg.channel.send(
         new Strom.MessageEmbed()
-          .setColor("BLACK")
+          .setColor("RANDOM")
           .setTitle(
             ":x: Müziği açamıyorum / kanalda konuşmama izin verilmediğinden veya mikrofonum kapalı olduğundan şarkı çalamıyorum."
           )
@@ -1549,7 +1552,7 @@ client.on("message", async (msg, message) => {
               .setFooter(
                 "Lütfen 1-10 arasında bir rakam seçin ve liste 10 saniye içinde iptal edilecektir.."
               )
-              .setColor("BLACK")
+              .setColor("RANDOM")
           );
           msg.delete(5000);
 
@@ -1566,7 +1569,7 @@ client.on("message", async (msg, message) => {
             console.error(err);
             return msg.channel.send(
               new Strom.MessageEmbed()
-                .setColor("BLACK")
+                .setColor("RANDOM")
                 .setDescription(
                   ":x: **Şarkı Değerini belirtmediği için seçim iptal edildi**."
                 )
@@ -1578,7 +1581,7 @@ client.on("message", async (msg, message) => {
           console.error(err);
           return msg.channel.send(
             new Strom.MessageEmbed()
-              .setColor("BLACK")
+              .setColor("RANDOM")
               .setDescription(":x: **Aradım ama sonuç yok**")
           );
         }
@@ -1590,7 +1593,7 @@ client.on("message", async (msg, message) => {
       if (!msg.member.voiceChannel)
         return msg.channel.send(
           new Strom.MessageEmbed()
-            .setColor("BLACK")
+            .setColor("RANDOM")
             .setDescription(
               ":x: **Bu komutu kullanmak için bir ses kanalında olmanız gerekir.**"
             )
@@ -1598,32 +1601,32 @@ client.on("message", async (msg, message) => {
     if (!serverQueue)
       return msg.channel.send(
         new Strom.MessageEmbed()
-          .setColor("BLACK")
+          .setColor("RANDOM")
           .setTitle(":x: Şu anda çalan şarkı yok.")
       );
     if (!args[1])
       return msg.channel.send(
         new Strom.MessageEmbed()
           .setTitle(`Current Volume: **${serverQueue.volume}**`)
-          .setColor("BLACK")
+          .setColor("RANDOM")
       );
     serverQueue.volume = args[1];
     serverQueue.connection.dispatcher.setVolumeLogarithmic(args[1] / 5);
     return msg.channel.send(
       new Strom.MessageEmbed()
         .setTitle(`Setting Volume: **${args[1]}**`)
-        .setColor("BLACK")
+        .setColor("RANDOM")
     );
   } else if (command === "now") {
     if (!serverQueue)
       return msg.channel.send(
         new Strom.MessageEmbed()
           .setTitle(":x: **Şu anda çalan şarkı yok.**")
-          .setColor("BLACK")
+          .setColor("RANDOM")
       );
     return msg.channel.send(
       new Strom.MessageEmbed()
-        .setColor("BLACK")
+        .setColor("RANDOM")
         .setTitle(" :headphones: | Şimdi oynuyor")
         .addField(
           "Şarkı Adı",
@@ -1640,13 +1643,13 @@ client.on("message", async (msg, message) => {
     let index = 0;
     if (!serverQueue)
       return msg.channel.send(
-        new StromStrom.MessageEmbed()
+        new Strom.MessageEmbed()
           .setTitle(":x: **Sırada Müzik Yok**")
-          .setColor("BLACK")
+          .setColor("RANDOM")
       );
     return msg.channel
       .send(
-        new StromStrom.MessageEmbed()
+        new Strom.MessageEmbed()
           .setColor("RANDOM")
           .setTitle("Şarkı sırası")
           .setDescription(
@@ -1693,9 +1696,9 @@ async function handleVideo(video, msg, voiceChannel, playlist = false) {
       console.error(`:x: Ses kanalına giremedim HATA: ${error}**`);
       queue.delete(msg.guild.id);
       return msg.channel.send(
-        new StromStromStrom.MessageEmbed()
+        new Strom.MessageEmbed()
           .setTitle(`:x: Ses kanalına giremedim HATA: ${error}**`)
-          .setColor("BLACK")
+          .setColor("RANDOM")
       );
     }
   } else {
@@ -1703,11 +1706,11 @@ async function handleVideo(video, msg, voiceChannel, playlist = false) {
     console.log(serverQueue.songs);
     if (playlist) return undefined;
     return msg.channel.send(
-      new StromStromStrom.MessageEmbed()
+      new Strom.MessageEmbed()
         .setTitle(
           `:arrow_heading_up:  **${song.title}** Sıraya Adlandırılmış Müzik Eklendi!`
         )
-        .setColor("BLACK")
+        .setColor("RANDOM")
     );
   }
   return undefined;
@@ -1747,13 +1750,13 @@ function play(guild, song) {
       .addField("Kanal adı", `${song.best}`, true)
       .addField("Video Link", `${song.url}`, true)
       .setImage(`https://i.ytimg.com/vi/${song.id}/hqdefault.jpg`)
-      .setColor("BLACK")
+      .setColor("RANDOM")
   );
 }
 client.on("message", (msg, message, guild) => {
   if (msg.content.toLowerCase() === prefix +"invite") {
     const eris = new Strom.MessageEmbed().setDescription(
-      `[Destek Sunucum](https://discord.gg/NAzGC2cxXR)`
+      `[Destek Sunucum](https://discord.gg/fr43SS2n64)`
     );
     msg.channel.send(eris);
   }
@@ -1762,11 +1765,11 @@ client.on("message", (msg, message, guild) => {
 client.on("guildCreate", async(guild, message) => {
 
 let alındı = `${ayarlar.oldu2}`
-let alınıyor = "<a:yükleniyor:839266395308687421>"
+let alınıyor = "⌛"
 
   const emmmmbed = new Strom.MessageEmbed()
     .setDescription(`
-  **Selamlar chat ben geldim sabahlara kadar kopmaya hazır mısınız? Bende bütün sistemler var rahat olun sadece** \`a!yardım\` **yazarak komutlarıma bakman yeterli. Hatalı komutlar** \`a!yardım-bot\``)
+  s!müzik-sistem\` **yazarak komutlarıma bakman yeterli.**\``)
 
   let defaultChannel = "";
   
