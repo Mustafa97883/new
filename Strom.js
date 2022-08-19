@@ -133,32 +133,6 @@ client.elevation = message => {
     return permlvl;
 };
 
-
-
-client.on("guildMemberAdd", async member => {
-    let kanal = await db.fetch(`hgkanal_${member.guild.id}`) 
-    if(!kanal || !kanal) return
-    let sonuç = kanal - member.guild.memberCount
-     let user = client.users.cache.get(member.id);
-  let yetkilirole = db.fetch(`yetkilirole_${member.guild.id}`)
-  require("moment-duration-format");
-    let kurulus = new Date().getTime() - user.createdAt.getTime();  
-    var kontrol;
-if (kurulus < 1296000000) kontrol = '**Şüpheli**'
-if (kurulus > 1296000000) kontrol = '**Güvenli**'
-  moment.locale("tr");
-  const embed = new Strom.MessageEmbed()
-    .setTitle(member.guild.name + ` Sunucusuna Hoş Geldin!`)
-    .setDescription(`${member} **Bizde Seni Bekliyorduk..**
-  \nSeninle Birlikte \`${member.guild.memberCount}\` Kişiyiz!
-  \nKaydının yapılması için **sesli odaya** gelip ses vermen yeterli.
-  \nSunucumuzdaki kaydını yapmak için <@&${yetkilirole}> Rolündekilerle İletişime Geçebilirsin.
-  \nHesap Durumu ${moment(member.user.createdAt).format("**DD MMMM YYYY dddd (hh<:mm:723226315972673658>ss)**") } - ${kontrol}`)
-  client.channels.cache.get(kanal).send(`<@&${yetkilirole}>`)
-  client.channels.cache.get(kanal).send(embed)
-  return
-    })
-
 client.login(process.env.token);
 
 //----------komut------------//
@@ -301,7 +275,7 @@ const küfür = [
 "31 çeken","am","amcık","am çorbası","amcık çorbası","tam sikmelik","sikiş","sikmek","sik çorbası","sik suyu","am suyu","amcık suyu","yarrak","amcık hoşafı","AMCIK HOŞAFI","Amcık Hoşafı",
 "yarrak kafalı","soğan sikli","siki başı sik","yarrağı kara","kara sikli","kara yarraklı","tam oç","tam öç","tem oç","tem öç","öç","yarrak kokusu",
 "sik kokusu","ananı sikim","ananı sikiyim","anneni sikim","anneni sikiyim","ablanı sikim","ablanı sikiyim","gacını sikiyim","karını sikiyim",
-"babanı sikiyim","aileni sikime oturturayım","muz istermisin","yarrağım","sikim","sik","nah","taşşak","taşak","yarak","yalak","kafasını siktiğim",
+"babanı sikiyim","aileni sikime oturturayım","muz istermisin","yarrağım","sikim","sik","taşşak","taşak","yarak","yalak","kafasını siktiğim",
 "kafası sikik","amk","sik","Sik","Sİk","SİK","Oruspu","Oruspu çocukları","Oruspi","Oruspu","amini","amina","selAM","SelAM","salAM"
  ,     ];
 client.on("messageUpdate", async (old, nev) => {
@@ -381,7 +355,7 @@ const botistatistik = new Strom.MessageEmbed()
 //https://cnslink.cf
 botdurum.send(botistatistik);
 
-  }, 600000); //Milisaniye cinsinden. 1 saniye =  1000 milisaniye. Örnek Olarak 1 saat = 3600000milisaniye
+  }, 3600000); //Milisaniye cinsinden. 1 saniye =  1000 milisaniye. Örnek Olarak 1 saat = 3600000milisaniye
   //https://convertlive.com/tr/u/dönüştürmek/milisaniye/a/saniye Bu siteden hesaplamasını yapabilirsiniz.
 });
 
