@@ -15,9 +15,6 @@
     "captcha-plus": "^2.5.2",
     "chalk": "^4.1.2",
     "common-tags": "^1.8.2",
-    "simple-youtube-api": "^5.2.1",
-    "ytdl-core": "^4.8.2",
-    "node-opus": "^0.3.3",
     "cool-images": "^1.0.3",
     "cpu-stat": "^2.0.1",
     "croxydb": "^0.0.7",
@@ -62,8 +59,7 @@
     "string-similarity": "^4.0.4",
     "superagent": "^6.1.0",
     "vultrex.db": "^1.4.1",
-    "weather-js": "^2.0.0",
-    "opusscript": "^0.0.8"
+    "weather-js": "^2.0.0"
   },
   "engines": {
     "node": "12.x"

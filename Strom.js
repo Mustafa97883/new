@@ -22,10 +22,7 @@ const path = require('path');
 const snekfetch = require('snekfetch');
 const ms = require('ms');
 const fetch = require('node-fetch')
-const queue = new Map();
-const YouTube = require("simple-youtube-api");
-const ytdl = require("ytdl-core");
-client.queue = new Map();
+
 
 setInterval(async () => {
   await fetch('https://cooperative-spiffy-dead.glitch.me','https://glitch.com/edit/#!/cooperative-spiffy-dead').then(console.log('Uptimed!'))
@@ -226,7 +223,7 @@ client.on("emojiDelete", async (emoji, message, channels) => {
       .fetchAuditLogs({ type: "EMOJI_DELETE" })
       .then(audit => audit.entries.first());
     if (entry.executor.id == client.user.id) return;
-    if (entry.executor.id == emoji.guild.sahip.id) return;
+    if (entry.executor.id == emoji.guild.owner.id) return;
     if (
       !emoji.guild.members.cache
         .get(entry.executor.id)
@@ -1471,6 +1468,3 @@ client.giveawaysManager = new GiveawaysManager(client, {
 });
 
 //// çekiliş son
-
-
-
