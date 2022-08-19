@@ -25,8 +25,10 @@ exports.run = async (yashinu, message, args) => {
         `🗑 | **\`\`${
           args[0]
         }\`\` Adet Mesaj Silindi.**`
+        
       )
   );
+  
 };
 
 exports.conf = {

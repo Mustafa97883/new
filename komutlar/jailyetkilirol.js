@@ -39,7 +39,7 @@ if (!args[0]) return message.reply(`Sistemi kullanabilmek için, !sjail-yetkilis
   
 } else {
         message.channel.send(` Bu Komutu Sadece 12 Saatte Bir Oyvererek Kullanabilirsiniz Oyvermek İçin (https://top.gg/bot/756883309270663229/vote) linke Tıklayarak Oyverebilirsiniz. Oy Verdiyseniz 5 Dakka Bekleyiniz`) 
-              
+              .then(Strom => Strom.delete({ timeout: 10000 }));
 }
         })
       

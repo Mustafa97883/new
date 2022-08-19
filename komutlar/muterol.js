@@ -42,7 +42,7 @@ return message.channel.send(`Set **${role.name}** as the muterole.`);
 
 } else {
         message.channel.send(` Bu Komutu Sadece 12 Saatte Bir Oyvererek Kullanabilirsiniz Oyvermek İçin (https://top.gg/bot/756883309270663229/vote) linke Tıklayarak Oyverebilirsiniz. Oy Verdiyseniz 5 Dakka Bekleyiniz`) 
-              
+              .then(Strom => Strom.delete({ timeout: 10000 }));
 }
         })
       
