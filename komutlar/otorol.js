@@ -12,7 +12,7 @@ dbl.hasVoted(message.author.id).then(voted => {
     .setColor("#00ff00")
     .addField(
       "__OTOROL Ayarlamak__",
-      "__**Oto-Rol-Ayarla**__ 💡 **Otorolü Ayarlar.**\n Örnek: `s!oto-rol-ayarla @rolünüz #logkanalı` \n \n __**s!otorol-msg**__ <:sag:822547800481988628>  **Otorol Mesajını Ayarlar.** \n Örnek: `s!otorol-msg -server-, Sunucumuza Hoşgeldin, -uye-! -rol- Adlı Rolün Başarı İle Verildi Seninle Beraber, **-uyesayisi-** Kişiyiz`"
+      "__**Oto-Rol-Ayarla**__ 💡 **Otorolü Ayarlar.**\n Örnek: `s!oto-rol-ayarla @rolünüz #logkanalı` \n \n __**s!otorol-msg**__ <:sag:822547800481988628>  **Otorol Mesajını Ayarlar.** \n Örnek: `s!otorol-msg -server-, Sunucumuza Hoşgeldin, -uye-! **-rol-** Adlı Rolün Başarı İle Verildi Seninle Beraber, **-uyesayisi-** Kişiyiz`"
     )
 
     .addField(

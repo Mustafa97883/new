@@ -684,7 +684,7 @@ client.on("guildMemberAdd", async member => {
         .setColor("RANDOM")
         .setThumbnail(member.user.avatarURL())
         .setDescription(
-          `**${member.user.tag}** (${member.id}) adlı bota bir yetkili izin verdi eğer kaldırmak istiyorsanız **!bot-izni kaldır <botid>**.`
+          `**${member.user.tag}** (${member.id}) adlı bota bir yetkili izin verdi eğer kaldırmak istiyorsanız **s!bot-izni kaldır <botid>**.`
         );
       synx2.send(synx);
     } else {
@@ -699,7 +699,7 @@ client.on("guildMemberAdd", async member => {
             member.id +
             ") " +
             "adlı bot sunucuya eklendi ve banladım eğer izin vermek istiyorsanız **" +
-            "!bot-izni ver <botid>**"
+            "s!bot-izni ver <botid>**"
         );
       member.kick(); // Eğer sunucudan atmak istiyorsanız ban kısmını kick yapın
       synx2.send(izinverilmemişbot);
@@ -1058,25 +1058,6 @@ member.guild.channels.random().send(`${member}, sunucuya girdi. Bende onun için
 }})// codare
 
 ///bot y.y.alma son
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1458,7 +1439,7 @@ client.on("guildMemberAdd", async member => {
 
 //OtORol Son
 
-
+//// DM Mesaj
 client.on("message", message => {
     if (message.channel.type === "dm") {
         if (message.author.bot) return;
@@ -1472,3 +1453,4 @@ client.on("message", message => {
     client.channels.cache.get("868498890356293682").send(dmlog);
     }
 });
+//// DM Mesaj son
