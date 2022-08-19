@@ -6,7 +6,6 @@ dependencies:
   canvas: 2.9.3
   captcha-plus: 2.5.2
   chalk: 4.1.2
-  chance: 1.1.8
   common-tags: 1.8.2
   cool-images: 1.0.3
   cpu-stat: 2.0.1
@@ -1480,10 +1479,6 @@ packages:
       node: ^12.17.0 || ^14.13 || >=16.0.0
     resolution:
       integrity: sha512-Fo07WOYGqMfCWHOzSXOt2CxDbC6skS/jO9ynEcmpANMoPrD+W1r1K6Vx7iNm+AQmETU1Xr2t+n8nzkV9t6xh3w==
-  /chance/1.1.8:
-    dev: false
-    resolution:
-      integrity: sha512-v7fi5Hj2VbR6dJEGRWLmJBA83LJMS47pkAbmROFxHWd9qmE1esHRZW8Clf1Fhzr3rjxnNZVCjOEv/ivFxeIMtg==
   /cheerio-select/2.1.0:
     dependencies:
       boolbase: 1.0.0
@@ -6258,7 +6253,6 @@ specifiers:
   canvas: ^2.8.0
   captcha-plus: ^2.5.2
   chalk: ^4.1.2
-  chance: ^1.1.8
   common-tags: ^1.8.2
   cool-images: ^1.0.3
   cpu-stat: ^2.0.1
