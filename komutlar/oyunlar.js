@@ -6,7 +6,7 @@ exports.run = async (client, message) => {
 
 
   const sunucu = new Discord.MessageEmbed()
-    .setAuthor(`Strom  | Eklentiler`)
+    .setAuthor(`Strom  | oyunlar`)
     .setTitle(``)
     .setColor("RANDOM")
     .setThumbnail(
@@ -16,45 +16,25 @@ exports.run = async (client, message) => {
       ` 🔌  Strom  Botumuzu Eklemek İçin \`${prefix}davet\` yazabilirsiniz.`
     )
     .addField(
-      `__Ticket Sistem__`,
-      `♻️ \`${prefix}ticket-sistem\` Gelişmiş Ticket Sistem`,
+      `__1vs1__`,
+      `🎮 \`${prefix}1vs1\` Etiketlenen kullanıcı ile 1vs1 savaşırsınız`,
       true
-    )
+     )
     .addField(
-      `__Rütbe Sistem__`,
-      `♻️ \`${prefix}rütbe-sistem\` Gelişmiş Seviye Sistem`,
+      `__xox__`,
+      `🎮 \`${prefix}xox\` Etiketlenen kullanıcı ile xox oynarsınız`,
       true
-    )
-    .addField(
-      `__OtoRol Sistem__`,
-      `♻️ \`${prefix}otorol-sistem\` Gelişmiş OtoRol Sistem`,
-      true
-    )
-    .addField(
-      `__Öneri Sistem__`,
-      `♻️ \`${prefix}öneri-sistem\` Ayarlanabilir Öneri Sistem`,
-      true
-    )
-   .addField(
-      `__botlist sistem__`,
-      `♻️ \`${prefix}botlist-sistem\` Ayarlanabilir botlist sistem`,
-      true
-    )
+     )
   .addField(
-      `__kayıt__`,
-      `♻️ \`${prefix}kayıt-sistem [Oyun]\` Ayarlanabilir Kayıt sistem`,
+      `__yazankazanır__`,
+      `🎮 \`${prefix}yazankazanır\` Etiketlenen kullanıcı ile yazankazanır oynarsınız`,
       true
-    )
+     )
     .addField(
-      `__Sayaç Sistem__`,
-      `♻️ \`${prefix}sayaç\` sunucunuza sayaç ayarlar`,
+      `__adamasmaca__`,
+      `🎮 \`${prefix}adamasmaca\` adamasmaca oynarsınız`,
       true
-    )
-      .addField(
-      `__AboneRol Sistem__`,
-      `♻️ \`${prefix}abonerol-sistem\` Ayarlanabilir Abone Rol Sistem`,
-      true
-    )
+     )
     .addField(
       `__Bilgilendirme__`,
       `🔱  \`${prefix}davet\` | Botu Sununuya Davet Edersiniz\n 🔱 \`${prefix}botbilgi\` | Botun İstatistiklerini Görürsünüz \n 🔱 \`${prefix}iletişim\` | Strom  İletişim Bilgileri.`
@@ -70,7 +50,7 @@ exports.conf = {
 };
 
 exports.help = {
-  name: "eklenti",
+  name: "oyunlar",
   description: "Yardım Menüsü",
   usage: "yardım"
 };
