@@ -1,6 +1,75 @@
 const Discord = require('discord.js');
 const database = require('quick.db');
-var kelimeler = ['test1', 'test2'];
+var kelimeler = ['test1', 'test2',"elma",
+  "armut",
+  "mahmut",
+  "eşya",
+  "sunucu",
+  "ismail",
+  "eşek",
+  "para",
+  "internet",
+  "eğlence",
+  "sigara",
+  "sevgi",
+  "Strom",
+  "dünya",
+  "korona",
+  "nitro",
+  "kral",
+  "misket",
+  "limonata",
+  "kurabiye",
+  "discord",
+  "portakal",
+  "aşure",
+  "yaşam",
+  "zehir",
+  "hamsi",
+  "balık",
+  "nektari",
+  "şeftali",
+  "kanalizasyon",
+  "yadigar",
+  "koyun",
+  "halı",
+  "kilim",
+  "paspas",
+  "kamera",
+  "telefon",
+  "çorap",
+  "şarj",
+  "slikon",
+  "kumanda",
+  "demir",
+  "crypto",
+  "kablo",
+  "resim",
+  "bira",
+  "site",
+  "zaman",
+  "ses",
+  "pervane",
+  "klima",
+  "mouse",
+  "kapıKolu",
+  "havalandırma",
+  "imleç",
+  "steam",
+  "twitch",
+  "arnavud",
+  "ankara",
+  "istanbul",
+  "sazan",
+  "olta",
+  "kitap",
+  "tuş",
+  "lavabo",
+  "hatıra",
+  "inek",
+  "tokmak",
+  "tabut",
+  "sinyal"];
 
 exports.run = async (client, message, args) => {// can#0002
 
@@ -16,7 +85,7 @@ exports.run = async (client, message, args) => {// can#0002
     const filter = (reaction, user) => user.id === member.id;
     sent.awaitReactions(filter, { max: 1, time: 60000, errors: ['time'] }).then(collected => {
       collected = collected.first();
-      if(collected._emoji.name === '🔴') return sent.delete() && message.reply('Korktu Kaçtı ibine ya.');
+      if(collected._emoji.name === '🔴') return sent.delete() && message.reply('**ENAYİ** Korktu Kaçtı.');
       sent.delete();
       message.channel.send('Kelime hazırlanıyor, bekleyin!').then(sent2 => {
         setTimeout(() => {
