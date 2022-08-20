@@ -30,7 +30,7 @@ exports.run = async (client, message) => {
       true
     )
     .addField(
-      `__Oyun Komutlar(Eklenecek)__`,
+      `__Oyun Komutları__`,
       ` 🎮 \`${prefix}oyunlar\` `,
       true
     )
