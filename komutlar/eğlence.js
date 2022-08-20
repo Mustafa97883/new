@@ -21,8 +21,8 @@ exports.run = async (client, message) => {
       true
     )
   .addField(
-      `__kac cm__`,
-      `📯 \`${prefix}kaccm\` Malafatın boyunu söyler.`,
+      `__kaç cm__`,
+      `📯 \`${prefix}kaçcm\` Malafatın boyunu söyler.`,
       true
     )
     .addField(
