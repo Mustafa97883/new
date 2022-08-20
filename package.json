@@ -59,7 +59,8 @@
     "string-similarity": "^4.0.4",
     "superagent": "^6.1.0",
     "vultrex.db": "^1.4.1",
-    "weather-js": "^2.0.0"
+    "weather-js": "^2.0.0",
+    "orio.db": "^3.1.2"
   },
   "engines": {
     "node": "12.x"

@@ -42,6 +42,7 @@ dependencies:
   node-fetch: 2.6.7
   node-superfetch: 0.1.11
   npm: 7.24.2
+  orio.db: 3.1.2
   parse-ms: 2.1.0
   path: 0.12.7
   pretty-ms: 7.0.1
@@ -1331,6 +1332,14 @@ packages:
       node: '>=6.9.0'
     resolution:
       integrity: sha512-uqrgcjyOaZsHfz7ea8zLRCLe1u+QGUSzMZmvXqO24CDW7DWoW1qiN9folSwa7hSneTSgM2ykDIzF5kcQQ8cwNw==
+  /bson/4.7.0:
+    dependencies:
+      buffer: 5.7.1
+    dev: false
+    engines:
+      node: '>=6.9.0'
+    resolution:
+      integrity: sha512-VrlEE4vuiO1WTpfof4VmaVolCVYkYTgB9iWgYNOrVlnifpME/06fhFRmONgBhClD5pFC1t9ZWqFUQEQAzY43bA==
   /buffer-equal/0.0.1:
     dev: false
     engines:
@@ -4536,6 +4545,13 @@ packages:
       node: '>= 0.8.0'
     resolution:
       integrity: sha512-+IW9pACdk3XWmmTXG8m3upGUJst5XRGzxMRjXzAuJ1XnIFNvfhjjIuYkDvysnPQ7qzqVzLt78BCruntqRhWQbA==
+  /orio.db/3.1.2:
+    dependencies:
+      bson: 4.7.0
+      yaml: 1.10.2
+    dev: false
+    resolution:
+      integrity: sha512-jDnI9MGXL4GP5DZLoaiFm8liecl1LPfXvXyern4dGX2CouFGemLiZ+i6S9M/5U9f8/mtjGTnlxkLQNsFk0VXRg==
   /os-homedir/1.0.2:
     dev: false
     engines:
@@ -6218,6 +6234,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==
+  /yaml/1.10.2:
+    dev: false
+    engines:
+      node: '>= 6'
+    resolution:
+      integrity: sha512-r3vXyErRCYJ7wg28yvBY5VSoAF8ZvlcW9/BwUzEtUsjvX/DKs24dIkuwjtuprwJJHsbyUbLApepYTR1BN4uHrg==
   /yargs-parser/7.0.0:
     dependencies:
       camelcase: 4.1.0
@@ -6289,6 +6311,7 @@ specifiers:
   node-fetch: ^2.6.7
   node-superfetch: ^0.1.11
   npm: ^7.20.6
+  orio.db: ^3.1.2
   parse-ms: ^2.1.0
   path: ^0.12.7
   pretty-ms: ^7.0.1
