@@ -38,7 +38,7 @@ exports.run = async (client, message, args) => {
 exports.conf = {
     enabled: true,
     guildOnly: false,
-    aliases: [],
+    aliases: ["bilgilerim","param"],
     permLevel: 0,
     katagori: "Ekonomi"
 }

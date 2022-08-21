@@ -79,12 +79,12 @@ exports.run = (client, message) => {
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: ['csgokasa'],
+  aliases: ['csgokasa',"cskasa"],
   permLevel: 0
 };
 
 exports.help = {
-  name: 'kasaaç',
+  name: 'csgokasaaç',
   description: 'CS:GO kasa açma simülasyonu',
-  usage: 'kasaaç'
+  usage: 'csgokasaaç'
 };

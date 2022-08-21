@@ -79,7 +79,7 @@ exports.run = async (client, message, args) => {
 exports.conf = {
     enabled: true,
     guildOnly: false,
-    aliases: ['günlük-para'],
+    aliases: ['günlük-para',"günlük"],
     permLevel: 0,
     katagori: "Ekonomi"
 }

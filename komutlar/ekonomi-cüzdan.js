@@ -72,7 +72,7 @@ if(!member2) return message.reply("Bir Kullanıcı Etiketlermisin.")
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: [],
+  aliases: ["para"],
   permLevel: 0,
   katagori: "Ekonomi"
 };
