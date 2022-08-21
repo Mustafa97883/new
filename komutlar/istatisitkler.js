@@ -42,7 +42,7 @@ let prefix = ayarlar.prefix;
     )
     .addField(
       `__Bilgilendirme__`,
-      `🎓  \`${prefix}davet\` | Botu Sununuya Davet Edersiniz\n 🎓 \`${prefix}botbilgi\` | Botun İstatistiklerini Görürsünüz \n \ `
+      `🎓  \`${prefix}davet\` | Botu Sununuya Davet Edersiniz\n 🎓 \`${prefix}botbilgi\` | Botun İstatistiklerini Görürsünüz \n 🎓 \`${prefix}iletişim\` | Strom  İletişim Bilgileri.`
     ); 
   
   return message.channel.send(botbilgi);
