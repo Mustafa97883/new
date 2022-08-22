@@ -82,8 +82,8 @@
 	} ,
 {
 
-		"isim": "Kumar Kasası(açma)",
-    "açıklama": "Kumar Kasası(açma) Batma ihtimali var",
+		"isim": "Dolandırıcılar kralı",
+    "açıklama": "Batma ihtimali var",
 		"fiyat": "10000000",
     "kasaid": "14"
 	} ,
@@ -93,6 +93,20 @@
     "açıklama": "Efkar Kasası Batma ihtimali var",
 		"fiyat": "5000000",
     "kasaid": "15"
-	} 
+	} ,
+
+
+  {
+		"isim": "Kumar",
+    "açıklama": "Kumar kasası eğer katlarsan zenginsin batarsen geçmiş olsun.",
+		"fiyat": "90000000",
+    "kasaid": "16"
+	}
+  
+
+
+
+
+
 
 ]
