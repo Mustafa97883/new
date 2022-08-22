@@ -52,7 +52,7 @@ exports.run = async (client, message, args) => {
         }, 5000);
         setTimeout(() => {
           const icindeki = icindekiler[Math.floor(Math.random() * icindekiler.length)];
-          message.channel.send(`Kasadan \`${icindeki}\` ${client.ekoayarlar.parabirimi} kazandın!`)
+          message.channel.send(`${message.author} Kasadan \`${icindeki}\` ${client.ekoayarlar.parabirimi} kazandın!`)
           db.add(`bakiyecdare-${message.author.id}`, icindeki)
         }, 7800)
       })
