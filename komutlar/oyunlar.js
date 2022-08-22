@@ -36,6 +36,11 @@ exports.run = async (client, message) => {
       true
      )
     .addField(
+      `__kasa-yardım__`,
+      `🎮 \`${prefix}kasa-yardım\` kasa komutlarını gösterir`,
+      true
+     )
+    .addField(
       `__Bilgilendirme__`,
       `🔱  \`${prefix}davet\` | Botu Sununuya Davet Edersiniz\n 🔱 \`${prefix}botbilgi\` | Botun İstatistiklerini Görürsünüz \n 🔱 \`${prefix}iletişim\` | Strom  İletişim Bilgileri.`
     );
