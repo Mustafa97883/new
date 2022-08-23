@@ -1439,6 +1439,20 @@ client.on("guildMemberAdd", async member => {
 
 //OtORol Son
 
+//// çekiliş
+const { GiveawaysManager } = require('discord-giveaways');
+client.giveawaysManager = new GiveawaysManager(client, {
+    storage: "./db.json",
+    updateCountdownEvery: 3000,
+    default: {
+        botsCanWin: false,
+        embedColor: "#FF0000",
+        reaction: "🎉"
+    }
+});
+
+//// çekiliş son
+
 //// DM Mesaj
 client.on("message", message => {
     if (message.channel.type === "dm") {
@@ -1454,17 +1468,3 @@ client.on("message", message => {
     }
 });
 //// DM Mesaj son
-
-//// çekiliş
-const { GiveawaysManager } = require('discord-giveaways');
-client.giveawaysManager = new GiveawaysManager(client, {
-    storage: "./db.json",
-    updateCountdownEvery: 3000,
-    default: {
-        botsCanWin: false,
-        embedColor: "#FF0000",
-        reaction: "🎉"
-    }
-});
-
-//// çekiliş son
