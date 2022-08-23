@@ -1,7 +1,23 @@
 const Discord = require('discord.js');
 const db = require('quick.db')
 const kasalar = require('.././kasalar');
+const talkedRecently = new Set();
 exports.run = async (client, message, args) => {
+  if (talkedRecently.has(message.author.id)) {
+           return message.reply("`10` Saniye de Bir Kullanabilirsin "); 
+           return   message.then(Strom => Strom.delete({ timeout: 10000 }));
+  } else {
+
+           // the user can type the command ... your command code goes here :)
+
+        // Adds the user to the set so that they can't talk for a minute
+        talkedRecently.add(message.author.id);
+        setTimeout(() => {
+        message.delete();
+          // Removes the user from the set after a minute
+          talkedRecently.delete(message.author.id);
+        }, 10000);// Şuan 5 Saniyedir Değiştirebilirsini..
+    }
   const kasaid = args[0];
   const bakiye = await db.fetch(`bakiyecdare-${message.author.id}`);
   const hesapdurumu = await db.fetch(`hesapdurumcodare-${message.author.id}`);
