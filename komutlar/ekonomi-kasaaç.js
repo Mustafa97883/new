@@ -5,7 +5,6 @@ const talkedRecently = new Set();
 exports.run = async (client, message, args) => {
   if (talkedRecently.has(message.author.id)) {
            return message.reply("`10` Saniye de Bir Kullanabilirsin "); 
-           return   message.then(Strom => Strom.delete({ timeout: 10000 }));
   } else {
 
            // the user can type the command ... your command code goes here :)
